@@ -124,22 +124,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8180899443649582767, guid: e2e4f1596addce240bcafc8889bf0043, type: 3}
   m_PrefabInstance: {fileID: 5955617575390408821}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &399578947 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8916134758494326139, guid: ce1b5e3341b36694bbacbbe43e52a15f, type: 3}
-  m_PrefabInstance: {fileID: 807910950}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &400385176 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5298539623139121550, guid: ce1b5e3341b36694bbacbbe43e52a15f, type: 3}
-  m_PrefabInstance: {fileID: 807910950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1001 &807910950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -152,14 +136,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1603376338993247166, guid: ce1b5e3341b36694bbacbbe43e52a15f, type: 3}
-      propertyPath: cameraRoot
-      value: 
-      objectReference: {fileID: 399578947}
-    - target: {fileID: 1603376338993247166, guid: ce1b5e3341b36694bbacbbe43e52a15f, type: 3}
-      propertyPath: cinemachineCamera
-      value: 
-      objectReference: {fileID: 400385176}
     - target: {fileID: 7407256383173631782, guid: ce1b5e3341b36694bbacbbe43e52a15f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -429,7 +405,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 909969873080997737, guid: ce1b5e3341b36694bbacbbe43e52a15f, type: 3}
-  m_SplitScreen: 0
+  m_SplitScreen: 1
   m_MaintainAspectRatioInSplitScreen: 1
   m_FixedNumberOfSplitScreens: 4
   m_SplitScreenRect:
