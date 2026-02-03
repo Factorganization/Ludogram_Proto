@@ -15,8 +15,8 @@ using UnityEngine.InputSystem;
         #region Fields
         [Header("Move Settings")]
         [Tooltip("Base movement speed when walking.")]
-        [SerializeField] private float _walkSpeed = 30f;
-        [SerializeField] private float _sprintSpeed = 70f;
+        public float _walkSpeed = 30f;
+        public float _sprintSpeed = 70f;
         
         [Tooltip("Sensitivity of the mouse when looking around.")]
 
@@ -64,7 +64,7 @@ using UnityEngine.InputSystem;
         public Vector2 moveVector, rotVector;
         private Transform parentTransform;
         private float _verticalRotation;
-        private float _currentSpeed;
+        public float _currentSpeed;
         private bool isMoving;
         private bool isGrounded;
 
@@ -90,7 +90,8 @@ using UnityEngine.InputSystem;
             playerCam.fieldOfView = defaultFOV;
             
             entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-            
+            _currentSpeed = _walkSpeed;
+
             /*playerEntity = entityManager.CreateEntity(
                 typeof(PlayerTag),
                 typeof(PlayerMovement)
@@ -184,6 +185,11 @@ using UnityEngine.InputSystem;
 
                 currentFallTime = coyoteTime + 1;
             }
+        }
+
+        void Sprint()
+        {
+            
         }
         
         private void TryInteract()
@@ -296,7 +302,7 @@ using UnityEngine.InputSystem;
             _rotationAction.performed += inputInfo => rotVector = inputInfo.ReadValue<Vector2>();
             _rotationAction.canceled += inputInfo => rotVector = Vector2.zero;
             
-            _sprintAction.performed += inputInfo => _currentSpeed = _sprintSpeed;
+            _sprintAction.started += inputInfo => _currentSpeed = _sprintSpeed;
             _sprintAction.canceled += inputInfo => _currentSpeed  = _walkSpeed;
             
             _jumpAction.started += inputInfo => Jump();
