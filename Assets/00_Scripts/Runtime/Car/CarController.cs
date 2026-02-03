@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 namespace Ezereal
 {
-    public class EzerealCarController : MonoBehaviour // This is the main system resposible for car control.
+    public class CarController : MonoBehaviour // This is the main system resposible for car control.
     {
         [Header("Ezereal References")]
 
         [SerializeField] EzerealLightController ezerealLightController;
-        [SerializeField] EzerealSoundController ezerealSoundController;
         [SerializeField] EzerealWheelFrictionController ezerealWheelFrictionController;
 
         [Header("References")]
@@ -28,11 +27,9 @@ namespace Ezereal
         [SerializeField] Transform rearRightWheelMesh;
 
         [SerializeField] Transform steeringWheel;
-
-        [SerializeField] TMP_Text currentGearTMP_UI;
+        
         [SerializeField] TMP_Text currentGearTMP_Dashboard;
-
-        [SerializeField] TMP_Text currentSpeedTMP_UI;
+        
         [SerializeField] TMP_Text currentSpeedTMP_Dashboard;
         [SerializeField] Slider accelerationSlider;
 
@@ -86,11 +83,6 @@ namespace Ezereal
                 Debug.LogWarning("EzerealLightController reference is missing. Ignore or attach one if you want to have light controls.");
             }
 
-            if (ezerealSoundController == null)
-            {
-                Debug.LogWarning("EzerealSoundController reference is missing. Ignore or attach one if you want to have engine sounds.");
-            }
-
             if (ezerealWheelFrictionController == null)
             {
                 Debug.LogWarning("EzerealWheelFrictionController reference is missing. Ignore or attach one if you want to have friction controls.");
@@ -109,11 +101,6 @@ namespace Ezereal
                 {
                     ezerealLightController.MiscLightsOn();
                 }
-
-                if (ezerealSoundController != null)
-                {
-                    ezerealSoundController.TurnOnEngineSound();
-                }
             }
         }
 
@@ -129,12 +116,6 @@ namespace Ezereal
                 {
                     ezerealLightController.MiscLightsOn();
                 }
-
-                if (ezerealSoundController != null)
-                {
-                    ezerealSoundController.TurnOnEngineSound();
-                }
-
             }
             else if (!isStarted)
             {
@@ -143,11 +124,6 @@ namespace Ezereal
                 if (ezerealLightController != null)
                 {
                     ezerealLightController.AllLightsOff();
-                }
-
-                if (ezerealSoundController != null)
-                {
-                    ezerealSoundController.TurnOffEngineSound();
                 }
 
                 frontLeftWheelCollider.motorTorque = 0;
@@ -288,7 +264,7 @@ namespace Ezereal
                 {
                     if (ezerealWheelFrictionController != null)
                     {
-                        //ezerealWheelFrictionController.StartDrifting(currentHandbrakeValue);
+                        ezerealWheelFrictionController.StartDrifting(currentHandbrakeValue);
                     }
 
                     if (ezerealLightController != null)
@@ -300,7 +276,7 @@ namespace Ezereal
                 {
                     if (ezerealWheelFrictionController != null)
                     {
-                        //ezerealWheelFrictionController.StopDrifting();
+                        ezerealWheelFrictionController.StopDrifting();
                     }
 
                     if (ezerealLightController != null)
@@ -485,20 +461,22 @@ namespace Ezereal
 
         void UpdateGearText(string gear)
         {
-            currentGearTMP_UI.text = gear;
-            currentGearTMP_Dashboard.text = gear;
+            if (currentGearTMP_Dashboard != null)
+                currentGearTMP_Dashboard.text = gear;
         }
 
         void UpdateSpeedText(float speed)
         {
             speed = Mathf.Abs(speed);
 
-            currentSpeedTMP_UI.text = speed.ToString("F0");
-            currentSpeedTMP_Dashboard.text = speed.ToString("F0");
+            if (currentGearTMP_Dashboard != null)
+                currentSpeedTMP_Dashboard.text = speed.ToString("F0");
         }
 
         void UpdateAccelerationSlider()
         {
+            if (accelerationSlider == null) return;
+            
             if (currentGear == AutomaticGears.Drive || currentGear == AutomaticGears.Reverse)
             {
                 accelerationSlider.value = Mathf.Lerp(accelerationSlider.value, currentAccelerationValue, Time.deltaTime * 15f);
