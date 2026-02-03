@@ -16,6 +16,7 @@ using UnityEngine.InputSystem;
         [Header("Move Settings")]
         [Tooltip("Base movement speed when walking.")]
         [SerializeField] private float _walkSpeed = 30f;
+        [SerializeField] private float _sprintSpeed = 70f;
         
         [Tooltip("Sensitivity of the mouse when looking around.")]
 
@@ -57,11 +58,13 @@ using UnityEngine.InputSystem;
         private InputAction _rotationAction;
         private InputAction _jumpAction;
         private InputAction _interactAction;
+        private InputAction _sprintAction;
 
         private Vector3 moveDir, slopeMoveDir;
         private Vector2 moveVector, rotVector;
         private Transform parentTransform;
         private float _verticalRotation;
+        private float _currentSpeed;
         private bool isMoving;
         private bool isGrounded;
 
@@ -215,15 +218,15 @@ using UnityEngine.InputSystem;
         
             if (isGrounded && !OnSlope())
             {
-                _playerRigidbody.AddForce(moveDir.normalized * _walkSpeed, ForceMode.Acceleration);
+                _playerRigidbody.AddForce(moveDir.normalized * _currentSpeed, ForceMode.Acceleration);
             }
             else if (isGrounded && OnSlope())
             {
-                _playerRigidbody.AddForce(slopeMoveDir.normalized * _walkSpeed, ForceMode.Acceleration);
+                _playerRigidbody.AddForce(slopeMoveDir.normalized * _currentSpeed, ForceMode.Acceleration);
             }
             else if (!isGrounded)
             {
-                _playerRigidbody.AddForce(moveDir.normalized * _walkSpeed * airMultiplier, ForceMode.Acceleration);
+                _playerRigidbody.AddForce(moveDir.normalized * _currentSpeed * airMultiplier, ForceMode.Acceleration);
             }
         }
         
@@ -280,6 +283,7 @@ using UnityEngine.InputSystem;
             _rotationAction = _playerControls.actions["Rotation"];
             _jumpAction = _playerControls.actions["Jump"];
             _interactAction = _playerControls.actions["Interaction"];
+            _sprintAction =  _playerControls.actions["Sprint"];
 
             SubscribeActionValuesToInputEvents();
         }
@@ -291,6 +295,9 @@ using UnityEngine.InputSystem;
 
             _rotationAction.performed += inputInfo => rotVector = inputInfo.ReadValue<Vector2>();
             _rotationAction.canceled += inputInfo => rotVector = Vector2.zero;
+            
+            _sprintAction.performed += inputInfo => _currentSpeed = _sprintSpeed;
+            _sprintAction.canceled += inputInfo => _currentSpeed  = _walkSpeed;
             
             _jumpAction.started += inputInfo => Jump();
 
