@@ -38,6 +38,11 @@ using UnityEngine.InputSystem;
         [Header("Camera effects")]
         [SerializeField] private CinemachineCamera playerCam;
         [SerializeField] private float defaultFOV = 100;
+
+        [Header("Interaction Settings")]
+        [SerializeField] float interactionRange = 10;
+        [SerializeField] private float interactionRadius = 0.25f; 
+        [SerializeField] private LayerMask interactableLayer;
         
         [Header("References")]
         [SerializeField] private Transform feet;
@@ -48,6 +53,7 @@ using UnityEngine.InputSystem;
         private InputAction _movementAction;
         private InputAction _rotationAction;
         private InputAction _jumpAction;
+        private InputAction _interactAction;
 
         private Vector3 moveDir, slopeMoveDir;
         private Vector2 moveVector, rotVector;
@@ -122,6 +128,21 @@ using UnityEngine.InputSystem;
                 currentFallTime = coyoteTime + 1;
             }
         }
+        
+        private void TryInteract()
+        {
+            RaycastHit hit; 
+            
+            if (Physics.SphereCast(headTransform.position, interactionRadius, headTransform.forward, out hit, interactionRange, interactableLayer))
+            {
+                Debug.Log("Interacting with " + hit.collider.name);
+                if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
+                {
+                    interactable.Interact(transform);
+                }
+            }
+        }
+
 
         private void HandleMovement()
         {
@@ -205,6 +226,7 @@ using UnityEngine.InputSystem;
             _movementAction = mapReference.FindAction("Movement");
             _rotationAction = mapReference.FindAction("Rotation");
             _jumpAction = mapReference.FindAction("Jump");
+            _interactAction = mapReference.FindAction("Interaction");
 
             SubscribeActionValuesToInputEvents();
         }
@@ -217,10 +239,13 @@ using UnityEngine.InputSystem;
             _rotationAction.performed += inputInfo => rotVector = inputInfo.ReadValue<Vector2>();
             _rotationAction.canceled += inputInfo => rotVector = Vector2.zero;
             
-            _jumpAction.performed += inputInfo => Jump();
-            _jumpAction.canceled -= inputInfo => Jump();
+            _jumpAction.started += inputInfo => Jump();
+
+            _interactAction.performed += inputInfo => TryInteract();
 
         }
+
+        
         #endregion
     }
 
