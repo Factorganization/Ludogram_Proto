@@ -36,7 +36,7 @@ using UnityEngine.InputSystem;
         private float currentFallTime;
         
         [Header("Camera effects")]
-        [SerializeField] private CinemachineCamera playerCam;
+        [SerializeField] private Camera playerCam;
         [SerializeField] private float defaultFOV = 100;
 
         [Header("Interaction Settings")]
@@ -47,7 +47,7 @@ using UnityEngine.InputSystem;
         [Header("References")]
         [SerializeField] private Transform feet;
         [SerializeField] private Transform headTransform;
-        [SerializeField] InputActionAsset _playerControls;
+        [SerializeField] PlayerInput _playerControls;
         [SerializeField] Rigidbody _playerRigidbody;
         
         private InputAction _movementAction;
@@ -71,7 +71,7 @@ using UnityEngine.InputSystem;
             
             SetInputReferences();
             
-            playerCam.Lens.FieldOfView = defaultFOV;
+            playerCam.fieldOfView = defaultFOV;
         }
         
         void Update()
@@ -120,7 +120,7 @@ using UnityEngine.InputSystem;
         
         void Jump()
         {
-            if (currentFallTime < coyoteTime)
+            if (currentFallTime < coyoteTime && _playerRigidbody)
             {
                 _playerRigidbody.linearVelocity = new Vector3(_playerRigidbody.linearVelocity.x, 0, _playerRigidbody.linearVelocity.z);
                 _playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -221,12 +221,11 @@ using UnityEngine.InputSystem;
         {
             if (_playerControls == null)
                 throw new MissingReferenceException("Please ensure that the player controls are assigned in the player input handler :)");
-            InputActionMap mapReference = _playerControls.FindActionMap("Player");
-
-            _movementAction = mapReference.FindAction("Movement");
-            _rotationAction = mapReference.FindAction("Rotation");
-            _jumpAction = mapReference.FindAction("Jump");
-            _interactAction = mapReference.FindAction("Interaction");
+            
+            _movementAction = _playerControls.actions["Movement"];
+            _rotationAction = _playerControls.actions["Rotation"];
+            _jumpAction = _playerControls.actions["Jump"];
+            _interactAction = _playerControls.actions["Interaction"];
 
             SubscribeActionValuesToInputEvents();
         }
