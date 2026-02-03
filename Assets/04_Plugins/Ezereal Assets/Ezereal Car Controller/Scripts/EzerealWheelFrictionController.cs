@@ -5,7 +5,7 @@ namespace Ezereal
     public class EzerealWheelFrictionController : MonoBehaviour
     {
         [Header("Ezereal References")]
-        [SerializeField] EzerealCarController ezerealCarController;
+        [SerializeField] CarController ezerealCarController;
 
         WheelFrictionCurve fLWSidewaysFriction;
         WheelFrictionCurve fRWSidewaysFriction;
