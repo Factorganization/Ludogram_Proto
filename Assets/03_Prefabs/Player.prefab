@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   _walkSpeed: 65
-  _sensitivity: 3
+  _sensitivity: 6
   _characterSize: 2
   _upDownLookRange: 90
   jumpForce: 20
@@ -290,7 +290,7 @@ MonoBehaviour:
   coyoteTime: 0.2
   playerCam: {fileID: 3164259511287397336}
   defaultFOV: 80
-  interactionRange: 10
+  interactionRange: 2
   interactionRadius: 0.25
   interactableLayer:
     serializedVersion: 2
