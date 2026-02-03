@@ -60,6 +60,7 @@ using UnityEngine.InputSystem;
 
         private Vector3 moveDir, slopeMoveDir;
         private Vector2 moveVector, rotVector;
+        private Transform parentTransform;
         private float _verticalRotation;
         private bool isMoving;
         private bool isGrounded;
@@ -78,6 +79,8 @@ using UnityEngine.InputSystem;
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            
+            parentTransform = transform.root.transform;
             
             SetInputReferences();
             
@@ -145,6 +148,28 @@ using UnityEngine.InputSystem;
             
             Debug.DrawRay(feet.position, Vector3.down * 0.5f, color);
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("TriggerZone"))
+            {
+                if (parentTransform.parent  != other.transform)
+                {
+                    parentTransform.parent = other.transform;
+                }
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("TriggerZone"))
+            {
+                if (parentTransform.parent  == other.transform)
+                {
+                    parentTransform.parent  = null;
+                }
+            }
+        }
         
         
         void Jump()
@@ -162,7 +187,7 @@ using UnityEngine.InputSystem;
         {
             RaycastHit hit; 
             
-            if (Physics.SphereCast(headTransform.position, interactionRadius, headTransform.forward, out hit, interactionRange, interactableLayer))
+            if (headTransform && Physics.SphereCast(headTransform.position, interactionRadius, headTransform.forward, out hit, interactionRange, interactableLayer))
             {
                 Debug.Log("Interacting with " + hit.collider.name);
                 if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
@@ -269,7 +294,7 @@ using UnityEngine.InputSystem;
             
             _jumpAction.started += inputInfo => Jump();
 
-            _interactAction.performed += inputInfo => TryInteract();
+            _interactAction.started += inputInfo => TryInteract();
 
         }
 

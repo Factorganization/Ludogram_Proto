@@ -205,7 +205,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   _walkSpeed: 65
-  _sensitivity: 3
+  _sensitivity: 6
   _characterSize: 2
   _upDownLookRange: 90
   jumpForce: 20
@@ -290,11 +290,11 @@ MonoBehaviour:
   coyoteTime: 0.2
   playerCam: {fileID: 3164259511287397336}
   defaultFOV: 80
-  interactionRange: 10
+  interactionRange: 2
   interactionRadius: 0.25
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   feet: {fileID: 2718970810235640701}
   headTransform: {fileID: 8916134758494326139}
   _playerControls: {fileID: 2177518196819521932}
