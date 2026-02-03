@@ -86,7 +86,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnMovement(InputValue inputValue)
     {
-        Logs.LogError("OnMovement called");
         MoveVector = inputValue.Get<Vector2>();
     }
 

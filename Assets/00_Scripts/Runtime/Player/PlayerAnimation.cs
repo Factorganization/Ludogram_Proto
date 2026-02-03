@@ -6,7 +6,8 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerController pc;
 
-    private float x, y;
+    private float x, y, speed;
+    private float targetSpeed;
 
     private void Update()
     {
@@ -20,11 +21,13 @@ public class PlayerAnimation : MonoBehaviour
 
         if (pc.CurrentSpeed == pc.sprintSpeed)
         {
-            animator.SetFloat("speed", 1);
+            targetSpeed = 1;
+            animator.SetFloat("speed", speed);
         }
         else
         {
-            animator.SetFloat("speed", 0);
+            targetSpeed = 0;
+            animator.SetFloat("speed", speed);
         }
         
         animator.SetFloat("x", x);
