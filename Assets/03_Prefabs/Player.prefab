@@ -92,6 +92,11 @@ MonoBehaviour:
   coyoteTime: 0.2
   playerCam: {fileID: 5298539623139121550}
   defaultFOV: 80
+  interactionRange: 10
+  interactionRadius: 0.25
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
   feet: {fileID: 2718970810235640701}
   headTransform: {fileID: 8916134758494326139}
   _playerControls: {fileID: -944628639613478452, guid: d2a247ea33621204f9b22bd7b29c9883, type: 3}
