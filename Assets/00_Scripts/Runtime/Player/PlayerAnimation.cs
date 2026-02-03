@@ -6,7 +6,8 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerController pc;
 
-    private float x, y;
+    private float x, y, speed;
+    private float targetSpeed;
 
     private void Update()
     {
@@ -17,14 +18,18 @@ public class PlayerAnimation : MonoBehaviour
     {
         x = Mathf.Lerp(x, pc.moveVector.x, Time.deltaTime * 15);
         y = Mathf.Lerp(y, pc.moveVector.y, Time.deltaTime * 15);
+        
+        speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 15);
 
         if (pc._currentSpeed == pc._sprintSpeed)
         {
-            animator.SetFloat("speed", 1);
+            targetSpeed = 1;
+            animator.SetFloat("speed", speed);
         }
         else
         {
-            animator.SetFloat("speed", 0);
+            targetSpeed = 0;
+            animator.SetFloat("speed", speed);
         }
         
         animator.SetFloat("x", x);
