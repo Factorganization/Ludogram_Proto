@@ -1,5 +1,8 @@
 using System;
+using BillSimulation;
 using Unity.Cinemachine;
+using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -62,6 +65,13 @@ using UnityEngine.InputSystem;
         private bool isGrounded;
 
         #endregion
+        
+        #region Entity Fields
+        
+        private Entity playerEntity;
+        private EntityManager entityManager;
+        
+        #endregion
 
         #region Methods
         void Start()
@@ -72,6 +82,13 @@ using UnityEngine.InputSystem;
             SetInputReferences();
             
             playerCam.fieldOfView = defaultFOV;
+            
+            entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+            
+            playerEntity = entityManager.CreateEntity(
+                typeof(PlayerTag),
+                typeof(PlayerMovement)
+            );
         }
         
         void Update()
@@ -83,6 +100,18 @@ using UnityEngine.InputSystem;
             if (isGrounded && _playerRigidbody.linearVelocity.y < 0)
             {
                 currentFallTime = 0;
+            }
+
+            if (entityManager.Exists(playerEntity))
+            {
+                float3 velocity = _playerRigidbody.linearVelocity / Time.deltaTime;
+
+                entityManager.SetComponentData(playerEntity, new PlayerMovement
+                {
+                    Position = transform.position,
+                    Velocity = velocity,
+                    CollisionRadius = 0.5f
+                });
             }
         }
 
