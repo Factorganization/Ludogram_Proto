@@ -127,6 +127,8 @@ using UnityEngine.InputSystem;
             HandleMovement();
             HandleRotation();
             
+            ResetSprint();
+            
             if (!isGrounded)
             {
                 currentAddedGravity = Mathf.SmoothStep(currentAddedGravity, maxAddedGravity, speedAddedGravity * Time.deltaTime);
@@ -189,7 +191,16 @@ using UnityEngine.InputSystem;
 
         void Sprint()
         {
-            
+            if (_currentSpeed == _walkSpeed) _currentSpeed = _sprintSpeed;
+            else _currentSpeed = _walkSpeed;
+        }
+
+        void ResetSprint()
+        {
+            if (_playerRigidbody.linearVelocity.magnitude < 1 && _currentSpeed == _sprintSpeed)
+            {
+                _currentSpeed = _walkSpeed;
+            }
         }
         
         private void TryInteract()
@@ -302,8 +313,8 @@ using UnityEngine.InputSystem;
             _rotationAction.performed += inputInfo => rotVector = inputInfo.ReadValue<Vector2>();
             _rotationAction.canceled += inputInfo => rotVector = Vector2.zero;
             
-            _sprintAction.started += inputInfo => _currentSpeed = _sprintSpeed;
-            _sprintAction.canceled += inputInfo => _currentSpeed  = _walkSpeed;
+            _sprintAction.started += inputInfo => Sprint();
+            
             
             _jumpAction.started += inputInfo => Jump();
 
