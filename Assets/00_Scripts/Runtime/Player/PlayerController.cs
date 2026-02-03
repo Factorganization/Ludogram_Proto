@@ -61,7 +61,7 @@ using UnityEngine.InputSystem;
         private InputAction _sprintAction;
 
         private Vector3 moveDir, slopeMoveDir;
-        private Vector2 moveVector, rotVector;
+        public Vector2 moveVector, rotVector;
         private Transform parentTransform;
         private float _verticalRotation;
         private float _currentSpeed;
@@ -91,10 +91,10 @@ using UnityEngine.InputSystem;
             
             entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
             
-            playerEntity = entityManager.CreateEntity(
+            /*playerEntity = entityManager.CreateEntity(
                 typeof(PlayerTag),
                 typeof(PlayerMovement)
-            );
+            );*/
         }
         
         void Update()
@@ -108,7 +108,7 @@ using UnityEngine.InputSystem;
                 currentFallTime = 0;
             }
 
-            if (entityManager.Exists(playerEntity))
+            /*if (entityManager.Exists(playerEntity))
             {
                 float3 velocity = _playerRigidbody.linearVelocity / Time.deltaTime;
 
@@ -118,7 +118,7 @@ using UnityEngine.InputSystem;
                     Velocity = velocity,
                     CollisionRadius = 0.5f
                 });
-            }
+            }*/
         }
 
         private void FixedUpdate()
