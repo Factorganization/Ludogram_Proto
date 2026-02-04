@@ -57,8 +57,10 @@ Material:
     - _Hue: 1
     - _IsRecolor: 0
     - _Metallic: 0
+    - _NormalStrength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Roughness_Strength: 0.6
     - _Smoothness: 0
     - _TextureRotation: 0
     m_Colors:

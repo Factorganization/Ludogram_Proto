@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
-        m_Texture: {fileID: 2800000, guid: 315db093db8907d459c652b9b78a70f7, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
@@ -57,8 +57,10 @@ Material:
     - _Hue: 1
     - _IsRecolor: 1
     - _Metallic: 0
+    - _NormalStrength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Roughness_Strength: 0.54
     - _Smoothness: 0
     - _TextureRotation: 0
     m_Colors:
