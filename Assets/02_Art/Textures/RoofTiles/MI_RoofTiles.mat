@@ -66,7 +66,7 @@ Material:
     m_Colors:
     - _Recolor_1: {r: 1, g: 0.84876186, b: 0.6179246, a: 1}
     - _Recolor_2: {r: 0.8867924, g: 0.4337753, b: 0.17150229, a: 1}
-    - _Tiling_XY: {r: 2, g: 2, b: 0, a: 0}
+    - _Tiling_XY: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7380130833868267941

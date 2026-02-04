@@ -64,8 +64,8 @@ Material:
     - _Smoothness: 0
     - _TextureRotation: 0
     m_Colors:
-    - _Recolor_1: {r: 0.6698113, g: 0.59461033, b: 0.48340157, a: 1}
-    - _Recolor_2: {r: 0.122641504, g: 0.0944301, b: 0.07809719, a: 1}
+    - _Recolor_1: {r: 1, g: 0.837559, b: 0.5896226, a: 1}
+    - _Recolor_2: {r: 0, g: 0, b: 0, a: 1}
     - _Tiling_XY: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
