@@ -19,9 +19,7 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
     private static SCC_InputActions inputActions;
 
     private void Awake() {
-
-        //  Hiding this gameobject in the hierarchy.
-        gameObject.hideFlags = HideFlags.HideInHierarchy;
+        
 
         //  Creating inputs.
         inputs = new SCC_Inputs();
