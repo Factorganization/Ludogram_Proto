@@ -25,12 +25,10 @@ public class PlayerAnimation : MonoBehaviour
 
     private void UpdateMovementAnimation()
     {
-        x = Mathf.Lerp(x, pc.moveVector.x, Time.deltaTime * 15);
-        y = Mathf.Lerp(y, pc.moveVector.y, Time.deltaTime * 15);
-        
-        speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 15);
+        x = Mathf.Lerp(x, pc.MoveVector.x, Time.deltaTime * 15);
+        y = Mathf.Lerp(y, pc.MoveVector.y, Time.deltaTime * 15);
 
-        if (pc._currentSpeed == pc._sprintSpeed)
+        if (pc.CurrentSpeed == pc.sprintSpeed)
         {
             targetSpeed = 1;
             animator.SetFloat("speed", speed);
