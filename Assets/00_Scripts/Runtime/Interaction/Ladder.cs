@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour, IInteractable
 {
-    [SerializeField] private float power = 50;
+    [SerializeField] private float power = 1000;
     public void Interact(Transform interactor)
     {
         interactor.TryGetComponent(out Rigidbody rb);
         
-        rb?.AddForce(transform.up * power, ForceMode.Impulse);
+        rb?.AddForce(transform.up * power, ForceMode.Acceleration);
     }
 }
