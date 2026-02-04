@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ladder : MonoBehaviour, IInteractable
 {
     [SerializeField] private float power = 50;
-    public void Interact(Transform interactor)
+    public void Interact(PlayerController interactor)
     {
         interactor.TryGetComponent(out Rigidbody rb);
         

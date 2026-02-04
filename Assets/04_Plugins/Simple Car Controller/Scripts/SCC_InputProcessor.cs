@@ -6,6 +6,7 @@
 //
 //----------------------------------------------
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,16 @@ public class SCC_InputProcessor : MonoBehaviour {
     public bool smoothInputs = true;        //  Smoothly lerp the inputs?
     public float smoothingFactor = 5f;      //  Smoothing factor.
     
+    public static SCC_InputProcessor Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(this);
+    }
+
 
     /// <summary>
     /// Overrides inputs with given inputs. Be sure to disable the receiveInputsFromInputManager while overriding inputs. 

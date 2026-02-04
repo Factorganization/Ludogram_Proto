@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 3684019837932375335}
   m_Layer: 6
   m_Name: Interactible (1)
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 6107748672219334233}
   m_Layer: 0
   m_Name: PF_VehiculeSave
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1359,7 +1359,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4302350066070710558}
-  - {fileID: 3502935298216678217}
   - {fileID: 3968325281485249429}
   - {fileID: 4785453245292451617}
   - {fileID: 5628270960802839207}
@@ -1408,49 +1407,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheels:
-  - wheelTransform: {fileID: 0}
+  - wheelTransform: {fileID: 2433563926998650559}
     wheelCollider: {fileID: 3454617196584895008}
     isSteering: 1
     steeringAngle: 25
     isTraction: 1
     isBrake: 1
     isHandbrake: 0
-  - wheelTransform: {fileID: 0}
+  - wheelTransform: {fileID: 9180515961114129206}
     wheelCollider: {fileID: 4126461559494133210}
-    isSteering: 1
+    isSteering: 0
     steeringAngle: 25
     isTraction: 1
     isBrake: 1
     isHandbrake: 0
-  - wheelTransform: {fileID: 0}
+  - wheelTransform: {fileID: 5059165688195186791}
     wheelCollider: {fileID: 5586440189409327443}
     isSteering: 0
     steeringAngle: 25
     isTraction: 1
     isBrake: 1
     isHandbrake: 1
-  - wheelTransform: {fileID: 0}
+  - wheelTransform: {fileID: 8499824221663992159}
     wheelCollider: {fileID: 1188503813583385387}
     isSteering: 0
     steeringAngle: 25
     isTraction: 1
     isBrake: 1
     isHandbrake: 1
-  - wheelTransform: {fileID: 0}
+  - wheelTransform: {fileID: 8356433442933892285}
     wheelCollider: {fileID: 6018921461983489182}
     isSteering: 0
     steeringAngle: 25
     isTraction: 1
     isBrake: 1
     isHandbrake: 1
-  - wheelTransform: {fileID: 0}
+  - wheelTransform: {fileID: 5062386191515626142}
     wheelCollider: {fileID: 1371639918951237614}
     isSteering: 0
     steeringAngle: 25
     isTraction: 1
     isBrake: 1
     isHandbrake: 1
-  COM: {fileID: 0}
+  COM: {fileID: 3968325281485249429}
   speed: 0
   currentEngineRPM: 0
   minimumEngineRPM: 650
@@ -1478,7 +1477,6 @@ MonoBehaviour:
     steerInput: 0
     brakeInput: 0
     handbrakeInput: 0
-  receiveInputsFromInputManager: 1
   smoothInputs: 1
   smoothingFactor: 5
 --- !u!114 &651812135386823915
@@ -1511,9 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bd53ce2e3fed349b9fedf0c04e284b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exhaustParticles:
-  - {fileID: 0}
-  - {fileID: 0}
+  exhaustParticles: []
   wheelParticlePrefab: {fileID: 198000012793226170, guid: 535bb7b587b353548946763756b103fd, type: 3}
   slip: 0.25
 --- !u!114 &1370260122253238461
@@ -1675,7 +1671,7 @@ GameObject:
   - component: {fileID: 9170973791874401499}
   m_Layer: 6
   m_Name: Interactible (4)
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1784,7 +1780,7 @@ GameObject:
   - component: {fileID: 5628270960802839207}
   m_Layer: 0
   m_Name: RightBackDoor
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2113,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972290ca72c3be64d83eecd704c89963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
-  wheelModel: {fileID: 0}
+  wheelModel: {fileID: 9180515961114129206}
 --- !u!1 &2581854657232675876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,7 +3203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972290ca72c3be64d83eecd704c89963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
-  wheelModel: {fileID: 0}
+  wheelModel: {fileID: 5059165688195186791}
 --- !u!1 &3276858789020184537
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,7 +3439,7 @@ GameObject:
   - component: {fileID: 3365061621555397549}
   m_Layer: 0
   m_Name: Carosserie
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3647,7 +3643,7 @@ GameObject:
   - component: {fileID: 3968325281485249429}
   m_Layer: 0
   m_Name: COM
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3751,7 +3747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972290ca72c3be64d83eecd704c89963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
-  wheelModel: {fileID: 0}
+  wheelModel: {fileID: 8499824221663992159}
 --- !u!1 &3744810347872383346
 GameObject:
   m_ObjectHideFlags: 0
@@ -5222,7 +5218,7 @@ GameObject:
   - component: {fileID: 1948727195582678678}
   m_Layer: 6
   m_Name: Interactible (2)
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5404,7 +5400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972290ca72c3be64d83eecd704c89963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
-  wheelModel: {fileID: 0}
+  wheelModel: {fileID: 5062386191515626142}
 --- !u!1 &4796392408690173296
 GameObject:
   m_ObjectHideFlags: 0
@@ -5629,143 +5625,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &4831126894298372392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3502935298216678217}
-  - component: {fileID: 3897622661598042138}
-  - component: {fileID: 5923220381638851353}
-  - component: {fileID: 8858159244524504873}
-  m_Layer: 0
-  m_Name: FPS Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3502935298216678217
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831126894298372392}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.75, y: 2.9750004, z: 3.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3173132064401502594}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &3897622661598042138
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831126894298372392}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &5923220381638851353
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831126894298372392}
-  m_Enabled: 1
---- !u!114 &8858159244524504873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831126894298372392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
-  m_Version: 2
 --- !u!1 &4887601211073740399
 GameObject:
   m_ObjectHideFlags: 0
@@ -6004,7 +5863,7 @@ GameObject:
   - component: {fileID: 4460452187696828012}
   m_Layer: 6
   m_Name: Interactible (3)
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7345,7 +7204,7 @@ GameObject:
   - component: {fileID: 3302247264093301260}
   m_Layer: 0
   m_Name: Elements
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8778,7 +8637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972290ca72c3be64d83eecd704c89963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
-  wheelModel: {fileID: 0}
+  wheelModel: {fileID: 8356433442933892285}
 --- !u!1 &6666322077472603184
 GameObject:
   m_ObjectHideFlags: 0
@@ -9351,7 +9210,7 @@ GameObject:
   - component: {fileID: 2202485892835820764}
   m_Layer: 0
   m_Name: Wheels
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9500,7 +9359,7 @@ GameObject:
   - component: {fileID: 4302350066070710558}
   m_Layer: 0
   m_Name: WheelsCollision
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10414,7 +10273,7 @@ GameObject:
   - component: {fileID: 2773338070672026871}
   m_Layer: 6
   m_Name: Interactible
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11044,7 +10903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972290ca72c3be64d83eecd704c89963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
-  wheelModel: {fileID: 0}
+  wheelModel: {fileID: 2433563926998650559}
 --- !u!1 &8559910554196920971
 GameObject:
   m_ObjectHideFlags: 0
@@ -11357,13 +11216,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8900788632032899542}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3.75, y: -0.14999962, z: 3.5}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 3.75, y: 0, z: 3.5000007}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2202485892835820764}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 180}
 --- !u!33 &3027685997906984328
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11544,7 +11403,7 @@ GameObject:
   - component: {fileID: 4785453245292451617}
   m_Layer: 0
   m_Name: LeftBackDoor
-  m_TagString: Untagged
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12003,6 +11862,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Volant
       objectReference: {fileID: 0}
+    - target: {fileID: 4358132666506446909, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
+      propertyPath: m_TagString
+      value: MovableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496709363208434159, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
+      propertyPath: _inputProcessor
+      value: 
+      objectReference: {fileID: 7859312327182410049}
     - target: {fileID: 6065893001950417728, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.41588
@@ -12061,6 +11928,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3302247264093301260}
     m_Modifications:
+    - target: {fileID: 329312548796901243, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 682523609692562760, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850973738828579790, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1875136539021214627, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.9772596
@@ -12104,6 +11983,30 @@ PrefabInstance:
     - target: {fileID: 3105232070458168593, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Name
       value: Ladder
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105232070458168593, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105232070458168593, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: MovableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258152594085128480, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403723026868600166, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6309325985693993202, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536818995435218748, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8856914990021432072, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Name
