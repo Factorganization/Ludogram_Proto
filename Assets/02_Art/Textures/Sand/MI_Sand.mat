@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_WoodPlanks
+  m_Name: MI_Sand
   m_Shader: {fileID: -6465566751694194690, guid: dba1310eb9dafa649b05e6a6d939c8b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,15 +25,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: e7efffbefb4aef04d9252046d42f5208, type: 3}
+        m_Texture: {fileID: 2800000, guid: 27034a4851194654a86d96f0621399b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: e1a786bc03103a045802dfa9db5522ff, type: 3}
+        m_Texture: {fileID: 2800000, guid: 316967059458df3448adb3f2cc7b3be9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
-        m_Texture: {fileID: 2800000, guid: 69c8e9ec2d3d537418fe91e0e919388c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 844f6695d4683bf459440661f1db007f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
@@ -55,7 +55,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Hue: 1
-    - _IsRecolor: 1
+    - _IsRecolor: 0
     - _Metallic: 0
     - _QueueControl: 0
     - _QueueOffset: 0
