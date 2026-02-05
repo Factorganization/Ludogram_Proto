@@ -1325,6 +1325,10 @@ PrefabInstance:
       value: P_MoneyLoss
       objectReference: {fileID: 0}
     - target: {fileID: 7249417702549281836, guid: 3133639a845bb9d4180156f146ed2539, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249417702549281836, guid: 3133639a845bb9d4180156f146ed2539, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3
       objectReference: {fileID: 0}
