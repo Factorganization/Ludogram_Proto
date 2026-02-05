@@ -21,7 +21,13 @@ namespace BillSimulation
             float deltaTime = SystemAPI.Time.DeltaTime;
             float3 gravity = new float3(0, -9.81f, 0);
             float time = (float)SystemAPI.Time.ElapsedTime;
+            
+            // Récupérer le niveau du sol depuis le GroundCollider
             float groundLevel = 0.0f;
+            if (SystemAPI.TryGetSingleton<GroundCollider>(out var ground) && ground.IsActive)
+            {
+                groundLevel = ground.Height;
+            }
             
             var job = new BillPhysicsJob
             {
@@ -49,12 +55,17 @@ namespace BillSimulation
             
             if (bill.State == BillState.Airborne || bill.State == BillState.BeingKicked)
             {
-                // ptit vent de mistral
-                float3 turbulence = new float3(
-                    noise.snoise(new float2(transform.Position.x * 0.5f, Time * 0.3f)),
-                    noise.snoise(new float2(transform.Position.y * 0.5f, Time * 0.3f + 100)),
-                    noise.snoise(new float2(transform.Position.z * 0.5f, Time * 0.3f + 200))
-                ) * 1.5f;
+                // Turbulence SEULEMENT si on est assez haut et en mouvement
+                float3 turbulence = float3.zero;
+                
+                if (transform.Position.y > GroundLevel + 0.5f && math.length(bill.Velocity) > 1.0f)
+                {
+                    turbulence = new float3(
+                        noise.snoise(new float2(transform.Position.x * 0.5f, Time * 0.3f)),
+                        noise.snoise(new float2(transform.Position.y * 0.5f, Time * 0.3f + 100)),
+                        noise.snoise(new float2(transform.Position.z * 0.5f, Time * 0.3f + 200))
+                    ) * 0.5f;
+                }
                 
                 float3 force = Gravity * bill.Mass + turbulence;
                 float3 acceleration = force / bill.Mass;
@@ -62,10 +73,8 @@ namespace BillSimulation
                 bill.Velocity += acceleration * DeltaTime;
                 bill.Velocity *= math.max(0, 1.0f - bill.Drag * DeltaTime);
                 
-                // Mise à jour position
                 float3 newPosition = transform.Position + bill.Velocity * DeltaTime;
                 
-                // Empêcher de traverser le sol
                 if (newPosition.y < GroundLevel)
                 {
                     newPosition.y = GroundLevel;
@@ -73,21 +82,17 @@ namespace BillSimulation
                 
                 transform.Position = newPosition;
                 
-                // Rotation
                 bill.AngularVelocity *= math.max(0, 1.0f - bill.AngularDrag * DeltaTime);
                 quaternion deltaRotation = quaternion.EulerXYZ(bill.AngularVelocity * DeltaTime);
                 transform.Rotation = math.mul(transform.Rotation, deltaRotation);
             }
             else if (bill.State == BillState.OnGround)
             {
-                // Mouvement au sol (glissement)
                 float3 horizontalVelocity = new float3(bill.Velocity.x, 0, bill.Velocity.z);
                 transform.Position += horizontalVelocity * DeltaTime;
                 
-                // forcer au niveau du sol
                 transform.Position.y = GroundLevel;
                 
-                // Rotation minimale au sol
                 if (math.length(bill.AngularVelocity) > 0.01f)
                 {
                     quaternion deltaRotation = quaternion.EulerXYZ(bill.AngularVelocity * DeltaTime);

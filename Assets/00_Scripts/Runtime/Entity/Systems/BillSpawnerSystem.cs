@@ -52,7 +52,7 @@ namespace BillSimulation
                     {
                         Position = spawnPos,
                         Rotation = quaternion.identity,
-                        Scale = 1.0f
+                        Scale = 0.25f
                     });
                     
                     ecb.SetComponent(bill, new BillData
