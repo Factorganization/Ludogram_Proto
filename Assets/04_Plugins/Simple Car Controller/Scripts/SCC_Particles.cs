@@ -125,7 +125,7 @@ public class SCC_Particles : MonoBehaviour {
             return;
 
         for (int i = 0; i < exhaustEmissions.Length; i++)
-            exhaustEmissions[i].rate = Mathf.Lerp(1f, 20f, InputProcessor.inputs.throttleInput);
+            exhaustEmissions[i].rateOverTime = Mathf.Lerp(1f, 20f, InputProcessor.inputs.throttleInput);
 
     }
 

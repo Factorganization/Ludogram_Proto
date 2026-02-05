@@ -1,4 +1,4 @@
-using MortierFu.Shared;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,40 +23,62 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Rigidbody playerRigidbody;
+    [SerializeField] private CapsuleCollider playerCollider;
     [SerializeField] private Transform feet;
     [SerializeField] private Transform headTransform;
     [SerializeField] private Camera playerCam;
 
-    private Vector2 _rotVector;
-    public Vector2 MoveVector { get; private set; }
-    
-    private float _verticalRotation;
+    [Header("Driving")] 
+    [SerializeField] private SCC_InputProcessor vehicleInputProcessor;
 
+    [Header("Debug")]
     public float CurrentSpeed { get; private set; }
+    [SerializeField] private Vector2 rotVector;
+    public Vector2 MoveVector { get; private set; }
+    [SerializeField] private float verticalRotation;
+    [SerializeField] public bool isGrounded;
+    [SerializeField] private float currentAddedGravity;
+    [SerializeField] private float currentFallTime;
+    [SerializeField] private Vector3 moveDir;
+    [SerializeField] private Vector3 slopeMoveDir;
+    [SerializeField] private Transform carrierTransform;
 
-    public bool isGrounded;
-    private float _currentAddedGravity;
-    private float _currentFallTime;
-
+    [SerializeField] private SCC_Inputs drivingInputs = new SCC_Inputs();
+    
     private RaycastHit _slopeHit;
-    private Vector3 _moveDir;
-    private Vector3 _slopeMoveDir;
-
-    private Transform _parentTransform;
+    [SerializeField] private float horVelRagdoll = 12;
+    [SerializeField] private float vertVelRagdoll = 20;
+    private Vector2 _currentVelocity;
+    private Vector2 _previousVelocity;
+    private bool ragdoll;
+    
+    // TODO action handbrake 
+    private InputAction handbrakeAction;
+    
 
     #endregion
 
     private void Awake()
     {
-        _parentTransform = transform.root;
         CurrentSpeed = walkSpeed;
         
-        
+        drivingInputs ??= new SCC_Inputs();
+    }
+
+    private void Start()
+    {
+        if (!playerCollider)
+        {
+            playerCollider = GetComponent<CapsuleCollider>();
+        }
     }
 
     private void OnEnable()
     {
         playerInput.ActivateInput();
+        
+        handbrakeAction = playerInput.actions["Handbrake"];
+        
         SwitchActionMap("Player");
     }
 
@@ -71,7 +93,12 @@ public class PlayerController : MonoBehaviour
         ControlDrag();
 
         if (isGrounded && playerRigidbody.linearVelocity.y < 0)
-            _currentFallTime = 0;
+            currentFallTime = 0;
+        
+        // Driving input override
+        
+        drivingInputs.handbrakeInput = handbrakeAction.ReadValue<float>();
+        vehicleInputProcessor?.OverrideInputs(drivingInputs);
     }
 
     private void FixedUpdate()
@@ -80,18 +107,64 @@ public class PlayerController : MonoBehaviour
         HandleRotation();
         ApplyExtraGravity();
         ResetSprintIfNotMoving();
+        
+        _currentVelocity = GetSpeed();
     }
 
-    #region INPUT CALLBACKS
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.CompareTag("Car"))
+        {
+            // Hard codé sa mère pardon 
+            OnEnterMovingObject(SCC_InputProcessor.Instance?.transform);
+        }
+        
+        if (other.collider.CompareTag("MovableObject"))
+        {
+            OnEnterMovingObject(other.transform);
+        }
+        _previousVelocity = GetSpeed();
+        FreeFall();
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        // Pardon maman
+        if (other.collider.CompareTag("Car"))
+        {
+            // Hard codé sa mère pardon 
+            OnEnterMovingObject(SCC_InputProcessor.Instance?.transform);
+        }
+        
+        if (other.collider.CompareTag("MovableObject"))
+        {
+            OnEnterMovingObject(other.transform);
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.collider.CompareTag("MovableObject") || other.collider.CompareTag("Car"))
+        {
+            OnExitMovingObject();
+        }
+    }
+
+    #region INPUT CALLBACKS - PLAYER 
 
     public void OnMovement(InputValue inputValue)
     {
         MoveVector = inputValue.Get<Vector2>();
+
+        if (ragdoll)
+        {
+            SetRagdollMode(false);
+        }
     }
 
     public void OnRotation(InputValue inputValue)
     {
-        _rotVector = inputValue.Get<Vector2>();
+        rotVector = inputValue.Get<Vector2>();
     }
 
     public void OnJump(InputValue inputValue)
@@ -111,26 +184,39 @@ public class PlayerController : MonoBehaviour
         if (inputValue.isPressed)
             TryInteract();
     }
+    
+    public void OnRagdoll(InputValue inputValue)
+    {
+        if (inputValue.isPressed)
+            SetRagdollMode(true);
+    }
 
     #endregion
-
-    #region ACTION MAP
-
-    private void SwitchActionMap(string map)
+    
+    # region INPUT CALLBACKS - DRIVING
+    
+    public void OnThrottle(InputValue inputValue)
     {
-        playerInput.SwitchCurrentActionMap(map);
+        drivingInputs.throttleInput = inputValue.Get<float>();
+    }
+    
+    public void OnSteering(InputValue inputValue)
+    {
+        drivingInputs.steerInput = inputValue.Get<float>();
+    }
+    
+    public void OnBrake(InputValue inputValue)
+    {
+        drivingInputs.brakeInput = inputValue.Get<float>();
     }
 
-    public void EnterVehicle()
+    
+    public void OnExitVehicle(InputValue inputValue)
     {
-        SwitchActionMap("Driving");
+        if (inputValue.isPressed)
+            StopDriving();
     }
-
-    public void ExitVehicle()
-    {
-        SwitchActionMap("Player");
-    }
-
+    
     #endregion
 
     #region Movement
@@ -143,38 +229,86 @@ public class PlayerController : MonoBehaviour
         forward.y = 0;
         right.y = 0;
 
-        _moveDir = forward.normalized * MoveVector.y +
+        moveDir = forward.normalized * MoveVector.y +
                   right.normalized * MoveVector.x;
 
-        _slopeMoveDir = Vector3.ProjectOnPlane(_moveDir, _slopeHit.normal);
+        slopeMoveDir = Vector3.ProjectOnPlane(moveDir, _slopeHit.normal);
 
-        playerRigidbody.AddForce(Vector3.down * _currentAddedGravity);
+        playerRigidbody.AddForce(Vector3.down * currentAddedGravity);
 
         if (isGrounded)
         {
-            Vector3 dir = OnSlope() ? _slopeMoveDir : _moveDir;
+            Vector3 dir = OnSlope() ? slopeMoveDir : moveDir;
             playerRigidbody.AddForce(dir.normalized * CurrentSpeed, ForceMode.Acceleration);
         }
         else
         {
-            playerRigidbody.AddForce(_moveDir.normalized * (CurrentSpeed * airMultiplier),
+            playerRigidbody.AddForce(moveDir.normalized * (CurrentSpeed * airMultiplier),
                 ForceMode.Acceleration);
         }
     }
 
     private void HandleRotation()
     {
-        float mouseX = _rotVector.x * sensitivity;
-        float mouseY = _rotVector.y * sensitivity;
+        float mouseX = rotVector.x * sensitivity;
+        float mouseY = rotVector.y * sensitivity;
 
         transform.Rotate(0, mouseX, 0);
 
-        _verticalRotation = Mathf.Clamp(
-            _verticalRotation - mouseY,
+        verticalRotation = Mathf.Clamp(
+            verticalRotation - mouseY,
             -upDownLookRange,
             upDownLookRange);
 
-        headTransform.localRotation = Quaternion.Euler(_verticalRotation, 0, 0);
+        headTransform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+    }
+
+    public Vector2 GetSpeed()
+    {
+        Vector3 playerVelocity = playerRigidbody.linearVelocity;
+
+        Vector3 groundVelocity = Vector3.zero;
+        
+        if (Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, out RaycastHit hit, 2f))
+        {
+            if (hit.rigidbody != null)
+            {
+                groundVelocity = hit.rigidbody.GetPointVelocity(hit.point);
+            }
+        }
+
+        Vector3 relativeVelocity = playerVelocity - groundVelocity;
+        
+        float verticalSpeed = relativeVelocity.y;
+
+        Vector3 horizontalVector = new Vector3(relativeVelocity.x, 0, relativeVelocity.z);
+        float horizontalSpeed = horizontalVector.magnitude; 
+
+        return new Vector2(horizontalSpeed, verticalSpeed);
+    }
+    
+    private void FreeFall()
+    {
+        float horVelDiff = Mathf.Abs(_previousVelocity.x - _currentVelocity.x);
+        float vertVelDiff = Mathf.Abs(_previousVelocity.y - _currentVelocity.y);
+        
+        if (horVelDiff > horVelRagdoll || vertVelDiff > vertVelRagdoll)
+        {
+            SetRagdollMode(true);
+        }
+    }
+
+    private void SetRagdollMode(bool ragdollState)
+    {
+        ragdoll = ragdollState;
+        if (ragdollState)
+        {
+            playerCollider.height = 0.001f;
+        }
+        else
+        {
+            playerCollider.height = 2f;
+        }
     }
 
     #endregion
@@ -196,7 +330,7 @@ public class PlayerController : MonoBehaviour
 
     private void ControlDrag()
     {
-        if (OnSlope() && _moveDir.magnitude <= 0.1f)
+        if (OnSlope() && moveDir.magnitude <= 0.1f)
             playerRigidbody.linearDamping = 30;
         else if (isGrounded)
             playerRigidbody.linearDamping = groundDrag;
@@ -208,17 +342,17 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGrounded)
         {
-            _currentAddedGravity = Mathf.SmoothStep(
-                _currentAddedGravity,
+            currentAddedGravity = Mathf.SmoothStep(
+                currentAddedGravity,
                 maxAddedGravity,
                 speedAddedGravity * Time.deltaTime);
 
-            if (_currentFallTime < coyoteTime + 0.1f)
-                _currentFallTime += Time.deltaTime;
+            if (currentFallTime < coyoteTime + 0.1f)
+                currentFallTime += Time.deltaTime;
         }
         else
         {
-            _currentAddedGravity = 0;
+            currentAddedGravity = 0;
         }
     }
 
@@ -228,14 +362,14 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (_currentFallTime >= coyoteTime) return;
+        if (currentFallTime >= coyoteTime) return;
 
         playerRigidbody.linearVelocity =
             new Vector3(playerRigidbody.linearVelocity.x, 0, playerRigidbody.linearVelocity.z);
 
         playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
-        _currentFallTime = coyoteTime + 1;
+        currentFallTime = coyoteTime + 1;
     }
 
     private void ResetSprintIfNotMoving()
@@ -256,8 +390,45 @@ public class PlayerController : MonoBehaviour
                 10f))
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
-                interactable.Interact(transform);
+                interactable.Interact(this);
         }
+    }
+    
+    private void OnEnterMovingObject(Transform objectTransform)
+    {
+        // Set itself as child of the moving object
+        carrierTransform = objectTransform;
+        transform.SetParent(carrierTransform);
+    }
+    
+    private void OnExitMovingObject()
+    {
+        // Unset itself as child
+        carrierTransform = null;
+        transform.SetParent(null);
+    }
+    
+    private void SwitchActionMap(string map)
+    {
+        playerInput.SwitchCurrentActionMap(map);
+    }
+
+    public void BeginDriving(SCC_InputProcessor vehicleInputProcessor)
+    {
+        // Switch to driving action map and register vehicle input processor
+        this.vehicleInputProcessor = vehicleInputProcessor;
+        SwitchActionMap("Driving");
+        
+        // TODO: CAMERA et tout le reste tia capté 
+    }
+
+    public void StopDriving()
+    {
+        // Switch back to player action map and unregister vehicle input processor
+        vehicleInputProcessor = null;
+        SwitchActionMap("Player");
+        
+        // TODO: CAMERA et tout le reste tia capté
     }
 
     #endregion
