@@ -13,8 +13,9 @@ public class HoleGenerator : MonoBehaviour
     [SerializeField] private float distanceMax = 100;
     [SerializeField] private float yBoost = 4;
     
+    
     //Test
-    [SerializeField] private List<Collider> targetWallstest;
+    public List<Collider> targetWallstest;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class HoleGenerator : MonoBehaviour
     }
 
     [ContextMenu("Generate Hole")]
-    public void TestPlaceHole()
+    void TestPlaceHole()
     {
         PlaceHoles(targetWallstest,1);
     }
@@ -35,18 +36,19 @@ public class HoleGenerator : MonoBehaviour
         if (!holePrefab || targetWalls.Count==0 || amount<=0) return;
         
         Collider targetWall = targetWalls[Random.Range(0, targetWalls.Count-1)];
-        Vector3 closestPoint = targetWall.ClosestPointOnBounds(transform.position+ Vector3.up * yBoost);
+        Vector3 closestPoint = targetWall.ClosestPoint(transform.position+ Vector3.up * yBoost);
+        Debug.DrawLine(transform.position, closestPoint, Color.red,2);
         
         if (Vector3.Distance(closestPoint, transform.position) > distanceMax) return;
         
         for (int i = 0; i < amount; i++)
         {
             Vector3 randomPos = new Vector3(
-                targetWall.bounds.center.x, 
+                Random.Range(targetWall.bounds.min.x,targetWall.bounds.max.x), 
                 Random.Range(targetWall.bounds.min.y,targetWall.bounds.max.y), 
                 Random.Range(targetWall.bounds.min.z,targetWall.bounds.max.z));
 
-            closestPoint.z = targetWall.bounds.center.z;
+            closestPoint.x = targetWall.bounds.center.x;
             
             Vector3 holePos = Vector3.Lerp(randomPos, closestPoint, aimPrecision);
             
