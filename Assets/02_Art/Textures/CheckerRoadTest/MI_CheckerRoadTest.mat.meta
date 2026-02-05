@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/03_Prefabs/PF_PlayerRagdoll.prefab.meta
-guid: ded6639868cf74649815455da0109534
-PrefabImporter:
-========
 guid: a0164009b3d5bcf45926f04b1699ad5d
 NativeFormatImporter:
->>>>>>>> Rita:Assets/02_Art/Textures/CheckerRoadTest/MI_CheckerRoadTest.mat.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
