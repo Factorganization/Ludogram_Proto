@@ -399,6 +399,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 2433563926998650559, guid: fc50e4a7f47f2274c8c85448f3740f26, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433563926998650559, guid: fc50e4a7f47f2274c8c85448f3740f26, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433563926998650559, guid: fc50e4a7f47f2274c8c85448f3740f26, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433563926998650559, guid: fc50e4a7f47f2274c8c85448f3740f26, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433563926998650559, guid: fc50e4a7f47f2274c8c85448f3740f26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2575197924473602928, guid: fc50e4a7f47f2274c8c85448f3740f26, type: 3}
       propertyPath: m_TagString
       value: Car

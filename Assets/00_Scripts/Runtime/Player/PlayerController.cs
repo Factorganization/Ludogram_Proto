@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
     
     private RaycastHit _slopeHit;
     
+    // TODO action handbrake 
+    private InputAction handbrakeAction;
+    
 
     #endregion
 
@@ -59,6 +62,9 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         playerInput.ActivateInput();
+        
+        handbrakeAction = playerInput.actions["Handbrake"];
+        
         SwitchActionMap("Player");
     }
 
@@ -74,7 +80,10 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded && playerRigidbody.linearVelocity.y < 0)
             currentFallTime = 0;
-
+        
+        // Driving input override
+        
+        drivingInputs.handbrakeInput = handbrakeAction.ReadValue<float>();
         vehicleInputProcessor?.OverrideInputs(drivingInputs);
     }
 
@@ -173,10 +182,6 @@ public class PlayerController : MonoBehaviour
         drivingInputs.brakeInput = inputValue.Get<float>();
     }
 
-    public void OnHandbrake(InputValue inputValue)
-    {
-        drivingInputs.handbrakeInput = inputValue.Get<float>();
-    }
     
     public void OnExitVehicle(InputValue inputValue)
     {
