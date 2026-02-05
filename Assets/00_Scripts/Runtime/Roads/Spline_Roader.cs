@@ -29,7 +29,8 @@ public class Spline_Sampler : MonoBehaviour
         GetComponent<MeshFilter>().sharedMesh = mesh;
     }
 
-    private void Update()
+    [ContextMenu("Update spline")]
+    private void UpdateSpline()
     {
         if (!m_splineContainer) return;
 
