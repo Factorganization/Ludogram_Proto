@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BillSimulation.BillSpawnerAuthoring
   BillPrefab: {fileID: 5014483837352083183, guid: b7e5e63db0adee74d95ab89e3cb5bd58, type: 3}
-  NumberOfBills: 1000
+  NumberOfBills: 10000
   SpawnRadius: 2
   InitialForceMin: 5
   InitialForceMax: 15
