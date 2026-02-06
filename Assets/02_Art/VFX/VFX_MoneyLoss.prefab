@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7249417702549281836}
   - component: {fileID: 7993010242798335429}
   m_Layer: 0
-  m_Name: P_MoneyLoss
+  m_Name: VFX_MoneyLoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
