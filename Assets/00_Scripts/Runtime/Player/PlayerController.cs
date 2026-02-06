@@ -1,4 +1,5 @@
 using System;
+using CarScripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,9 +29,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform headTransform;
     [SerializeField] private Camera playerCam;
 
-    [Header("Driving")] 
-    [SerializeField] private SCC_InputProcessor vehicleInputProcessor;
-
     [Header("Debug")]
     public float CurrentSpeed { get; private set; }
     [SerializeField] private Vector2 rotVector;
@@ -43,7 +41,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 slopeMoveDir;
     [SerializeField] private Transform carrierTransform;
 
-    [SerializeField] private SCC_Inputs drivingInputs = new SCC_Inputs();
+    [SerializeField] private Inputs drivingInputs = new Inputs();
     
     private RaycastHit _slopeHit;
     [SerializeField] private float horVelRagdoll = 12;
@@ -54,7 +52,7 @@ public class PlayerController : MonoBehaviour
     
     // TODO action handbrake 
     private InputAction handbrakeAction;
-    
+    private CarController carController;
 
     #endregion
 
@@ -62,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         CurrentSpeed = walkSpeed;
         
-        drivingInputs ??= new SCC_Inputs();
+        drivingInputs ??= new Inputs();
     }
 
     private void Start()
@@ -98,7 +96,6 @@ public class PlayerController : MonoBehaviour
         // Driving input override
         
         drivingInputs.handbrakeInput = handbrakeAction.ReadValue<float>();
-        vehicleInputProcessor?.OverrideInputs(drivingInputs);
     }
 
     private void FixedUpdate()
@@ -413,19 +410,22 @@ public class PlayerController : MonoBehaviour
         playerInput.SwitchCurrentActionMap(map);
     }
 
-    public void BeginDriving(SCC_InputProcessor vehicleInputProcessor)
+    public void BeginDriving(CarController newCarController)
     {
         // Switch to driving action map and register vehicle input processor
-        this.vehicleInputProcessor = vehicleInputProcessor;
+        carController = newCarController;
+        carController.AssignInputs(drivingInputs);
         SwitchActionMap("Driving");
         
         // TODO: CAMERA et tout le reste tia capté 
+        Debug.Log($"Begin driving");
     }
 
     public void StopDriving()
     {
         // Switch back to player action map and unregister vehicle input processor
-        vehicleInputProcessor = null;
+        carController.ClearInputs();
+        carController = null;
         SwitchActionMap("Player");
         
         // TODO: CAMERA et tout le reste tia capté

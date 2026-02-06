@@ -17,7 +17,7 @@ using UnityEngine;
 [AddComponentMenu("BoneCracker Games/Simple Car Controller/SCC Input Processor")]
 public class SCC_InputProcessor : MonoBehaviour {
 
-    public SCC_Inputs inputs = new SCC_Inputs();        //  Target inputs.
+    public Inputs inputs = new Inputs();        //  Target inputs.
     
     public bool smoothInputs = true;        //  Smoothly lerp the inputs?
     public float smoothingFactor = 5f;      //  Smoothing factor.
@@ -37,7 +37,7 @@ public class SCC_InputProcessor : MonoBehaviour {
     /// Overrides inputs with given inputs. Be sure to disable the receiveInputsFromInputManager while overriding inputs. 
     /// </summary>
     /// <param name="newInputs"></param>
-    public void OverrideInputs(SCC_Inputs newInputs) {
+    public void OverrideInputs(Inputs newInputs) {
 
         if (!smoothInputs) {
 
