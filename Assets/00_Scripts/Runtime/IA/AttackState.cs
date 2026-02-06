@@ -5,7 +5,7 @@ public class AttackState : EnemyState
 {
     public AttackState(EnemyBehavior _brain) : base(_brain){}
     
-    private List<Collider> _targetWalls;
+    private List<Collider> _targetWalls = new List<Collider>();
 
     private float shootingTimer; //refacto
     
@@ -34,9 +34,30 @@ public class AttackState : EnemyState
 
     void AutoFindTarget()
     {
-        //c'est du test, ce sera a remplacer
-        _targetWalls = brain.HoleGenerator.targetWallstest;
+        //_targetWalls = brain.HoleGenerator.targetWallstest;
+        
+        if (brain.PlayerVehicule && brain.PlayerVehicule.BankColliders.Length > 0)
+        {
+            Collider closestWall = null;
+            foreach (var wall in brain.PlayerVehicule.BankColliders)
+            {
+                if (closestWall == null)
+                {
+                    closestWall = wall;
+                    continue;
+                }
 
-        // find List<Collider> targetWalls 
+                //Peut etre amélioré en recuperant le closestpoint mais flemme
+                if (Vector3.Distance(brain.transform.position, closestWall.transform.position) >
+                    Vector3.Distance(brain.transform.position, wall.transform.position))
+                {
+                    closestWall = wall;
+                }
+            }
+            _targetWalls.Clear();
+            _targetWalls.Add(closestWall);
+        }
+
+        
     }
 }

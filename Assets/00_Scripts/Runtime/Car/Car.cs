@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
+    public Collider[] BankColliders => bankColliders;
+    
     public Rigidbody rigid;
     public WheelCollider wheel1, wheel2, wheel3, wheel4;
     public float drivespeed, steerspeed, maxSpeed;
     float horizontalInput, verticalInput;
+
+    [SerializeField] private Collider[] bankColliders;
     
     private bool breaking;
 
     private float currentSpeed;
 
-    void Update()
+    /*void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
@@ -30,7 +34,7 @@ public class Car : MonoBehaviour
         ClampVelocity();
         
         Brake();
-    }
+    }*/
 
     private float GetMotor()
     {
