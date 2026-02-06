@@ -2,7 +2,7 @@ using MortierFu.Shared;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ControllerComponent : CharacterComponent
+public class ControllerComponent : PlayerComponent
 {
     private InputAction _moveAction;
     private InputAction _lookAction;
@@ -35,7 +35,6 @@ public class ControllerComponent : CharacterComponent
     public void HandleMovementUpdate()
     {
         if (character == null || _controller == null) return;
-        if (!PlayerCharacter.AllowGameplayActions) return;
 
         Vector2 moveInput = _moveAction != null ? _moveAction.ReadValue<Vector2>() : Vector2.zero;
         Vector2 lookInput = _lookAction != null ? _lookAction.ReadValue<Vector2>() : Vector2.zero;
@@ -73,6 +72,16 @@ public class ControllerComponent : CharacterComponent
 
         // Move the character
         _controller.Move(move * Time.deltaTime);
+    }
+    
+    public void ResetVelocity()
+    {
+        // Stop all movement immediately by moving the controller with zero velocity
+        if (_controller != null)
+        {
+            _controller.Move(Vector3.zero);
+        }
+        _verticalVelocity = 0f;
     }
 
     public override void Dispose()
