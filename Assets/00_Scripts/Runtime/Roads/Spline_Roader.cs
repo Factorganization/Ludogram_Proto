@@ -34,7 +34,7 @@ public class Spline_Sampler : MonoBehaviour
     {
         UpdateSpline();
 
-        GetComponent<MeshCollider>().sharedMesh = GetComponent<MeshFilter>().mesh;
+        GetComponent<MeshCollider>().sharedMesh = GetComponent<MeshFilter>().sharedMesh;
     }
 
     [ContextMenu("Update spline")]
