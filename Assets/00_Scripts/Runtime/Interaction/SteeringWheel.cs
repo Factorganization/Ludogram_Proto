@@ -1,17 +1,17 @@
+using CarScripts;
 using UnityEngine;
 
 public class SteeringWheel : MonoBehaviour, IInteractable
 {
-    [SerializeField] private SCC_InputProcessor _inputProcessor;
-    
+    [SerializeField] private CarController carController;
     public void Interact(PlayerController interactor)
     {
-        if (_inputProcessor == null)
+        if (carController == null)
         {
-            Debug.LogWarning("Input Processor not assigned on SteeringWheel.");
+            Debug.LogWarning("Car Controller not assigned on SteeringWheel.");
             return;
         }
         
-        interactor.BeginDriving(_inputProcessor);
+        interactor.BeginDriving(carController);
     }
 }
