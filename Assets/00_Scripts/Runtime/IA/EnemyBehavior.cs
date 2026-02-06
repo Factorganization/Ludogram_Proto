@@ -1,16 +1,17 @@
 using System;
+using CarScripts;
 using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
     public HoleGenerator HoleGenerator => holeGenerator;
-    public Car PlayerVehicule=> playerVehicule; // a remplacer par le nouveau script car
+    public CarController PlayerVehicule=> playerVehicule; // a remplacer par le nouveau script car
     public float ShootCooldown => shootCooldown;
     
     //State Date
     EnemyState _currentState;
 
-    [SerializeField] private Car playerVehicule; // a remplacer par le nouveau script car
+    [SerializeField] private CarController playerVehicule; // a remplacer par le nouveau script car
     [SerializeField] private HoleGenerator holeGenerator;
     [SerializeField] private float shootCooldown = 2; //in seconds
 
