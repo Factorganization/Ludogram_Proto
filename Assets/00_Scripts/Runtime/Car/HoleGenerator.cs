@@ -47,10 +47,10 @@ public class HoleGenerator : MonoBehaviour
                 Random.Range(targetWall.bounds.min.x,targetWall.bounds.max.x), 
                 Random.Range(targetWall.bounds.min.y,targetWall.bounds.max.y), 
                 Random.Range(targetWall.bounds.min.z,targetWall.bounds.max.z));
-
-            closestPoint.x = targetWall.bounds.center.x;
             
             Vector3 holePos = Vector3.Lerp(randomPos, closestPoint, aimPrecision);
+
+            holePos.x = targetWall.bounds.center.x;
             
             GameObject hole = Instantiate(holePrefab, holePos, targetWall.transform.rotation);
             hole.transform.parent = targetWall.transform;
