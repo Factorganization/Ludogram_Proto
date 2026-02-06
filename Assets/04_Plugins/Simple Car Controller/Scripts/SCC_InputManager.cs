@@ -15,14 +15,14 @@ using UnityEngine;
 /// </summary>
 public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
-    public SCC_Inputs inputs;       //  Actual inputs.
+    public Inputs inputs;       //  Actual inputs.
     private static SCC_InputActions inputActions;
 
     private void Awake() {
         
 
         //  Creating inputs.
-        inputs = new SCC_Inputs();
+        inputs = new Inputs();
 
     }
 
@@ -30,7 +30,7 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
         //  Creating inputs.
         if (inputs == null)
-            inputs = new SCC_Inputs();
+            inputs = new Inputs();
 
         //  Receive inputs from the controller.
         GetInputs();
