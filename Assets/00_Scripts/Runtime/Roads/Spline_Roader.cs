@@ -33,6 +33,7 @@ public class Spline_Sampler : MonoBehaviour
     private void Start()
     {
         UpdateSpline();
+        gameObject.AddComponent<MeshCollider>();
     }
 
     [ContextMenu("Update spline")]
