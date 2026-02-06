@@ -9787,7 +9787,7 @@ GameObject:
   - component: {fileID: 993462861379698385}
   - component: {fileID: 5593004247659244779}
   m_Layer: 0
-  m_Name: P_VacuumVFX
+  m_Name: VFX_VacuumVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,6 +8,7 @@ namespace CarScripts {
         private Rigidbody carRb;
         private Inputs inputs;
         
+        
         private enum WheelDriveMode {
             FWD, //Front
             RWD, //Rear
@@ -103,6 +104,9 @@ namespace CarScripts {
         float rpm => wheelRotationRate * gearRatio * differentialRatio * 60 / 2 * 3.14f;*/
         
         //float wheelRPM => carRb.linearVelocity.magnitude / (2 * Mathf.PI * wheelRadius) * 60f;
+
+        public Collider[] BankColliders => bankCollider;
+        [SerializeField] private Collider[] bankCollider;
         
         private Dictionary<Transform, WheelContact> wheelsContact = new();
         
