@@ -1141,7 +1141,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard Mouse",
+                    "groups": "Keyboard Mouse;Keyboard&Mouse",
                     "action": "Throttle",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1251,7 +1251,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard Mouse",
+                    "groups": "Keyboard Mouse;Keyboard&Mouse",
                     "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1284,7 +1284,7 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard Mouse",
+                    "groups": "Keyboard Mouse;Keyboard&Mouse",
                     "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1372,7 +1372,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard Mouse",
+                    "groups": "Keyboard Mouse;Keyboard&Mouse",
                     "action": "Steering",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1383,7 +1383,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard Mouse",
+                    "groups": "Keyboard Mouse;Keyboard&Mouse",
                     "action": "Steering",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1405,7 +1405,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard Mouse",
+                    "groups": "Keyboard Mouse;Keyboard&Mouse;Gamepad",
                     "action": "Steering",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1504,7 +1504,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard Mouse",
+                    "groups": "Keyboard Mouse;Keyboard&Mouse",
                     "action": "Handbrake",
                     "isComposite": false,
                     "isPartOfComposite": true
