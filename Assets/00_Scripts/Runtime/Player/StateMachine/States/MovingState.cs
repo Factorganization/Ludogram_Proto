@@ -9,7 +9,7 @@ public class MovingState : PlayerBaseState
     public override void OnEnter()
     {
         Logs.Log($"[Player {character.PlayerIndex}] Moving state entered");
-        animator.CrossFade(LocomotionHash, k_crossFadeDuration);
+        //animator?.CrossFade(MovingHash, k_crossFadeDuration);
     }
         
     public override void Update()
