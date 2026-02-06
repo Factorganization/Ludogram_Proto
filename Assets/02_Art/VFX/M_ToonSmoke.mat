@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Outline
-  m_Shader: {fileID: -6465566751694194690, guid: faa5262e814db7e4d9310f6df42e8f81, type: 3}
+  m_Name: M_ToonSmoke
+  m_Shader: {fileID: -6465566751694194690, guid: 386fd7319999dd643b88315daf535b40, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -24,12 +24,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: e3e7d4bc04120d34dbd489b409e74221, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_d5adfa30b9ed4ab5873f88284d2d7236_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 16d9b0561c9badf4e8107e32aa42326e, type: 3}
+    - _NoiseDissolveTexrurz:
+        m_Texture: {fileID: 2800000, guid: 4452f8b3b689dec4dbd76c3a79bd8b6c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -46,14 +42,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _OutlineThickness: 0.0107
+    - _Float: 0.62
+    - _MainLigth_Vector: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ShadowRatio: 0.654
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    - _Color_1: {r: 0.12415449, g: 0.15104948, b: 0.16981131, a: 1}
+    - _Vectorize_Light_Direction: {r: 0, g: -1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3524618344045927055
+--- !u!114 &7651682312160582854
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
