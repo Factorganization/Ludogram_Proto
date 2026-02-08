@@ -19,8 +19,16 @@ public class PlayerCharacter : Actor
 
     [Header("References")]
     [SerializeField] private Animator _animator;
+    [Tooltip("Pivot transform for camera pitch (up/down look).")]
+    [SerializeField] private Transform _headTransform;
 
-    public bool IsStunned { get; private set; }
+    public Transform HeadTransform => _headTransform;
+
+    // State flags for transitions (set these when entering/exiting states)
+    public bool IsStunned { get; set; }
+    public bool IsInteracting { get; set; }
+    public bool IsDriving { get; set; }
+    public bool IsFlying { get; set; }
     
     protected override void BeginPlay()
     {
@@ -63,23 +71,22 @@ public class PlayerCharacter : Actor
     {
         _stateMachine = new StateMachine();
         var movingState = new MovingState(this, _animator);
-
-        // Create other states
         var drivingState = new DrivingState(this, _animator);
         var flyingState = new FlyingState(this, _animator);
         var interactingState = new InteractingState(this, _animator);
         var stunState = new StunState(this, _animator);
 
-        // Helper to create IPredicate from a Func<bool>
-        // (private nested class below)
-        // Any -> Interacting when Interact action is triggered
-        
+        // --- Any() transitions: from any state when condition is true ---
+        Any(stunState, new FuncPredicate(() => IsStunned));
+        Any(drivingState, new FuncPredicate(() => IsDriving));
+        Any(interactingState, new FuncPredicate(() => IsInteracting));
+        Any(flyingState, new FuncPredicate(() => IsFlying));
 
-        At(movingState, stunState, new FuncPredicate(() => IsStunned));
+        // --- At() transitions: return to Moving from specific states ---
         At(stunState, movingState, new FuncPredicate(() => !IsStunned));
-        
-        
-        
+        At(drivingState, movingState, new FuncPredicate(() => !IsDriving));
+        At(interactingState, movingState, new FuncPredicate(() => !IsInteracting));
+        At(flyingState, movingState, new FuncPredicate(() => !IsFlying));
 
         // Start in moving state
         _stateMachine.SetState(movingState);

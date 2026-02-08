@@ -10,7 +10,7 @@ public class ControllerComponent : PlayerComponent
 
     private CharacterController _controller;
     private float _verticalVelocity;
-    
+    private float _verticalRotation; 
 
     public ControllerComponent(PlayerCharacter character) : base(character)
     {
@@ -40,11 +40,22 @@ public class ControllerComponent : PlayerComponent
         Vector2 lookInput = _lookAction != null ? _lookAction.ReadValue<Vector2>() : Vector2.zero;
         bool jumpRequested = _jumpAction != null && _jumpAction.triggered;
 
-        // Yaw rotation from look x
+        float sensitivity = character.Playerstats.LookSensitivity;
+        float upDownRange = character.Playerstats.UpDownLookRange;
+
+        // Yaw (horizontal look) - rotates character body
         if (lookInput.x != 0f)
         {
-            float yaw = lookInput.x * character.Playerstats.LookSensitivity;
+            float yaw = lookInput.x * sensitivity;
             character.transform.Rotate(0f, yaw, 0f);
+        }
+
+        // Pitch (vertical look) - rotates head/camera pivot
+        if (lookInput.y != 0f && character.HeadTransform != null)
+        {
+            _verticalRotation -= lookInput.y * sensitivity;
+            _verticalRotation = Mathf.Clamp(_verticalRotation, -upDownRange, upDownRange);
+            character.HeadTransform.localRotation = Quaternion.Euler(_verticalRotation, 0f, 0f);
         }
 
         // Movement in local XZ
@@ -53,14 +64,14 @@ public class ControllerComponent : PlayerComponent
         Vector3 move = forward * moveInput.y + right * moveInput.x;
         move *= character.Playerstats.Speed;
 
-        // Gravity & Jump
+        // Gravity & Jump - JumpHeight is in meters, formula: v = sqrt(2 * g * h)
         if (_controller.isGrounded)
         {
-            // small negative so controller stays grounded
             _verticalVelocity = -0.5f;
             if (jumpRequested)
             {
-                _verticalVelocity = Mathf.Sqrt(character.Playerstats.JumpForce * -2f * character.Playerstats.Gravity);
+                float g = Mathf.Abs(character.Playerstats.Gravity);
+                _verticalVelocity = Mathf.Sqrt(2f * g * character.Playerstats.JumpHeight);
             }
         }
         else
@@ -70,7 +81,6 @@ public class ControllerComponent : PlayerComponent
 
         move.y = _verticalVelocity;
 
-        // Move the character
         _controller.Move(move * Time.deltaTime);
     }
     
