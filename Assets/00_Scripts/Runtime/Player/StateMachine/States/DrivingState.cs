@@ -15,6 +15,7 @@ public class DrivingState : PlayerBaseState
     public override void Update()
     {
         character.Driving.HandleDrivingUpdate();
+        character.Interact.HandleInteractUpdate();
     }
     
         

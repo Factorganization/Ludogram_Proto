@@ -93,7 +93,7 @@ public class SCC_Audio : MonoBehaviour {
         }
 
         //  Calculating the target volume depends on the throttle / brake.
-        float volume = Drivetrain.direction == 1 ? InputProcessor.inputs.throttleInput : InputProcessor.inputs.brakeInput;
+        float volume = Drivetrain.direction == 1 ? InputProcessor.drivingInputs.throttleInput : InputProcessor.drivingInputs.brakeInput;
 
         //  Setting volumes.
         engineOnSource.volume = Mathf.Lerp(minimumVolume, maximumVolume, volume);

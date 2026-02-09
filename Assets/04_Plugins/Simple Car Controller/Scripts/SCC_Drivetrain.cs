@@ -125,7 +125,7 @@ public class SCC_Drivetrain : MonoBehaviour {
         for (int i = 0; i < wheels.Length; i++) {
 
             if (wheels[i].isSteering)
-                wheels[i].wheelCollider.WheelCollider.steerAngle = (wheels[i].steeringAngle * InputProcessor.inputs.steerInput) * Mathf.Lerp(1f, .25f, speed / highSpeedSteerAngle);
+                wheels[i].wheelCollider.WheelCollider.steerAngle = (wheels[i].steeringAngle * InputProcessor.drivingInputs.steerInput) * Mathf.Lerp(1f, .25f, speed / highSpeedSteerAngle);
             else
                 wheels[i].wheelCollider.WheelCollider.steerAngle = 0f;
 
@@ -151,7 +151,7 @@ public class SCC_Drivetrain : MonoBehaviour {
         for (int i = 0; i < wheels.Length; i++) {
 
             if (wheels[i].isTraction)
-                wheels[i].wheelCollider.WheelCollider.motorTorque = ((engineTorque * finalDriveRatio) * (direction == 1 ? InputProcessor.inputs.throttleInput : -InputProcessor.inputs.brakeInput)) / Mathf.Clamp(totalTractionWheels, 1, 20);
+                wheels[i].wheelCollider.WheelCollider.motorTorque = ((engineTorque * finalDriveRatio) * (direction == 1 ? InputProcessor.drivingInputs.throttleInput : -InputProcessor.drivingInputs.brakeInput)) / Mathf.Clamp(totalTractionWheels, 1, 20);
             else
                 wheels[i].wheelCollider.WheelCollider.motorTorque = 0f;
 
@@ -182,7 +182,7 @@ public class SCC_Drivetrain : MonoBehaviour {
 
             if (wheels[i].isBrake) {
 
-                wheels[i].wheelCollider.WheelCollider.brakeTorque = brakeTorque * (direction == 1 ? InputProcessor.inputs.brakeInput : InputProcessor.inputs.throttleInput) / Mathf.Clamp(totalBrakeWheels, 1, 20);
+                wheels[i].wheelCollider.WheelCollider.brakeTorque = brakeTorque * (direction == 1 ? InputProcessor.drivingInputs.brakeInput : InputProcessor.drivingInputs.throttleInput) / Mathf.Clamp(totalBrakeWheels, 1, 20);
 
                 if (wheels[i].wheelCollider.WheelCollider.brakeTorque >= 5f)
                     appliedBrake = true;
@@ -220,7 +220,7 @@ public class SCC_Drivetrain : MonoBehaviour {
 
             if (wheels[i].isHandbrake) {
 
-                wheels[i].wheelCollider.WheelCollider.brakeTorque = brakeTorque * InputProcessor.inputs.handbrakeInput / totalBrakeWheels;
+                wheels[i].wheelCollider.WheelCollider.brakeTorque = brakeTorque * InputProcessor.drivingInputs.handbrakeInput / totalBrakeWheels;
 
             } else {
 
@@ -241,9 +241,9 @@ public class SCC_Drivetrain : MonoBehaviour {
         speed = Rigid.linearVelocity.magnitude * 3.6f;        //  Speed of the vehicle.
 
         //  If speed is below 5, and player is still pressing brake, increase timerForReverse value. If this value exceeds the limit, set direction to -1 for reverse gear.
-        if (speed <= 5f && InputProcessor.inputs.brakeInput >= .75f)
+        if (speed <= 5f && InputProcessor.drivingInputs.brakeInput >= .75f)
             timerForReverse += Time.fixedDeltaTime;
-        else if (speed <= 5f && InputProcessor.inputs.brakeInput <= .25f)
+        else if (speed <= 5f && InputProcessor.drivingInputs.brakeInput <= .25f)
             timerForReverse = 0f;
 
         if (timerForReverse >= .1f)

@@ -6,7 +6,7 @@ namespace CarScripts {
     [RequireComponent(typeof(Rigidbody))]
     public class CarController : MonoBehaviour {
         private Rigidbody carRb;
-        private Inputs inputs;
+        private DrivingInputs _drivingInputs;
         
         
         private enum WheelDriveMode {
@@ -191,27 +191,27 @@ namespace CarScripts {
             }
         }
 
-        public void AssignInputs(Inputs newInputs)
+        public void AssignInputs(DrivingInputs newDrivingInputs)
         {
-            inputs = newInputs;
+            _drivingInputs = newDrivingInputs;
         }
 
         public void ClearInputs()
         {
-            inputs = null;
+            _drivingInputs = null;
         }
 
         void MyInputs() {
-            if (inputs == null) {
+            if (_drivingInputs == null) {
                 steering = 0;
                 throttle = 0;
                 brake = 0;
                 return;
             }
             
-            steering = inputs.steerInput;
-            throttle = inputs.throttleInput;
-            brake = inputs.brakeInput;
+            steering = _drivingInputs.steerInput;
+            throttle = _drivingInputs.throttleInput;
+            brake = _drivingInputs.brakeInput;
         }
         
         void LateUpdate() {
