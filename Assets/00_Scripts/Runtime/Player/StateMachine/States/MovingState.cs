@@ -18,13 +18,13 @@ public class MovingState : PlayerBaseState
         
     public override void Update()
     {
-        switch (character.Controller.sprintInput)
+        switch (_isSprinting)
         {
-            case 0 :    //WALK
+            case false :    //WALK
                 character.Controller.HandleMovementUpdate();
                 break;
-            case 1 :    //SPRINT
-                character.Controller.HandleMovementUpdate(1.3f);
+            case true :    //SPRINT
+                character.Controller.HandleMovementUpdate(1.7f);
                 break;
         }
         AnimationUpdate();
@@ -35,12 +35,26 @@ public class MovingState : PlayerBaseState
         x = Mathf.Lerp(x, character.Controller.moveInput.x, Time.deltaTime * 12);
         y = Mathf.Lerp(y, character.Controller.moveInput.y, Time.deltaTime * 12);
         
-        sprint = Mathf.Lerp(sprint, character.Controller.sprintInput, Time.deltaTime * 12);
+        SprintHandler();
+        sprint = Mathf.Lerp(sprint, _isSprinting ? 1 : 0, Time.deltaTime * 12);
         
         animator.SetFloat("x", x);
         animator.SetFloat("y", y);
         
-        animator.SetFloat("speed", _isSprinting ? 1 : 0);
+        animator.SetFloat("speed", sprint);
+    }
+
+    private void SprintHandler()
+    {
+        if (character.Controller._sprintAction.WasPressedThisFrame())
+        {
+            _isSprinting = !_isSprinting;
+        }
+
+        if (_isSprinting && character.Controller._controller.velocity.magnitude < 0.2f)
+        {
+            _isSprinting = false;
+        }
     }
     
         

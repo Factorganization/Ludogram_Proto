@@ -7,14 +7,13 @@ public class ControllerComponent : PlayerComponent
     private InputAction _moveAction;
     private InputAction _lookAction;
     private InputAction _jumpAction;
-    private InputAction _sprintAction;
+    internal InputAction _sprintAction;
 
-    private CharacterController _controller;
+    internal CharacterController _controller;
     private float _verticalVelocity;
     private float _verticalRotation; 
     
     internal Vector2 moveInput, lookInput;
-    internal float sprintInput;
 
     public ControllerComponent(PlayerCharacter character) : base(character)
     {
@@ -44,7 +43,6 @@ public class ControllerComponent : PlayerComponent
         moveInput = _moveAction != null ? _moveAction.ReadValue<Vector2>() : Vector2.zero;
         lookInput = _lookAction != null ? _lookAction.ReadValue<Vector2>() : Vector2.zero;
         bool jumpRequested = _jumpAction != null && _jumpAction.triggered;
-        sprintInput = _sprintAction.inProgress ? 1 : 0;
 
         float sensitivity = character.Playerstats.LookSensitivity;
         float upDownRange = character.Playerstats.UpDownLookRange;
