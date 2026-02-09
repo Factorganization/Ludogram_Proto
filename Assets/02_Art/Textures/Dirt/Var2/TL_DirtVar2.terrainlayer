@@ -6,9 +6,9 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TL_Sand
-  m_DiffuseTexture: {fileID: 2800000, guid: 27034a4851194654a86d96f0621399b7, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 316967059458df3448adb3f2cc7b3be9, type: 3}
+  m_Name: TL_DirtVar2
+  m_DiffuseTexture: {fileID: 2800000, guid: 136dba2f520b45a48ade34aa9e40f7f1, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 9004d447a1fa8bc4f8e0698c93866635, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 15, y: 15}
   m_TileOffset: {x: 0, y: 0}
