@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Wood
+  m_Name: M_Wood_Window
   m_Shader: {fileID: -6465566751694194690, guid: dba1310eb9dafa649b05e6a6d939c8b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -57,16 +57,16 @@ Material:
     - _Hue: 1
     - _IsRecolor: 1
     - _Metallic: 0
-    - _NormalStrength: 0.47
+    - _NormalStrength: 0.56
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Roughness_Strength: -1.58
+    - _Roughness_Strength: -3.45
     - _Smoothness: 0
-    - _TextureRotation: 0
+    - _TextureRotation: 93.07
     m_Colors:
-    - _Recolor_1: {r: 1, g: 0.7357311, b: 0.6084906, a: 1}
-    - _Recolor_2: {r: 0.4056604, g: 0.23827536, b: 0.08610717, a: 1}
-    - _Tiling_XY: {r: 25, g: 25, b: 0, a: 0}
+    - _Recolor_1: {r: 0.20754719, g: 0.08397339, b: 0.0244749, a: 1}
+    - _Recolor_2: {r: 0.41509432, g: 0.2499703, b: 0.09985758, a: 1}
+    - _Tiling_XY: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7380130833868267941
