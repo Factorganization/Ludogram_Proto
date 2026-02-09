@@ -1325,7 +1325,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6753,7 +6753,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8451671816365951077}
   - component: {fileID: 1591408674541547338}
-  - component: {fileID: 2710654707208533422}
   - component: {fileID: 812030917639629708}
   m_Layer: 10
   m_Name: RightMirrorCam
@@ -6816,7 +6815,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2047
+    m_Bits: 2015
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: bb686f0eef6f5c94c9a53173346c870e, type: 2}
   m_TargetDisplay: 0
@@ -6828,14 +6827,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2710654707208533422
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2573856039126098849}
-  m_Enabled: 1
 --- !u!114 &812030917639629708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11832,7 +11823,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4781751542220497489}
   - component: {fileID: 8132958851372110153}
-  - component: {fileID: 1086841807191818052}
   - component: {fileID: 324141371109990403}
   m_Layer: 10
   m_Name: LeftMirrorCam
@@ -11895,7 +11885,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2047
+    m_Bits: 2015
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 3ff1e979d442fdf4b954bd05789732c1, type: 2}
   m_TargetDisplay: 0
@@ -11907,14 +11897,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1086841807191818052
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4288175730059188358}
-  m_Enabled: 1
 --- !u!114 &324141371109990403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20293,7 +20275,6 @@ GameObject:
   m_Component:
   - component: {fileID: 981834006918222007}
   - component: {fileID: 4952193705581833118}
-  - component: {fileID: 8424835212368983871}
   - component: {fileID: 2705262183067285291}
   m_Layer: 10
   m_Name: CenterMirrorCam
@@ -20356,7 +20337,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2047
+    m_Bits: 2015
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 798a0476ca006ad4084f7fb827a00d43, type: 2}
   m_TargetDisplay: 0
@@ -20368,14 +20349,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8424835212368983871
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7466173257248685592}
-  m_Enabled: 1
 --- !u!114 &2705262183067285291
 MonoBehaviour:
   m_ObjectHideFlags: 0

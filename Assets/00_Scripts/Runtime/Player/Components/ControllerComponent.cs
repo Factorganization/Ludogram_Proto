@@ -7,10 +7,14 @@ public class ControllerComponent : PlayerComponent
     private InputAction _moveAction;
     private InputAction _lookAction;
     private InputAction _jumpAction;
+    private InputAction _sprintAction;
 
     private CharacterController _controller;
     private float _verticalVelocity;
     private float _verticalRotation; 
+    
+    internal Vector2 moveInput, lookInput;
+    internal float sprintInput;
 
     public ControllerComponent(PlayerCharacter character) : base(character)
     {
@@ -22,6 +26,7 @@ public class ControllerComponent : PlayerComponent
         character.FindInputAction("Move", out _moveAction);
         character.FindInputAction("Look", out _lookAction);
         character.FindInputAction("Jump", out _jumpAction);
+        character.FindInputAction("Sprint", out _sprintAction);
 
         _controller = character.GetCachedComponent<CharacterController>();
         if (_controller == null)
@@ -32,13 +37,14 @@ public class ControllerComponent : PlayerComponent
         Logs.Log("[PlayerControllerComponent] Initialized for " + character.name);
     }
 
-    public void HandleMovementUpdate()
+    public void HandleMovementUpdate(float speedMultiplier = 1)
     {
         if (character == null || _controller == null) return;
 
-        Vector2 moveInput = _moveAction != null ? _moveAction.ReadValue<Vector2>() : Vector2.zero;
-        Vector2 lookInput = _lookAction != null ? _lookAction.ReadValue<Vector2>() : Vector2.zero;
+        moveInput = _moveAction != null ? _moveAction.ReadValue<Vector2>() : Vector2.zero;
+        lookInput = _lookAction != null ? _lookAction.ReadValue<Vector2>() : Vector2.zero;
         bool jumpRequested = _jumpAction != null && _jumpAction.triggered;
+        sprintInput = _sprintAction.inProgress ? 1 : 0;
 
         float sensitivity = character.Playerstats.LookSensitivity;
         float upDownRange = character.Playerstats.UpDownLookRange;
@@ -62,7 +68,7 @@ public class ControllerComponent : PlayerComponent
         Vector3 right = character.transform.right;
         Vector3 forward = Vector3.ProjectOnPlane(character.transform.forward, Vector3.up).normalized;
         Vector3 move = forward * moveInput.y + right * moveInput.x;
-        move *= character.Playerstats.Speed;
+        move *= (character.Playerstats.Speed * speedMultiplier);
 
         // Gravity & Jump - JumpHeight is in meters, formula: v = sqrt(2 * g * h)
         if (_controller.isGrounded)
