@@ -5,9 +5,8 @@ public abstract class PlayerBaseState : IState
     protected readonly PlayerCharacter character;
     protected readonly Animator animator;
         
-    protected static readonly int LocomotionHash = Animator.StringToHash("Locomotion");
-    protected static readonly int ShootHash = Animator.StringToHash("Shoot");
-    protected static readonly int DashHash = Animator.StringToHash("Strike");
+    //protected static readonly int MovingHash = Animator.StringToHash("Locomotion");
+    //protected static readonly int InteractingHash = Animator.StringToHash("Interacting");
         
     protected const float k_crossFadeDuration = 0.1f; 
         

@@ -2,47 +2,53 @@ using MortierFu.Shared;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 [RequireComponent(typeof(PlayerInput), typeof(CharacterController), typeof(Rigidbody))]
 public class PlayerCharacter : Actor
 {
-    public static bool AllowGameplayActions { get; set; }
-
     public PlayerInput PlayerInput => GetCachedComponent<PlayerInput>();
     public int PlayerIndex => PlayerInput.playerIndex + 1; // PlayerIndex is 1-based for better readability in logs and UI.
-    
+
     [field: SerializeField, Expandable]
     public SO_PlayerStats Playerstats { get; private set; }
-    
-    public ControllerComponent Controller { get; private set; }
-    private StateMachine _stateMachine;
-    private MovingState _movingState;
-    
-    private Animator _animator;
 
+    public ControllerComponent Controller { get; private set; }
+    public DrivingComponent Driving { get; private set; }
+    private StateMachine _stateMachine;
+
+    [Header("References")]
+    [SerializeField] private Animator _animator;
+    [Tooltip("Pivot transform for camera pitch (up/down look).")]
+    [SerializeField] private Transform _headTransform;
+
+    public Transform HeadTransform => _headTransform;
+
+    // State flags for transitions (set these when entering/exiting states)
+    public bool IsStunned { get; set; }
+    public bool IsInteracting { get; set; }
+    public bool IsDriving { get; set; }
+    public bool IsFlying { get; set; }
+    
     protected override void BeginPlay()
     {
         Controller = new ControllerComponent(this);
-        _animator = GetCachedComponent<Animator>();
-        
         Controller.Initialize();
+        
+        Driving = new DrivingComponent(this);
+        Driving.Initialize();
         
         InitStateMachine();
     }
 
-    private void InitStateMachine()
+    private void Update()
     {
-        _stateMachine = new StateMachine();
-        _movingState = new MovingState(this, _animator);
-        
-        // Define transitions
-        
-        
-        
+        _stateMachine.Update();
     }
 
+
     #region Inputs
-    
+
     public void FindInputAction(string actionName, out InputAction action)
     {
 #if UNITY_EDITOR
@@ -56,15 +62,39 @@ public class PlayerCharacter : Actor
             Logs.LogError($"[PlayerCharacter]: Input Action '{actionName}' not found in PlayerInput actions.");
         }
     }
-    
+
     #endregion
-    
+
     #region State Machine
-    
+
+    private void InitStateMachine()
+    {
+        _stateMachine = new StateMachine();
+        var movingState = new MovingState(this, _animator);
+        var drivingState = new DrivingState(this, _animator);
+        var flyingState = new FlyingState(this, _animator);
+        var interactingState = new InteractingState(this, _animator);
+        var stunState = new StunState(this, _animator);
+
+        // --- Any() transitions: from any state when condition is true ---
+        Any(stunState, new FuncPredicate(() => IsStunned));
+        Any(drivingState, new FuncPredicate(() => IsDriving));
+        Any(interactingState, new FuncPredicate(() => IsInteracting));
+        Any(flyingState, new FuncPredicate(() => IsFlying));
+
+        // --- At() transitions: return to Moving from specific states ---
+        At(stunState, movingState, new FuncPredicate(() => !IsStunned));
+        At(drivingState, movingState, new FuncPredicate(() => !IsDriving));
+        At(interactingState, movingState, new FuncPredicate(() => !IsInteracting));
+        At(flyingState, movingState, new FuncPredicate(() => !IsFlying));
+
+        // Start in moving state
+        _stateMachine.SetState(movingState);
+    }
     private void At(IState from, IState to, IPredicate condition) =>
         _stateMachine.AddTransition(from, to, condition);
-
     private void Any(IState to, IPredicate condition) => _stateMachine.AddAnyTransition(to, condition);
-    
+
     #endregion
+    
 }

@@ -2,14 +2,14 @@ using System;
 using MortierFu.Shared;
 using UnityEngine.InputSystem;
 
-public abstract class CharacterComponent : IDisposable {
+public abstract class PlayerComponent : IDisposable {
     
     protected readonly PlayerCharacter character;
 
     public PlayerCharacter Character => character;
     public PlayerInput PlayerInput => character.PlayerInput;
         
-    protected CharacterComponent(PlayerCharacter character) {
+    protected PlayerComponent(PlayerCharacter character) {
         if (character == null) {
             Logs.LogError("Trying to create a character component for a null character!");
             return;

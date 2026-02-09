@@ -9,7 +9,7 @@ public class FlyingState : PlayerBaseState
     public override void OnEnter()
     {
         Logs.Log($"[Player {character.PlayerIndex}] Flying state entered");
-        animator.CrossFade(LocomotionHash, k_crossFadeDuration);
+        //animator?.CrossFade(MovingHash, k_crossFadeDuration);
     }
         
     public override void Update()
