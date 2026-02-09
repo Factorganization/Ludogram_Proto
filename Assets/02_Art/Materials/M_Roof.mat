@@ -128,11 +128,13 @@ Material:
     - _Hue: 1
     - _IsRecolor: 1
     - _Metallic: 0
+    - _NormalStrength: 1.92
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Roughness_Strength: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -150,6 +152,6 @@ Material:
     - _Recolor_1: {r: 0.514151, g: 0.9390307, b: 1, a: 1}
     - _Recolor_2: {r: 0, g: 0.16888644, b: 0.5188679, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling_XY: {r: 1, g: 1, b: 0, a: 0}
+    - _Tiling_XY: {r: 10, g: 10, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
