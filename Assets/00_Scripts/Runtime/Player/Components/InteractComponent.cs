@@ -12,6 +12,9 @@ public class InteractComponent : PlayerComponent
     
     // Buffer réutilisé pour le SphereCast non alloc
     private readonly RaycastHit[] _hitBuffer = new RaycastHit[256];
+    
+    // Stocker l'interactible dans la range pour l'activer lorsque l'input est pressé.
+    private IInteractable currentInteractable;
 
     public InteractComponent(PlayerCharacter character) : base(character)
     {
@@ -37,20 +40,43 @@ public class InteractComponent : PlayerComponent
         
         if (character.IsStunned) return;
 
-        if (!_interactAction.triggered) return;
-
         var (interactable, hitPosition) = FindBestInteractable();
-        if (interactable == null)
+        currentInteractable = interactable;
+        
+        if (currentInteractable == null)
         {
             Logs.Log($"[InteractComponent] No interactable found");
+            character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.NONE);
             return;
         }
 
-        var targetTransform = interactable.GetTransform();
+        var targetTransform = currentInteractable.GetTransform();
         Logs.Log($"[InteractComponent] Interacting with {targetTransform.name} at {hitPosition}");
+        // Update CrosshairUI
+        switch (currentInteractable)
+        {
+            case SteeringWheel:
+                character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.DRIVE);
+                break;
+            case Ladder : 
+                character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.ELSE);
+                break;
+            case Hole :
+                character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.REPAIR);
+                break;
+            //TODO : DESTROY ENEMIES CAR
+            
+            //TODO : Rope crank
+            
+            default:
+                character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.NONE);
+                break;
+        }
+        
 
+        if (!_interactAction.triggered) return;
         // Nouvelle API d'interaction générique
-        interactable.Interact(IInteractable.InteractAction.Primary, character.transform);
+        currentInteractable.Interact(IInteractable.InteractAction.Primary, character.transform);
     }
 
     private (IInteractable interactable, Vector3 hitPosition) FindBestInteractable()

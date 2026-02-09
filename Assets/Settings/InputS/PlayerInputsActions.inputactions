@@ -1043,7 +1043,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Steering",
+                    "name": "Steer",
                     "type": "Value",
                     "id": "002b6cc4-4612-40b2-bb9e-bc217553668c",
                     "expectedControlType": "Axis",
@@ -1362,7 +1362,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -1373,7 +1373,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard Mouse;Keyboard&Mouse",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1384,7 +1384,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard Mouse;Keyboard&Mouse",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1395,7 +1395,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -1406,7 +1406,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard Mouse;Keyboard&Mouse;Gamepad",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1417,7 +1417,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard Mouse",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1428,7 +1428,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -1439,7 +1439,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1450,7 +1450,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1461,7 +1461,7 @@
                     "interactions": "",
                     "processors": "Scale",
                     "groups": "G920",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1472,7 +1472,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Oculus Quest",
-                    "action": "Steering",
+                    "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

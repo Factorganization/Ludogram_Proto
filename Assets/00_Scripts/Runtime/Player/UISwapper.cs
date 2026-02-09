@@ -12,26 +12,26 @@ public class UISwapper : MonoBehaviour
         DRIVE,
         REPAIR,
         DESTROY,
-        ROPE
+        ELSE
     }
 
     public void SwapCrosshair(InteractionUI crosshair)
     {
         switch (crosshair)
         {
-            case InteractionUI.NONE :
+            case InteractionUI.NONE:
                 crosshairImage.sprite = crosshairs[0];
                 break;
-            case InteractionUI.DRIVE :
+            case InteractionUI.DRIVE:
                 crosshairImage.sprite = crosshairs[1];
                 break;
-            case InteractionUI.REPAIR :
+            case InteractionUI.REPAIR:
                 crosshairImage.sprite = crosshairs[2];
                 break;
-            case InteractionUI.DESTROY :
+            case InteractionUI.DESTROY:
                 crosshairImage.sprite = crosshairs[3];
                 break;
-            case InteractionUI.ROPE :
+            case InteractionUI.ELSE:
                 crosshairImage.sprite = crosshairs[4];
                 break;
         }
