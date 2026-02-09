@@ -28,6 +28,8 @@ public class MovingState : PlayerBaseState
                 break;
         }
         AnimationUpdate();
+        
+        character.Interact.HandleInteractUpdate();
     }
 
     private void AnimationUpdate()
