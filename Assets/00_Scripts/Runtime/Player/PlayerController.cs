@@ -1,4 +1,5 @@
 using System;
+using CarScripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,12 +24,10 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Rigidbody playerRigidbody;
+    [SerializeField] private CapsuleCollider playerCollider;
     [SerializeField] private Transform feet;
     [SerializeField] private Transform headTransform;
     [SerializeField] private Camera playerCam;
-
-    [Header("Driving")] 
-    [SerializeField] private SCC_InputProcessor vehicleInputProcessor;
 
     [Header("Debug")]
     public float CurrentSpeed { get; private set; }
@@ -42,10 +41,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 slopeMoveDir;
     [SerializeField] private Transform carrierTransform;
 
-    [SerializeField] private SCC_Inputs drivingInputs = new SCC_Inputs();
+    [SerializeField] private Inputs drivingInputs = new Inputs();
     
     private RaycastHit _slopeHit;
+    [SerializeField] private float horVelRagdoll = 12;
+    [SerializeField] private float vertVelRagdoll = 20;
+    private Vector2 _currentVelocity;
+    private Vector2 _previousVelocity;
+    private bool ragdoll;
     
+    // TODO action handbrake 
+    private InputAction handbrakeAction;
+    private CarController carController;
 
     #endregion
 
@@ -53,12 +60,23 @@ public class PlayerController : MonoBehaviour
     {
         CurrentSpeed = walkSpeed;
         
-        drivingInputs ??= new SCC_Inputs();
+        drivingInputs ??= new Inputs();
+    }
+
+    private void Start()
+    {
+        if (!playerCollider)
+        {
+            playerCollider = GetComponent<CapsuleCollider>();
+        }
     }
 
     private void OnEnable()
     {
         playerInput.ActivateInput();
+        
+        handbrakeAction = playerInput.actions["Handbrake"];
+        
         SwitchActionMap("Player");
     }
 
@@ -74,8 +92,10 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded && playerRigidbody.linearVelocity.y < 0)
             currentFallTime = 0;
-
-        vehicleInputProcessor?.OverrideInputs(drivingInputs);
+        
+        // Driving input override
+        
+        drivingInputs.handbrakeInput = handbrakeAction.ReadValue<float>();
     }
 
     private void FixedUpdate()
@@ -85,8 +105,9 @@ public class PlayerController : MonoBehaviour
         ApplyExtraGravity();
         ResetSprintIfNotMoving();
         
+        _currentVelocity = GetSpeed();
     }
-    
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag("Car"))
@@ -99,6 +120,8 @@ public class PlayerController : MonoBehaviour
         {
             OnEnterMovingObject(other.transform);
         }
+        _previousVelocity = GetSpeed();
+        FreeFall();
     }
 
     private void OnCollisionStay(Collision other)
@@ -129,6 +152,11 @@ public class PlayerController : MonoBehaviour
     public void OnMovement(InputValue inputValue)
     {
         MoveVector = inputValue.Get<Vector2>();
+
+        if (ragdoll)
+        {
+            SetRagdollMode(false);
+        }
     }
 
     public void OnRotation(InputValue inputValue)
@@ -153,6 +181,12 @@ public class PlayerController : MonoBehaviour
         if (inputValue.isPressed)
             TryInteract();
     }
+    
+    public void OnRagdoll(InputValue inputValue)
+    {
+        if (inputValue.isPressed)
+            SetRagdollMode(true);
+    }
 
     #endregion
     
@@ -173,10 +207,6 @@ public class PlayerController : MonoBehaviour
         drivingInputs.brakeInput = inputValue.Get<float>();
     }
 
-    public void OnHandbrake(InputValue inputValue)
-    {
-        drivingInputs.handbrakeInput = inputValue.Get<float>();
-    }
     
     public void OnExitVehicle(InputValue inputValue)
     {
@@ -228,6 +258,54 @@ public class PlayerController : MonoBehaviour
             upDownLookRange);
 
         headTransform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+    }
+
+    public Vector2 GetSpeed()
+    {
+        Vector3 playerVelocity = playerRigidbody.linearVelocity;
+
+        Vector3 groundVelocity = Vector3.zero;
+        
+        if (Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, out RaycastHit hit, 2f))
+        {
+            if (hit.rigidbody != null)
+            {
+                groundVelocity = hit.rigidbody.GetPointVelocity(hit.point);
+            }
+        }
+
+        Vector3 relativeVelocity = playerVelocity - groundVelocity;
+        
+        float verticalSpeed = relativeVelocity.y;
+
+        Vector3 horizontalVector = new Vector3(relativeVelocity.x, 0, relativeVelocity.z);
+        float horizontalSpeed = horizontalVector.magnitude; 
+
+        return new Vector2(horizontalSpeed, verticalSpeed);
+    }
+    
+    private void FreeFall()
+    {
+        float horVelDiff = Mathf.Abs(_previousVelocity.x - _currentVelocity.x);
+        float vertVelDiff = Mathf.Abs(_previousVelocity.y - _currentVelocity.y);
+        
+        if (horVelDiff > horVelRagdoll || vertVelDiff > vertVelRagdoll)
+        {
+            SetRagdollMode(true);
+        }
+    }
+
+    private void SetRagdollMode(bool ragdollState)
+    {
+        ragdoll = ragdollState;
+        if (ragdollState)
+        {
+            playerCollider.height = 0.001f;
+        }
+        else
+        {
+            playerCollider.height = 2f;
+        }
     }
 
     #endregion
@@ -332,19 +410,22 @@ public class PlayerController : MonoBehaviour
         playerInput.SwitchCurrentActionMap(map);
     }
 
-    public void BeginDriving(SCC_InputProcessor vehicleInputProcessor)
+    public void BeginDriving(CarController newCarController)
     {
         // Switch to driving action map and register vehicle input processor
-        this.vehicleInputProcessor = vehicleInputProcessor;
+        carController = newCarController;
+        carController.AssignInputs(drivingInputs);
         SwitchActionMap("Driving");
         
         // TODO: CAMERA et tout le reste tia capté 
+        Debug.Log($"Begin driving");
     }
 
     public void StopDriving()
     {
         // Switch back to player action map and unregister vehicle input processor
-        vehicleInputProcessor = null;
+        carController.ClearInputs();
+        carController = null;
         SwitchActionMap("Player");
         
         // TODO: CAMERA et tout le reste tia capté

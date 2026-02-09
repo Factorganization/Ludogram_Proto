@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Splines;
 using Unity.Mathematics;
@@ -29,7 +30,15 @@ public class Spline_Sampler : MonoBehaviour
         GetComponent<MeshFilter>().sharedMesh = mesh;
     }
 
-    private void Update()
+    private void Start()
+    {
+        UpdateSpline();
+
+        GetComponent<MeshCollider>().sharedMesh = GetComponent<MeshFilter>().sharedMesh;
+    }
+
+    [ContextMenu("Update spline")]
+    private void UpdateSpline()
     {
         if (!m_splineContainer) return;
 
