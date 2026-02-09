@@ -12,4 +12,11 @@ public class SO_PlayerStats : ScriptableObject
     public float Gravity = -9.81f;
     [Tooltip("Vertical look range in degrees (up/down).")]
     public float UpDownLookRange = 80f;
+    
+    [Header("Interaction")]
+    [Tooltip("Radius of the interaction sphere cast in front of the player.")]
+    public float InteractRadius = 0.25f;
+    
+    [Tooltip("Maximum distance for interaction checks in front of the player.")]
+    public float InteractDistance = 10f;
 }

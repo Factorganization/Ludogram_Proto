@@ -15,22 +15,22 @@ using UnityEngine;
 /// </summary>
 public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
-    public Inputs inputs;       //  Actual inputs.
+    public DrivingInputs drivingInputs;       //  Actual inputs.
     private static SCC_InputActions inputActions;
 
     private void Awake() {
         
 
         //  Creating inputs.
-        inputs = new Inputs();
+        drivingInputs = new DrivingInputs();
 
     }
 
     private void Update() {
 
         //  Creating inputs.
-        if (inputs == null)
-            inputs = new Inputs();
+        if (drivingInputs == null)
+            drivingInputs = new DrivingInputs();
 
         //  Receive inputs from the controller.
         GetInputs();
@@ -50,10 +50,10 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
         }
 
-        inputs.throttleInput = inputActions.Vehicle.Throttle.ReadValue<float>();
-        inputs.brakeInput = inputActions.Vehicle.Brake.ReadValue<float>();
-        inputs.steerInput = inputActions.Vehicle.Steering.ReadValue<float>();
-        inputs.handbrakeInput = inputActions.Vehicle.Handbrake.ReadValue<float>();
+        drivingInputs.throttleInput = inputActions.Vehicle.Throttle.ReadValue<float>();
+        drivingInputs.brakeInput = inputActions.Vehicle.Brake.ReadValue<float>();
+        drivingInputs.steerInput = inputActions.Vehicle.Steering.ReadValue<float>();
+        drivingInputs.handbrakeInput = inputActions.Vehicle.Handbrake.ReadValue<float>();
 
     }
 
