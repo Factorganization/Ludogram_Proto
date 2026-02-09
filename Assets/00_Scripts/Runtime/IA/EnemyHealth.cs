@@ -57,7 +57,18 @@ public class EnemyHealth : MonoBehaviour,IInteractable
         Destroy(gameObject);
     }
 
-    public void Interact(PlayerController interactor)
+    public Transform GetTransform() => transform;
+
+    public void Interact(IInteractable.InteractAction action, Transform interactor)
+    {
+        var playerCharacter = interactor.GetComponent<PlayerCharacter>();
+        if (playerCharacter != null)
+        {
+            Interact(playerCharacter);
+        }
+    }
+
+    public void Interact(PlayerCharacter interactor)
     {
         UpdateHealth(-(maxHealth/3)); // refacto : à changer par une valeur de degat sur l'interactor
     }
