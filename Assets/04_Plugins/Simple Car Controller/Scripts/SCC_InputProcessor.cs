@@ -6,6 +6,7 @@
 //
 //----------------------------------------------
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,36 +18,20 @@ using UnityEngine;
 public class SCC_InputProcessor : MonoBehaviour {
 
     public SCC_Inputs inputs = new SCC_Inputs();        //  Target inputs.
-
-    public bool receiveInputsFromInputManager = true;       //  Receive inputs directly from the SCC_InputManager.
+    
     public bool smoothInputs = true;        //  Smoothly lerp the inputs?
     public float smoothingFactor = 5f;      //  Smoothing factor.
+    
+    public static SCC_InputProcessor Instance;
 
-    private void Update() {
-
-        //  Creating new inputs if doesn't exists yet.
-        if (inputs == null)
-            inputs = new SCC_Inputs();
-
-        //Receiving all inputs from the SCC_InputManager.
-        if (receiveInputsFromInputManager) {
-
-            if (smoothInputs) {
-
-                inputs.throttleInput = Mathf.MoveTowards(inputs.throttleInput, SCC_InputManager.Instance.inputs.throttleInput, Time.deltaTime * smoothingFactor);
-                inputs.steerInput = Mathf.MoveTowards(inputs.steerInput, SCC_InputManager.Instance.inputs.steerInput, Time.deltaTime * smoothingFactor);
-                inputs.brakeInput = Mathf.MoveTowards(inputs.brakeInput, SCC_InputManager.Instance.inputs.brakeInput, Time.deltaTime * smoothingFactor);
-                inputs.handbrakeInput = Mathf.MoveTowards(inputs.handbrakeInput, SCC_InputManager.Instance.inputs.handbrakeInput, Time.deltaTime * smoothingFactor);
-
-            } else {
-
-                inputs = SCC_InputManager.Instance.inputs;
-
-            }
-
-        }
-
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(this);
     }
+
 
     /// <summary>
     /// Overrides inputs with given inputs. Be sure to disable the receiveInputsFromInputManager while overriding inputs. 

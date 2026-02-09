@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "SCC_InputActions",
     "maps": [
         {
@@ -36,7 +37,7 @@
                     "name": "Handbrake",
                     "type": "Button",
                     "id": "862a1da3-327a-425f-bc3a-c144667b0f07",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
