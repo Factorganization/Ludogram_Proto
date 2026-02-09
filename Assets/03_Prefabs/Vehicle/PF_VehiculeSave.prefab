@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5421159537680958978}
   - component: {fileID: 6588966140562657673}
   - component: {fileID: 1216312819346895832}
+  - component: {fileID: 3785366950726858163}
   m_Layer: 0
   m_Name: Ground (64)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3785366950726858163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28526260665524170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1216312819346895832}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &71309962736576872
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,9 +143,10 @@ GameObject:
   - component: {fileID: 1320823683847519855}
   - component: {fileID: 3082503610980933463}
   - component: {fileID: 8760452615668120678}
+  - component: {fileID: 5535276934744125713}
   m_Layer: 0
   m_Name: Ground_3
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,6 +244,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5535276934744125713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71309962736576872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8760452615668120678}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &195604898959462391
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,9 +274,10 @@ GameObject:
   - component: {fileID: 1035496870968415585}
   - component: {fileID: 4336365047207920121}
   - component: {fileID: 8579018051101047339}
+  - component: {fileID: 727503618796833481}
   m_Layer: 0
   m_Name: Ground (23)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,6 +375,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &727503618796833481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195604898959462391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8579018051101047339}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &396305079999999478
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +406,7 @@ GameObject:
   - component: {fileID: 8027352282000882925}
   m_Layer: 0
   m_Name: LeftBotWheel
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,9 +495,10 @@ GameObject:
   - component: {fileID: 3155804438605504066}
   - component: {fileID: 4805873111130410187}
   - component: {fileID: 4495153498583087946}
+  - component: {fileID: 1032843779134380677}
   m_Layer: 0
   m_Name: Ground (36)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,6 +596,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1032843779134380677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522147093732512128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4495153498583087946}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &942817715298141615
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,9 +626,10 @@ GameObject:
   - component: {fileID: 3438957733033422451}
   - component: {fileID: 6372804949704042623}
   - component: {fileID: 3684019837932375335}
+  - component: {fileID: 3642610806093299920}
   m_Layer: 6
   m_Name: Interactible (1)
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,6 +727,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3642610806093299920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942817715298141615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3684019837932375335}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1046724053392371950
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,9 +757,10 @@ GameObject:
   - component: {fileID: 1744972088224180598}
   - component: {fileID: 1627590995604941279}
   - component: {fileID: 4551618626021560012}
+  - component: {fileID: 8837627739333437808}
   m_Layer: 0
   m_Name: Ground (11)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -762,6 +858,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8837627739333437808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046724053392371950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4551618626021560012}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1377523720009980245
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,9 +888,10 @@ GameObject:
   - component: {fileID: 662129577089335061}
   - component: {fileID: 3014068425199283348}
   - component: {fileID: 9212231475293776782}
+  - component: {fileID: 3548486690961986148}
   m_Layer: 0
   m_Name: Ground (21)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -874,6 +989,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3548486690961986148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377523720009980245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 9212231475293776782}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1400279412900801921
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,9 +1019,10 @@ GameObject:
   - component: {fileID: 6155983527919329262}
   - component: {fileID: 6710972801535074731}
   - component: {fileID: 5374425064992086860}
+  - component: {fileID: 9148357435316158836}
   m_Layer: 0
   m_Name: Ground (54)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -986,6 +1120,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9148357435316158836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400279412900801921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5374425064992086860}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1471868545009041314
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,9 +1150,10 @@ GameObject:
   - component: {fileID: 2521617642394912432}
   - component: {fileID: 1872561885566656039}
   - component: {fileID: 5702974830409710902}
+  - component: {fileID: 2347234117009819294}
   m_Layer: 0
   m_Name: Ground (62)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,6 +1251,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2347234117009819294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471868545009041314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5702974830409710902}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1582277505642322128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,9 +1281,10 @@ GameObject:
   - component: {fileID: 8300685088127226869}
   - component: {fileID: 8747617797180220192}
   - component: {fileID: 6569155293139421252}
+  - component: {fileID: 3473773037974219452}
   m_Layer: 0
   m_Name: Ground (57)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1210,6 +1382,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3473773037974219452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582277505642322128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6569155293139421252}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1603203238956686564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,9 +1412,10 @@ GameObject:
   - component: {fileID: 417886828142624378}
   - component: {fileID: 738475747375810703}
   - component: {fileID: 8444567746655790061}
+  - component: {fileID: 3555090749131183015}
   m_Layer: 0
   m_Name: Ground (27)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1322,6 +1513,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3555090749131183015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603203238956686564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8444567746655790061}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1973503323033935521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1547,8 @@ GameObject:
   - component: {fileID: 7269232536231244238}
   - component: {fileID: 1370260122253238461}
   - component: {fileID: 6107748672219334233}
+  - component: {fileID: 1491256733620471164}
+  - component: {fileID: 1228115712809806815}
   m_Layer: 0
   m_Name: PF_VehiculeSave
   m_TagString: Car
@@ -1365,6 +1576,7 @@ Transform:
   - {fileID: 3365061621555397549}
   - {fileID: 2202485892835820764}
   - {fileID: 3302247264093301260}
+  - {fileID: 3745028509983717536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1208153643677277845
@@ -1545,6 +1757,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SCC_RigidStabilizer
   reflection: 75
   stability: 0.5
+--- !u!114 &1491256733620471164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973503323033935521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e67b7dc0064b14d863c0d400863e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  componentToAdd: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+--- !u!114 &1228115712809806815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973503323033935521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiRigidbody
+  kinematicForParticles: 1
 --- !u!1 &1986730960784650144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,9 +1795,10 @@ GameObject:
   - component: {fileID: 6235127601569386779}
   - component: {fileID: 4557182073079335174}
   - component: {fileID: 4088643289207113581}
+  - component: {fileID: 1893480223416755619}
   m_Layer: 0
   m_Name: Ground (55)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1657,6 +1896,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1893480223416755619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986730960784650144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4088643289207113581}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2009844649955740386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,9 +1926,10 @@ GameObject:
   - component: {fileID: 6793760899348007802}
   - component: {fileID: 7007923674839634419}
   - component: {fileID: 9170973791874401499}
+  - component: {fileID: 3538087993078466016}
   m_Layer: 6
   m_Name: Interactible (4)
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1769,6 +2027,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3538087993078466016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009844649955740386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 9170973791874401499}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2063010819214854149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,7 +2056,7 @@ GameObject:
   - component: {fileID: 5628270960802839207}
   m_Layer: 0
   m_Name: RightBackDoor
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1813,9 +2089,10 @@ GameObject:
   - component: {fileID: 6677728280271106879}
   - component: {fileID: 6843100717091788744}
   - component: {fileID: 3465871604663896235}
+  - component: {fileID: 3323108910068622676}
   m_Layer: 0
   m_Name: Ground (30)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,6 +2190,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3323108910068622676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287009644796404102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3465871604663896235}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2345016293510061221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,9 +2220,10 @@ GameObject:
   - component: {fileID: 5406793511593159037}
   - component: {fileID: 1220139254798931752}
   - component: {fileID: 511489367939896065}
+  - component: {fileID: 6270079418004348248}
   m_Layer: 0
   m_Name: Ground (4)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2025,6 +2321,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6270079418004348248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2345016293510061221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 511489367939896065}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2575197924473602928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,9 +2350,10 @@ GameObject:
   - component: {fileID: 3201871878545711127}
   - component: {fileID: 2700355383270971445}
   - component: {fileID: 4126461559494133210}
+  - component: {fileID: 5859754725446392390}
   m_Layer: 0
   m_Name: FRWheelCol
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2110,6 +2425,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
   wheelModel: {fileID: 9180515961114129206}
+--- !u!114 &5859754725446392390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575197924473602928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2700355383270971445}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2581854657232675876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,9 +2455,10 @@ GameObject:
   - component: {fileID: 1861474997864883519}
   - component: {fileID: 7669443873520089800}
   - component: {fileID: 4241847908529283147}
+  - component: {fileID: 305982753241251917}
   m_Layer: 0
   m_Name: Ground (28)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2222,6 +2556,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &305982753241251917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2581854657232675876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4241847908529283147}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2597339146562468879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,9 +2586,10 @@ GameObject:
   - component: {fileID: 3331438189512644269}
   - component: {fileID: 7897472813645242979}
   - component: {fileID: 234910366755330112}
+  - component: {fileID: 7614333421168813613}
   m_Layer: 0
   m_Name: Ground (24)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2334,6 +2687,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7614333421168813613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2597339146562468879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 234910366755330112}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2618879041713314151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,9 +2717,10 @@ GameObject:
   - component: {fileID: 992026279520047323}
   - component: {fileID: 3453374957609381490}
   - component: {fileID: 501852894745791297}
+  - component: {fileID: 270717962224858774}
   m_Layer: 0
   m_Name: Ground (1)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2446,6 +2818,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &270717962224858774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618879041713314151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 501852894745791297}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2777539289934805971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,9 +2848,10 @@ GameObject:
   - component: {fileID: 8691481624089357087}
   - component: {fileID: 6137017048153212913}
   - component: {fileID: 7307002173579450083}
+  - component: {fileID: 7692378752248861015}
   m_Layer: 0
   m_Name: Ground (20)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2558,6 +2949,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7692378752248861015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777539289934805971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7307002173579450083}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2806543416139240939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,9 +2979,10 @@ GameObject:
   - component: {fileID: 6279434244078538926}
   - component: {fileID: 5173547820556453502}
   - component: {fileID: 8635805265506883991}
+  - component: {fileID: 6761718843705159285}
   m_Layer: 0
   m_Name: Object
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2671,6 +3081,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6761718843705159285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2806543416139240939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8635805265506883991}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2898993505612233507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2683,9 +3111,10 @@ GameObject:
   - component: {fileID: 5473264731801025656}
   - component: {fileID: 7729826101073451871}
   - component: {fileID: 2167404153420962462}
+  - component: {fileID: 4790208868930768849}
   m_Layer: 0
   m_Name: Ground (37)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2783,6 +3212,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4790208868930768849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898993505612233507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2167404153420962462}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3000806109866528335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,9 +3242,10 @@ GameObject:
   - component: {fileID: 7456344424767599593}
   - component: {fileID: 3135002233638045950}
   - component: {fileID: 6867879177843955778}
+  - component: {fileID: 1398399479857363327}
   m_Layer: 0
   m_Name: Ground (18)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2895,6 +3343,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1398399479857363327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000806109866528335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6867879177843955778}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3117899893316644673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,9 +3373,10 @@ GameObject:
   - component: {fileID: 4369767462098325352}
   - component: {fileID: 7076485320864868655}
   - component: {fileID: 618142278910873173}
+  - component: {fileID: 4585803910059124649}
   m_Layer: 0
   m_Name: Ground (67)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3007,6 +3474,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4585803910059124649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3117899893316644673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 618142278910873173}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3257328458645450541
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,9 +3504,10 @@ GameObject:
   - component: {fileID: 5379319082900016138}
   - component: {fileID: 3802887481971246861}
   - component: {fileID: 6343419867765117397}
+  - component: {fileID: 5227714757714027920}
   m_Layer: 0
   m_Name: Ground_4
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3119,6 +3605,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5227714757714027920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3257328458645450541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6343419867765117397}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3259341242774887231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,9 +3634,10 @@ GameObject:
   - component: {fileID: 1749513370243156393}
   - component: {fileID: 7126319016912159587}
   - component: {fileID: 5586440189409327443}
+  - component: {fileID: 7377019793857028729}
   m_Layer: 0
   m_Name: RLWheelCol
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3204,6 +3709,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
   wheelModel: {fileID: 5059165688195186791}
+--- !u!114 &7377019793857028729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3259341242774887231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7126319016912159587}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3276858789020184537
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,9 +3739,10 @@ GameObject:
   - component: {fileID: 5271047244230012816}
   - component: {fileID: 5884646874250032659}
   - component: {fileID: 1566940705424933965}
+  - component: {fileID: 6401252836009198779}
   m_Layer: 0
   m_Name: Ground (69)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3316,6 +3840,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6401252836009198779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276858789020184537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1566940705424933965}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3382214284838146965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,9 +3870,10 @@ GameObject:
   - component: {fileID: 7409002561339895015}
   - component: {fileID: 3112073516608772796}
   - component: {fileID: 1044021115296966160}
+  - component: {fileID: 3243115964661489126}
   m_Layer: 0
   m_Name: Ground (14)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3428,6 +3971,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3243115964661489126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3382214284838146965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1044021115296966160}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3477912263012992122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,7 +4000,7 @@ GameObject:
   - component: {fileID: 3365061621555397549}
   m_Layer: 0
   m_Name: Carosserie
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3555,7 +4116,7 @@ GameObject:
   - component: {fileID: 849474029388864745}
   m_Layer: 0
   m_Name: LeftMidWheel
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3643,7 +4204,7 @@ GameObject:
   - component: {fileID: 3968325281485249429}
   m_Layer: 0
   m_Name: COM
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3674,9 +4235,10 @@ GameObject:
   - component: {fileID: 8251200611004911637}
   - component: {fileID: 32022577141806507}
   - component: {fileID: 1188503813583385387}
+  - component: {fileID: 1761984586093825735}
   m_Layer: 0
   m_Name: RRWheelCol
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3748,6 +4310,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
   wheelModel: {fileID: 8499824221663992159}
+--- !u!114 &1761984586093825735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739071840295859027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 32022577141806507}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3744810347872383346
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,9 +4340,10 @@ GameObject:
   - component: {fileID: 6871767765611622055}
   - component: {fileID: 8373759167033991557}
   - component: {fileID: 2103426740540571118}
+  - component: {fileID: 3045139785001054859}
   m_Layer: 0
   m_Name: Ground (6)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3860,6 +4441,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3045139785001054859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744810347872383346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2103426740540571118}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3753116184776066946
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,9 +4471,10 @@ GameObject:
   - component: {fileID: 6921052879271508920}
   - component: {fileID: 5863979146210515404}
   - component: {fileID: 8647695516550192130}
+  - component: {fileID: 950320437650603978}
   m_Layer: 0
   m_Name: Ground (42)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3972,6 +4572,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &950320437650603978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753116184776066946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8647695516550192130}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3824886487173100461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,9 +4602,10 @@ GameObject:
   - component: {fileID: 4289735640001545873}
   - component: {fileID: 6303403073787083432}
   - component: {fileID: 2000640400607259327}
+  - component: {fileID: 6180499085138400161}
   m_Layer: 0
   m_Name: Ground (40)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4084,6 +4703,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6180499085138400161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824886487173100461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2000640400607259327}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3883644871717489394
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,9 +4733,10 @@ GameObject:
   - component: {fileID: 1317137946254629851}
   - component: {fileID: 7505950506310953005}
   - component: {fileID: 3995329134377908379}
+  - component: {fileID: 8428831137235191572}
   m_Layer: 0
   m_Name: Ground (48)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4196,6 +4834,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8428831137235191572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883644871717489394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3995329134377908379}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &3946515484648113429
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,9 +4864,10 @@ GameObject:
   - component: {fileID: 8220656433671028482}
   - component: {fileID: 3828064856088788454}
   - component: {fileID: 4252907090967294394}
+  - component: {fileID: 3843265233898949741}
   m_Layer: 0
   m_Name: Ground (60)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4308,6 +4965,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3843265233898949741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946515484648113429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4252907090967294394}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4034122031558460080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,9 +4995,10 @@ GameObject:
   - component: {fileID: 2467529468880548111}
   - component: {fileID: 9070422423276039324}
   - component: {fileID: 6274579816578264189}
+  - component: {fileID: 9162076527832514057}
   m_Layer: 0
   m_Name: Ground (41)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4420,6 +5096,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9162076527832514057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034122031558460080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6274579816578264189}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4042975967509897463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,9 +5126,10 @@ GameObject:
   - component: {fileID: 476994756811858376}
   - component: {fileID: 2016120940400580360}
   - component: {fileID: 5737884601676433272}
+  - component: {fileID: 5737232364130047062}
   m_Layer: 0
   m_Name: Ground (8)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4532,6 +5227,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5737232364130047062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4042975967509897463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5737884601676433272}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4159000736233104795
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,9 +5257,10 @@ GameObject:
   - component: {fileID: 3030261635033113025}
   - component: {fileID: 5522800069035851401}
   - component: {fileID: 2278761994183821678}
+  - component: {fileID: 5008314565252098858}
   m_Layer: 0
   m_Name: Ground (33)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4644,6 +5358,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5008314565252098858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4159000736233104795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2278761994183821678}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4239529356970114786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4656,9 +5388,10 @@ GameObject:
   - component: {fileID: 6011429906669382407}
   - component: {fileID: 2525080969128327653}
   - component: {fileID: 7294584202658444828}
+  - component: {fileID: 7147220101494444149}
   m_Layer: 0
   m_Name: Ground_7
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4756,6 +5489,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7147220101494444149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239529356970114786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7294584202658444828}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4278725481053699405
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,9 +5519,10 @@ GameObject:
   - component: {fileID: 3130669617550359320}
   - component: {fileID: 8377626878366996789}
   - component: {fileID: 6405512087778540017}
+  - component: {fileID: 6122411410057245590}
   m_Layer: 0
   m_Name: Ground_6
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4868,6 +5620,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6122411410057245590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278725481053699405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6405512087778540017}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4298585546371381694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4880,9 +5650,10 @@ GameObject:
   - component: {fileID: 1020845697730005106}
   - component: {fileID: 6704819108997439202}
   - component: {fileID: 7194439410997490134}
+  - component: {fileID: 3785222659529813883}
   m_Layer: 0
   m_Name: Ground (70)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4980,6 +5751,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3785222659529813883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4298585546371381694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7194439410997490134}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4358035114423637138
 GameObject:
   m_ObjectHideFlags: 0
@@ -4992,9 +5781,10 @@ GameObject:
   - component: {fileID: 76683720268048667}
   - component: {fileID: 1110687740732908240}
   - component: {fileID: 1165672476214662879}
+  - component: {fileID: 8632370986324434608}
   m_Layer: 0
   m_Name: Ground_5
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5092,6 +5882,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8632370986324434608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358035114423637138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1165672476214662879}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4420495284938044958
 GameObject:
   m_ObjectHideFlags: 0
@@ -5104,9 +5912,10 @@ GameObject:
   - component: {fileID: 6672082944610281501}
   - component: {fileID: 3476743592819481745}
   - component: {fileID: 1556808497782982522}
+  - component: {fileID: 4044505423518969982}
   m_Layer: 0
   m_Name: Ground (34)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5204,6 +6013,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4044505423518969982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420495284938044958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1556808497782982522}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4568533553084276222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,9 +6043,10 @@ GameObject:
   - component: {fileID: 2849543895438721393}
   - component: {fileID: 3519495518362484491}
   - component: {fileID: 1948727195582678678}
+  - component: {fileID: 3245238532065268849}
   m_Layer: 6
   m_Name: Interactible (2)
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5316,6 +6144,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3245238532065268849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4568533553084276222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1948727195582678678}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4774302232024076550
 GameObject:
   m_ObjectHideFlags: 0
@@ -5327,9 +6173,10 @@ GameObject:
   - component: {fileID: 6050397539027949012}
   - component: {fileID: 1185037855060186319}
   - component: {fileID: 6018921461983489182}
+  - component: {fileID: 1031451205031289948}
   m_Layer: 0
   m_Name: MRWheelCol
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5401,6 +6248,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
   wheelModel: {fileID: 5062386191515626142}
+--- !u!114 &1031451205031289948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4774302232024076550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1185037855060186319}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4796392408690173296
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,9 +6278,10 @@ GameObject:
   - component: {fileID: 2004001443578241693}
   - component: {fileID: 5208454422666224490}
   - component: {fileID: 5609779301380931233}
+  - component: {fileID: 4290900988543030339}
   m_Layer: 0
   m_Name: Ground (25)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5513,6 +6379,369 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4290900988543030339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796392408690173296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5609779301380931233}
+  m_DistanceField: {fileID: 0}
+--- !u!1 &4815515832997625028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3595134953701109608}
+  - component: {fileID: 3023944099114208580}
+  - component: {fileID: 7656299184715176708}
+  - component: {fileID: 4558177058802283043}
+  - component: {fileID: 1336754302911865882}
+  - component: {fileID: 8167250627461708943}
+  - component: {fileID: 274741494646283835}
+  m_Layer: 10
+  m_Name: Chain_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3595134953701109608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815515832997625028}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.78, y: 8.984, z: 10.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4319611359073920835}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3023944099114208580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815515832997625028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solverIndices:
+    serializedContents: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000
+    m_AlignBytes: 16
+  groupID: 1
+  m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
+  m_SurfaceCollisions: 1
+  m_MassScale: 1
+  m_SelfCollisions: 1
+  restLength_: 6.8750076
+  elements:
+  - particle1: 0
+    particle2: 1
+    restLength: 0.21982504
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 1
+    particle2: 2
+    restLength: 0.2300377
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 2
+    particle2: 3
+    restLength: 0.2325357
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 3
+    particle2: 4
+    restLength: 0.23047782
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 4
+    particle2: 5
+    restLength: 0.22633041
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 5
+    particle2: 6
+    restLength: 0.23323444
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 6
+    particle2: 7
+    restLength: 0.22673967
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 7
+    particle2: 8
+    restLength: 0.23124819
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 8
+    particle2: 9
+    restLength: 0.22839487
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 9
+    particle2: 10
+    restLength: 0.23063587
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 10
+    particle2: 11
+    restLength: 0.22868025
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 11
+    particle2: 12
+    restLength: 0.23053461
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 12
+    particle2: 13
+    restLength: 0.22878931
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 13
+    particle2: 14
+    restLength: 0.23021722
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 14
+    particle2: 15
+    restLength: 0.22923201
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 15
+    particle2: 16
+    restLength: 0.22929883
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 16
+    particle2: 17
+    restLength: 0.23021244
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 17
+    particle2: 18
+    restLength: 0.22836013
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 18
+    particle2: 19
+    restLength: 0.2311205
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 19
+    particle2: 20
+    restLength: 0.22779982
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 20
+    particle2: 21
+    restLength: 0.23167636
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 21
+    particle2: 22
+    restLength: 0.22701463
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 22
+    particle2: 23
+    restLength: 0.23259972
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 23
+    particle2: 24
+    restLength: 0.22479895
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 24
+    particle2: 25
+    restLength: 0.23460472
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 25
+    particle2: 26
+    restLength: 0.2284436
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 26
+    particle2: 27
+    restLength: 0.22668995
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 27
+    particle2: 28
+    restLength: 0.23331344
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 28
+    particle2: 29
+    restLength: 0.22980218
+    constraintForce: 0
+    tearResistance: 1
+  - particle1: 29
+    particle2: 30
+    restLength: 0.22235861
+    constraintForce: 0
+    tearResistance: 1
+  _aerodynamicsEnabled: 1
+  _drag: 0.05
+  _lift: 0.02
+  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
+  tearingEnabled: 0
+  tearResistanceMultiplier: 1000
+  tearRate: 1
+  _distanceConstraintsEnabled: 1
+  _stretchingScale: 1
+  _stretchCompliance: 0
+  _maxCompression: 0
+  _bendConstraintsEnabled: 1
+  _bendCompliance: 0
+  _maxBending: 0.05
+  _plasticYield: 0
+  _plasticCreep: 0
+--- !u!114 &7656299184715176708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815515832997625028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decimation: 0
+  smoothing: 0
+  twist: 0
+  indexInSystem: 0
+--- !u!114 &4558177058802283043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815515832997625028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ac962c0743c400aa230ebf871b6156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkMesh: {fileID: 4300000, guid: 70b5250dc71ea4b35987751a9843d8d6, type: 3}
+  linkMaterial: {fileID: 2100000, guid: b74081a5a5bbf418ea9f95bfec18f393, type: 2}
+  linkScale: {x: 34, y: 34, z: 34}
+  twistAnchor: 0
+  linkTwist: 0
+  linkModifiers:
+  - translation: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+  - translation: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 90}
+  renderParameters:
+    layer: 10
+    lightProbeUsage: 1
+    reflectionProbeUsage: 1
+    shadowCastingMode: 1
+    receiveShadows: 1
+    motionVectors: 0
+    renderingLayerMask: 4294967295
+--- !u!114 &1336754302911865882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815515832997625028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ac962c0743c400aa230ebf871b6156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkMesh: {fileID: 4300000, guid: 70b5250dc71ea4b35987751a9843d8d6, type: 3}
+  linkMaterial: {fileID: 2100000, guid: edc856900ac3941a98996e21e91e215e, type: 2}
+  linkScale: {x: 34, y: 34, z: 34}
+  twistAnchor: 0
+  linkTwist: 0
+  linkModifiers:
+  - translation: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+  - translation: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+  renderParameters:
+    layer: 10
+    lightProbeUsage: 1
+    reflectionProbeUsage: 1
+    shadowCastingMode: 1
+    receiveShadows: 1
+    motionVectors: 0
+    renderingLayerMask: 4294967295
+--- !u!114 &8167250627461708943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815515832997625028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actor: {fileID: 3023944099114208580}
+  m_Target: {fileID: 0}
+  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
+  m_AttachmentType: 1
+  m_ConstrainOrientation: 0
+  m_Projection: 0
+  m_Compliance: 0
+  breakThreshold: Infinity
+--- !u!114 &274741494646283835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815515832997625028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actor: {fileID: 3023944099114208580}
+  m_Target: {fileID: 4212376364183097039}
+  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
+  m_AttachmentType: 0
+  m_ConstrainOrientation: 0
+  m_Projection: 0
+  m_Compliance: 0
+  breakThreshold: Infinity
 --- !u!1 &4822461724323421870
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,9 +6754,10 @@ GameObject:
   - component: {fileID: 226608921251069752}
   - component: {fileID: 6722559040119970780}
   - component: {fileID: 7233722515559532678}
+  - component: {fileID: 7835180269353977921}
   m_Layer: 0
   m_Name: Ground (65)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5625,6 +6855,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7835180269353977921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822461724323421870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7233722515559532678}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4887601211073740399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5637,9 +6885,10 @@ GameObject:
   - component: {fileID: 7434923397083352892}
   - component: {fileID: 272369863455164377}
   - component: {fileID: 632728082183341533}
+  - component: {fileID: 7079794491192781968}
   m_Layer: 0
   m_Name: Ground (29)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5737,6 +6986,155 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7079794491192781968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887601211073740399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 632728082183341533}
+  m_DistanceField: {fileID: 0}
+--- !u!1 &5139582161283280479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4212376364183097039}
+  - component: {fileID: 8311651615679523001}
+  - component: {fileID: 1291160716430340048}
+  - component: {fileID: 2229503504955481639}
+  - component: {fileID: 6881700922946713800}
+  m_Layer: 0
+  m_Name: RopeHolder_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4212376364183097039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139582161283280479}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.56, y: 5.776, z: -3.324}
+  m_LocalScale: {x: 0.36361, y: 0.36361, z: 0.36361}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3745028509983717536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8311651615679523001
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139582161283280479}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1291160716430340048
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139582161283280479}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2229503504955481639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139582161283280479}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6881700922946713800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139582161283280479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2229503504955481639}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5160401187581435675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5749,9 +7147,10 @@ GameObject:
   - component: {fileID: 2993812015050905927}
   - component: {fileID: 1717801831577183675}
   - component: {fileID: 6136668359809013087}
+  - component: {fileID: 8464787154055287568}
   m_Layer: 0
   m_Name: Ground_2
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5849,6 +7248,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8464787154055287568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160401187581435675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6136668359809013087}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5179012230956921531
 GameObject:
   m_ObjectHideFlags: 0
@@ -5861,9 +7278,10 @@ GameObject:
   - component: {fileID: 3943095542769929735}
   - component: {fileID: 3218204728331155533}
   - component: {fileID: 4460452187696828012}
+  - component: {fileID: 8022275494540360257}
   m_Layer: 6
   m_Name: Interactible (3)
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5961,6 +7379,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8022275494540360257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179012230956921531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4460452187696828012}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5218486498688904236
 GameObject:
   m_ObjectHideFlags: 0
@@ -5973,9 +7409,10 @@ GameObject:
   - component: {fileID: 978319167086533323}
   - component: {fileID: 5230572980950827874}
   - component: {fileID: 5032757916982593690}
+  - component: {fileID: 5494223814570694642}
   m_Layer: 0
   m_Name: Ground (7)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6073,6 +7510,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5494223814570694642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218486498688904236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5032757916982593690}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5258488388147817068
 GameObject:
   m_ObjectHideFlags: 0
@@ -6085,9 +7540,10 @@ GameObject:
   - component: {fileID: 7490660054491737977}
   - component: {fileID: 7290492777776102044}
   - component: {fileID: 5083068654873019469}
+  - component: {fileID: 3970339213896990535}
   m_Layer: 0
   m_Name: Ground (66)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6185,6 +7641,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3970339213896990535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258488388147817068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5083068654873019469}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5271230727650681283
 GameObject:
   m_ObjectHideFlags: 0
@@ -6197,9 +7671,10 @@ GameObject:
   - component: {fileID: 8311533607809448022}
   - component: {fileID: 6705756895803563949}
   - component: {fileID: 894450109594407217}
+  - component: {fileID: 2496465424272509423}
   m_Layer: 0
   m_Name: Ground (44)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6297,6 +7772,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2496465424272509423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5271230727650681283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 894450109594407217}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5297359851387658127
 GameObject:
   m_ObjectHideFlags: 0
@@ -6309,9 +7802,10 @@ GameObject:
   - component: {fileID: 758688676262845804}
   - component: {fileID: 2999098012757223079}
   - component: {fileID: 105001347230682644}
+  - component: {fileID: 1971165528031088809}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6409,6 +7903,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1971165528031088809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297359851387658127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 105001347230682644}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5343231275909875674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6421,9 +7933,10 @@ GameObject:
   - component: {fileID: 7706544806672276600}
   - component: {fileID: 3338889937996337421}
   - component: {fileID: 2974761246260790810}
+  - component: {fileID: 8395413133436626274}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6521,6 +8034,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8395413133436626274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343231275909875674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2974761246260790810}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5393265926331291125
 GameObject:
   m_ObjectHideFlags: 0
@@ -6533,9 +8064,10 @@ GameObject:
   - component: {fileID: 7048456745895053730}
   - component: {fileID: 309242622848603681}
   - component: {fileID: 307454369842405357}
+  - component: {fileID: 5987042059193223036}
   m_Layer: 0
   m_Name: Ground (22)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6633,6 +8165,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5987042059193223036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393265926331291125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 307454369842405357}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5455500412978229009
 GameObject:
   m_ObjectHideFlags: 0
@@ -6645,9 +8195,10 @@ GameObject:
   - component: {fileID: 6919780062832618683}
   - component: {fileID: 8665990886128708639}
   - component: {fileID: 3844696988332243886}
+  - component: {fileID: 2247371460186492136}
   m_Layer: 0
   m_Name: Ground (9)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6745,6 +8296,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2247371460186492136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455500412978229009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3844696988332243886}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5468702215469103918
 GameObject:
   m_ObjectHideFlags: 0
@@ -6757,9 +8326,10 @@ GameObject:
   - component: {fileID: 7201533728544808862}
   - component: {fileID: 5170290005929287904}
   - component: {fileID: 1249815230691775822}
+  - component: {fileID: 178092000945332586}
   m_Layer: 0
   m_Name: Ground (51)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6857,6 +8427,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &178092000945332586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468702215469103918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1249815230691775822}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5517065951774951404
 GameObject:
   m_ObjectHideFlags: 0
@@ -6869,9 +8457,10 @@ GameObject:
   - component: {fileID: 6806136028933267757}
   - component: {fileID: 842947151817233274}
   - component: {fileID: 1221389592753402663}
+  - component: {fileID: 5679761787855535908}
   m_Layer: 0
   m_Name: Ground (26)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6969,6 +8558,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5679761787855535908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517065951774951404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1221389592753402663}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5529641346168434875
 GameObject:
   m_ObjectHideFlags: 0
@@ -6981,9 +8588,10 @@ GameObject:
   - component: {fileID: 5994234549708297510}
   - component: {fileID: 7276687199406224636}
   - component: {fileID: 7195479964026787359}
+  - component: {fileID: 5207125499939222586}
   m_Layer: 0
   m_Name: Ground (49)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7081,6 +8689,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5207125499939222586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5529641346168434875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7195479964026787359}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5622272194666796471
 GameObject:
   m_ObjectHideFlags: 0
@@ -7093,9 +8719,10 @@ GameObject:
   - component: {fileID: 4913945711869621386}
   - component: {fileID: 5215489608858241982}
   - component: {fileID: 6051556388276793897}
+  - component: {fileID: 6774241565034301144}
   m_Layer: 0
   m_Name: Ground_1
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7193,6 +8820,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6774241565034301144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5622272194666796471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6051556388276793897}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5657707816439054701
 GameObject:
   m_ObjectHideFlags: 0
@@ -7204,7 +8849,7 @@ GameObject:
   - component: {fileID: 3302247264093301260}
   m_Layer: 0
   m_Name: Elements
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7243,9 +8888,10 @@ GameObject:
   - component: {fileID: 5254022554154168638}
   - component: {fileID: 6975862539437203749}
   - component: {fileID: 82231145087075281}
+  - component: {fileID: 5612298841851558335}
   m_Layer: 0
   m_Name: Ground (72)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7343,6 +8989,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5612298841851558335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5734350924873208444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 82231145087075281}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5826404761860052937
 GameObject:
   m_ObjectHideFlags: 0
@@ -7355,9 +9019,10 @@ GameObject:
   - component: {fileID: 5282516480121240703}
   - component: {fileID: 7822426480883735585}
   - component: {fileID: 5329234935847916981}
+  - component: {fileID: 584583972745249235}
   m_Layer: 0
   m_Name: Ground (10)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7455,6 +9120,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &584583972745249235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5826404761860052937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5329234935847916981}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &5872270502578503410
 GameObject:
   m_ObjectHideFlags: 0
@@ -7467,9 +9150,10 @@ GameObject:
   - component: {fileID: 5964162782747395959}
   - component: {fileID: 2874083733902344870}
   - component: {fileID: 6374931055195718211}
+  - component: {fileID: 6842024996389872739}
   m_Layer: 0
   m_Name: Ground (2)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7567,6 +9251,57 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6842024996389872739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872270502578503410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6374931055195718211}
+  m_DistanceField: {fileID: 0}
+--- !u!1 &6006372576998453391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3745028509983717536}
+  m_Layer: 0
+  m_Name: Ropes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3745028509983717536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006372576998453391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4319611359073920835}
+  - {fileID: 4212376364183097039}
+  m_Father: {fileID: 3173132064401502594}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6226469275366224119
 GameObject:
   m_ObjectHideFlags: 0
@@ -7579,9 +9314,10 @@ GameObject:
   - component: {fileID: 3605776393502922232}
   - component: {fileID: 1968960315620298590}
   - component: {fileID: 9033578800923010696}
+  - component: {fileID: 6588684583640809161}
   m_Layer: 0
   m_Name: Ground (47)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7679,6 +9415,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6588684583640809161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226469275366224119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 9033578800923010696}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6259585268233111035
 GameObject:
   m_ObjectHideFlags: 0
@@ -7692,7 +9446,7 @@ GameObject:
   - component: {fileID: 7415541152414464122}
   m_Layer: 0
   m_Name: RightMidWheel
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7781,9 +9535,10 @@ GameObject:
   - component: {fileID: 7721105378347072114}
   - component: {fileID: 8146853890325785790}
   - component: {fileID: 6131959291741128455}
+  - component: {fileID: 130456819779801475}
   m_Layer: 0
   m_Name: Ground (50)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7881,6 +9636,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &130456819779801475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6296770875771165499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6131959291741128455}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6300811066478570583
 GameObject:
   m_ObjectHideFlags: 0
@@ -7893,9 +9666,10 @@ GameObject:
   - component: {fileID: 7268899345214989614}
   - component: {fileID: 6450044620122333086}
   - component: {fileID: 1856084273004283468}
+  - component: {fileID: 237732037827919086}
   m_Layer: 0
   m_Name: Ground (39)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7993,6 +9767,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &237732037827919086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300811066478570583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1856084273004283468}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6385330329719907681
 GameObject:
   m_ObjectHideFlags: 0
@@ -8005,9 +9797,10 @@ GameObject:
   - component: {fileID: 2392263095761436534}
   - component: {fileID: 2965982890028804824}
   - component: {fileID: 7184157176772807340}
+  - component: {fileID: 487098022998834323}
   m_Layer: 0
   m_Name: Ground (17)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8105,6 +9898,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &487098022998834323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385330329719907681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7184157176772807340}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6412649089186283439
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,9 +9928,10 @@ GameObject:
   - component: {fileID: 4821582029130645498}
   - component: {fileID: 3665714797063781502}
   - component: {fileID: 2962682625010120720}
+  - component: {fileID: 433873066009422920}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8217,6 +10029,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &433873066009422920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6412649089186283439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2962682625010120720}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6442772361014216083
 GameObject:
   m_ObjectHideFlags: 0
@@ -8229,9 +10059,10 @@ GameObject:
   - component: {fileID: 5533207898022390483}
   - component: {fileID: 299870766532451967}
   - component: {fileID: 1603554467769191523}
+  - component: {fileID: 6746216666011922104}
   m_Layer: 0
   m_Name: Ground (53)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8329,6 +10160,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6746216666011922104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442772361014216083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1603554467769191523}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6445571733389020152
 GameObject:
   m_ObjectHideFlags: 0
@@ -8341,9 +10190,10 @@ GameObject:
   - component: {fileID: 3536809053013652617}
   - component: {fileID: 3898639008546664018}
   - component: {fileID: 2360169552164163294}
+  - component: {fileID: 1233088478341501629}
   m_Layer: 0
   m_Name: Ground (56)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8441,6 +10291,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1233088478341501629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6445571733389020152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2360169552164163294}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6567386185283518289
 GameObject:
   m_ObjectHideFlags: 0
@@ -8453,9 +10321,10 @@ GameObject:
   - component: {fileID: 6381033227103997086}
   - component: {fileID: 2136619206481765376}
   - component: {fileID: 2412389573644317764}
+  - component: {fileID: 5326929386216644961}
   m_Layer: 0
   m_Name: Ground (35)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8553,6 +10422,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5326929386216644961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567386185283518289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2412389573644317764}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6632683719389235871
 GameObject:
   m_ObjectHideFlags: 0
@@ -8564,9 +10451,10 @@ GameObject:
   - component: {fileID: 534561493506519219}
   - component: {fileID: 2849447051724460067}
   - component: {fileID: 1371639918951237614}
+  - component: {fileID: 3229297225368106814}
   m_Layer: 0
   m_Name: MLWheelCol
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8638,6 +10526,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
   wheelModel: {fileID: 8356433442933892285}
+--- !u!114 &3229297225368106814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632683719389235871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2849447051724460067}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6666322077472603184
 GameObject:
   m_ObjectHideFlags: 0
@@ -8650,9 +10556,10 @@ GameObject:
   - component: {fileID: 1879839083539054689}
   - component: {fileID: 6404693553837564836}
   - component: {fileID: 2683343297101223053}
+  - component: {fileID: 1537098410397740033}
   m_Layer: 0
   m_Name: Ground (38)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8750,6 +10657,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1537098410397740033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666322077472603184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2683343297101223053}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6861335174445505819
 GameObject:
   m_ObjectHideFlags: 0
@@ -8762,9 +10687,10 @@ GameObject:
   - component: {fileID: 2331989975027083987}
   - component: {fileID: 2412807978566113999}
   - component: {fileID: 7968806901782976731}
+  - component: {fileID: 5716289654639938503}
   m_Layer: 0
   m_Name: Ground (52)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8862,6 +10788,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5716289654639938503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6861335174445505819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7968806901782976731}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6899871023275054655
 GameObject:
   m_ObjectHideFlags: 0
@@ -8874,9 +10818,10 @@ GameObject:
   - component: {fileID: 8466267595571935995}
   - component: {fileID: 437129829140701947}
   - component: {fileID: 9123745540995568624}
+  - component: {fileID: 1884267053862501683}
   m_Layer: 0
   m_Name: Ground (46)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8974,6 +10919,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1884267053862501683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899871023275054655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 9123745540995568624}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &6931135551432556012
 GameObject:
   m_ObjectHideFlags: 0
@@ -8986,9 +10949,10 @@ GameObject:
   - component: {fileID: 6001900217838688106}
   - component: {fileID: 2520134911838369513}
   - component: {fileID: 1561682295893333534}
+  - component: {fileID: 5614381686225697387}
   m_Layer: 0
   m_Name: Object
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9087,6 +11051,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5614381686225697387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931135551432556012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1561682295893333534}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7188057063703983964
 GameObject:
   m_ObjectHideFlags: 0
@@ -9099,9 +11081,10 @@ GameObject:
   - component: {fileID: 694381384924060815}
   - component: {fileID: 5356866205557819237}
   - component: {fileID: 372892048197389785}
+  - component: {fileID: 8963522457658852918}
   m_Layer: 0
   m_Name: Ground_8
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9199,6 +11182,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8963522457658852918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7188057063703983964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 372892048197389785}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7224280657570450118
 GameObject:
   m_ObjectHideFlags: 0
@@ -9210,7 +11211,7 @@ GameObject:
   - component: {fileID: 2202485892835820764}
   m_Layer: 0
   m_Name: Wheels
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9248,9 +11249,10 @@ GameObject:
   - component: {fileID: 5906948607479173222}
   - component: {fileID: 6398277161062536835}
   - component: {fileID: 3699402543031699183}
+  - component: {fileID: 2322570207983247361}
   m_Layer: 0
   m_Name: Ground (43)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9348,6 +11350,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2322570207983247361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277824267508549608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3699402543031699183}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7399813699921645610
 GameObject:
   m_ObjectHideFlags: 0
@@ -9359,7 +11379,7 @@ GameObject:
   - component: {fileID: 4302350066070710558}
   m_Layer: 0
   m_Name: WheelsCollision
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9397,9 +11417,10 @@ GameObject:
   - component: {fileID: 6579210450063960630}
   - component: {fileID: 3271273147076857518}
   - component: {fileID: 5604502314826132157}
+  - component: {fileID: 1066934407403402274}
   m_Layer: 0
   m_Name: Ground (19)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9497,6 +11518,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1066934407403402274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7505775427219866278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5604502314826132157}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7580292260060693321
 GameObject:
   m_ObjectHideFlags: 0
@@ -9509,9 +11548,10 @@ GameObject:
   - component: {fileID: 305630903678967733}
   - component: {fileID: 5492066859069572522}
   - component: {fileID: 2545516181391313298}
+  - component: {fileID: 6601012061676644929}
   m_Layer: 0
   m_Name: Ground_9
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9609,6 +11649,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6601012061676644929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580292260060693321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2545516181391313298}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7621679149854319130
 GameObject:
   m_ObjectHideFlags: 0
@@ -9621,9 +11679,10 @@ GameObject:
   - component: {fileID: 2847784613342931548}
   - component: {fileID: 1445341429775714194}
   - component: {fileID: 7606539599488855569}
+  - component: {fileID: 7220054934551381278}
   m_Layer: 0
   m_Name: Ground (12)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9721,6 +11780,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7220054934551381278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7621679149854319130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7606539599488855569}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7669883239735755255
 GameObject:
   m_ObjectHideFlags: 0
@@ -9733,9 +11810,10 @@ GameObject:
   - component: {fileID: 2477660486021473559}
   - component: {fileID: 676802744802778370}
   - component: {fileID: 248105396128797615}
+  - component: {fileID: 3236326225107850885}
   m_Layer: 0
   m_Name: Ground (32)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9833,6 +11911,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3236326225107850885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7669883239735755255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 248105396128797615}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7684155336722036034
 GameObject:
   m_ObjectHideFlags: 0
@@ -9845,9 +11941,10 @@ GameObject:
   - component: {fileID: 7782785723723201926}
   - component: {fileID: 4374860859182245196}
   - component: {fileID: 4700748168553074849}
+  - component: {fileID: 1351544761218257396}
   m_Layer: 0
   m_Name: Ground (15)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9945,6 +12042,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1351544761218257396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7684155336722036034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4700748168553074849}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7751226036629110254
 GameObject:
   m_ObjectHideFlags: 0
@@ -9957,9 +12072,10 @@ GameObject:
   - component: {fileID: 8465348031974215779}
   - component: {fileID: 9050895428719916811}
   - component: {fileID: 8250563357272544908}
+  - component: {fileID: 1724364950271010312}
   m_Layer: 0
   m_Name: Ground (31)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10057,6 +12173,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1724364950271010312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751226036629110254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8250563357272544908}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &7766439611640382207
 GameObject:
   m_ObjectHideFlags: 0
@@ -10070,7 +12204,7 @@ GameObject:
   - component: {fileID: 1616052626536660286}
   m_Layer: 0
   m_Name: RightBotWheel
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10159,9 +12293,10 @@ GameObject:
   - component: {fileID: 2760113867314541674}
   - component: {fileID: 2860341857170285273}
   - component: {fileID: 7310461323580300279}
+  - component: {fileID: 8078761658289641391}
   m_Layer: 0
   m_Name: Ground (68)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10259,6 +12394,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8078761658289641391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7790692031322973789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7310461323580300279}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8041215800225792477
 GameObject:
   m_ObjectHideFlags: 0
@@ -10271,9 +12424,10 @@ GameObject:
   - component: {fileID: 5884086619436987163}
   - component: {fileID: 8606272407957285866}
   - component: {fileID: 2773338070672026871}
+  - component: {fileID: 9038317492919453397}
   m_Layer: 6
   m_Name: Interactible
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10371,6 +12525,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9038317492919453397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8041215800225792477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2773338070672026871}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8217252641834248644
 GameObject:
   m_ObjectHideFlags: 0
@@ -10383,9 +12555,10 @@ GameObject:
   - component: {fileID: 8927247798784559010}
   - component: {fileID: 8251395661784628149}
   - component: {fileID: 2124590104796485483}
+  - component: {fileID: 3894679048204556483}
   m_Layer: 0
   m_Name: Ground (3)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10483,6 +12656,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3894679048204556483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217252641834248644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2124590104796485483}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8403098481280372019
 GameObject:
   m_ObjectHideFlags: 0
@@ -10495,9 +12686,10 @@ GameObject:
   - component: {fileID: 1792168271614506865}
   - component: {fileID: 8616847191398325855}
   - component: {fileID: 4025453218949026986}
+  - component: {fileID: 7962305051473329299}
   m_Layer: 0
   m_Name: Ground (45)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10595,6 +12787,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7962305051473329299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8403098481280372019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4025453218949026986}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8488126537274756680
 GameObject:
   m_ObjectHideFlags: 0
@@ -10607,9 +12817,10 @@ GameObject:
   - component: {fileID: 3505877236416220887}
   - component: {fileID: 2164609549609668417}
   - component: {fileID: 4201278943148773464}
+  - component: {fileID: 5378130402547366758}
   m_Layer: 0
   m_Name: Ground (71)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10707,6 +12918,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5378130402547366758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488126537274756680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4201278943148773464}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8502170321241014742
 GameObject:
   m_ObjectHideFlags: 0
@@ -10719,9 +12948,10 @@ GameObject:
   - component: {fileID: 5539155056348913233}
   - component: {fileID: 5551596053307136874}
   - component: {fileID: 5872669302351641397}
+  - component: {fileID: 4875025767759580505}
   m_Layer: 0
   m_Name: Ground (59)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10819,6 +13049,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4875025767759580505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8502170321241014742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5872669302351641397}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8539874443604755253
 GameObject:
   m_ObjectHideFlags: 0
@@ -10830,9 +13078,10 @@ GameObject:
   - component: {fileID: 9114621204869965945}
   - component: {fileID: 2393914323061681501}
   - component: {fileID: 3454617196584895008}
+  - component: {fileID: 7006721065572681361}
   m_Layer: 0
   m_Name: FLWheelCol
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10904,6 +13153,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SCC_Wheel
   wheelModel: {fileID: 2433563926998650559}
+--- !u!114 &7006721065572681361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539874443604755253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2393914323061681501}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8559910554196920971
 GameObject:
   m_ObjectHideFlags: 0
@@ -10916,9 +13183,10 @@ GameObject:
   - component: {fileID: 1829953075284090645}
   - component: {fileID: 7285175569570284687}
   - component: {fileID: 5558593891658801335}
+  - component: {fileID: 3583620211509103628}
   m_Layer: 0
   m_Name: Ground (13)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11016,6 +13284,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3583620211509103628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559910554196920971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5558593891658801335}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8618268007010271830
 GameObject:
   m_ObjectHideFlags: 0
@@ -11027,9 +13313,10 @@ GameObject:
   - component: {fileID: 4124143816263926738}
   - component: {fileID: 7340300186713437822}
   - component: {fileID: 8296692963841367151}
+  - component: {fileID: 2076071272486553196}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11078,6 +13365,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.072226, y: 0.14917822, z: 2.5286505}
   m_Center: {x: 0.831218, y: 0.17544472, z: -0.009924308}
+--- !u!114 &2076071272486553196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618268007010271830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8296692963841367151}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8775331256137356671
 GameObject:
   m_ObjectHideFlags: 0
@@ -11090,9 +13395,10 @@ GameObject:
   - component: {fileID: 2473046288425695143}
   - component: {fileID: 217200367455435828}
   - component: {fileID: 7606695070203670855}
+  - component: {fileID: 2204136153472109022}
   m_Layer: 0
   m_Name: Ground (16)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11190,6 +13496,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2204136153472109022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775331256137356671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7606695070203670855}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8900788632032899542
 GameObject:
   m_ObjectHideFlags: 0
@@ -11203,7 +13527,7 @@ GameObject:
   - component: {fileID: 2552027353949175295}
   m_Layer: 0
   m_Name: LeftTopWheel
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11216,13 +13540,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8900788632032899542}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 3.75, y: 0, z: 3.5000007}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2202485892835820764}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
 --- !u!33 &3027685997906984328
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11292,9 +13616,10 @@ GameObject:
   - component: {fileID: 8671365117582613205}
   - component: {fileID: 5908534931718793900}
   - component: {fileID: 8901742240918246897}
+  - component: {fileID: 9165676136895802190}
   m_Layer: 0
   m_Name: Ground (5)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11392,6 +13717,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9165676136895802190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013896618387527091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8901742240918246897}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &9021739828552757251
 GameObject:
   m_ObjectHideFlags: 0
@@ -11403,7 +13746,7 @@ GameObject:
   - component: {fileID: 4785453245292451617}
   m_Layer: 0
   m_Name: LeftBackDoor
-  m_TagString: MovableObject
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11436,9 +13779,10 @@ GameObject:
   - component: {fileID: 3455454571398671317}
   - component: {fileID: 187030635089570728}
   - component: {fileID: 2934079929091497446}
+  - component: {fileID: 6341738345535227272}
   m_Layer: 0
   m_Name: Ground (63)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11536,6 +13880,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6341738345535227272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077212154203244066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2934079929091497446}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &9115691263147854587
 GameObject:
   m_ObjectHideFlags: 0
@@ -11548,9 +13910,10 @@ GameObject:
   - component: {fileID: 7910196071236796091}
   - component: {fileID: 20121463103357021}
   - component: {fileID: 7851588732554837721}
+  - component: {fileID: 2402749956237106998}
   m_Layer: 0
   m_Name: Ground (58)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11648,6 +14011,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2402749956237106998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115691263147854587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 7851588732554837721}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &9200869427719989436
 GameObject:
   m_ObjectHideFlags: 0
@@ -11661,7 +14042,7 @@ GameObject:
   - component: {fileID: 8916055099331966941}
   m_Layer: 0
   m_Name: RightTopWheel
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11750,9 +14131,10 @@ GameObject:
   - component: {fileID: 8523447037450254339}
   - component: {fileID: 2345694878941539593}
   - component: {fileID: 5105324681778752135}
+  - component: {fileID: 2451496608461050675}
   m_Layer: 0
   m_Name: Ground (61)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11850,6 +14232,207 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2451496608461050675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9218178037562691287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5105324681778752135}
+  m_DistanceField: {fileID: 0}
+--- !u!1 &9220180587332770205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4319611359073920835}
+  - component: {fileID: 5454654666534161310}
+  m_Layer: 0
+  m_Name: Obi Solver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4319611359073920835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220180587332770205}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.06, y: -2.81697, z: -12.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3595134953701109608}
+  m_Father: {fileID: 3745028509983717536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5454654666534161310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220180587332770205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d174fab52f0c4b8399f25d5c3ea524c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simulateWhenInvisible: 1
+  m_Backend: 1
+  substeps: 4
+  maxStepsPerFrame: 1
+  synchronization: 0
+  parameters:
+    mode: 0
+    interpolation: 0
+    gravity: {x: 0, y: -9.81, z: 0}
+    ambientWind: {x: 0, y: 0, z: 0}
+    foamGravityScale: 1
+    damping: 0.5
+    maxAnisotropy: 3
+    sleepThreshold: 0.001
+    maxVelocity: 50
+    maxAngularVelocity: 20
+    collisionMargin: 0.02
+    maxDepenetration: 10
+    colliderCCD: 1
+    particleCCD: 0
+    shockPropagation: 0
+    surfaceCollisionIterations: 8
+    surfaceCollisionTolerance: 0.005
+    diffusionMask: {x: 1, y: 1, z: 1, w: 1}
+  m_MaxSurfaceChunks: 32768
+  maxQueryResults: 8192
+  maxFoamParticles: 8192
+  maxParticleNeighbors: 128
+  maxParticleContacts: 6
+  useLimits: 0
+  killOffLimitsParticles: 0
+  boundaryLimits:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 5, y: 5, z: 5}
+  gravity: {x: 0, y: -9.81, z: 0}
+  gravitySpace: 1
+  ambientWind: {x: 0, y: 0, z: 0}
+  windSpace: 1
+  foamSubsteps: 1
+  foamMinNeighbors: 3
+  foamCollisions: 0
+  maxFoamVelocityStretch: 0.3
+  foamRadiusScale: 1
+  foamFade: {x: 0.05, y: 0.8}
+  foamAccelAgingRange: {x: 0.5, y: 0.8}
+  foamAccelAging: 4
+  foamVolumeDensity: 0.1
+  foamAmbientDensity: 0.02
+  foamScatterColor: {r: 0.8, g: 0.75, b: 0.7, a: 1}
+  foamAmbientColor: {r: 0.4, g: 0.5, b: 0.6, a: 1}
+  worldLinearInertiaScale: 0
+  worldAngularInertiaScale: 0
+  synchronousSpatialQueries: 0
+  distanceConstraintParameters:
+    evaluationOrder: 0
+    iterations: 5
+    SORFactor: 1
+    enabled: 1
+  bendingConstraintParameters:
+    evaluationOrder: 0
+    iterations: 1
+    SORFactor: 1
+    enabled: 1
+  particleCollisionConstraintParameters:
+    evaluationOrder: 1
+    iterations: 2
+    SORFactor: 1
+    enabled: 1
+  particleFrictionConstraintParameters:
+    evaluationOrder: 1
+    iterations: 2
+    SORFactor: 1
+    enabled: 1
+  collisionConstraintParameters:
+    evaluationOrder: 1
+    iterations: 2
+    SORFactor: 1
+    enabled: 1
+  frictionConstraintParameters:
+    evaluationOrder: 1
+    iterations: 2
+    SORFactor: 1
+    enabled: 1
+  skinConstraintParameters:
+    evaluationOrder: 0
+    iterations: 3
+    SORFactor: 1
+    enabled: 0
+  volumeConstraintParameters:
+    evaluationOrder: 1
+    iterations: 3
+    SORFactor: 1
+    enabled: 0
+  shapeMatchingConstraintParameters:
+    evaluationOrder: 1
+    iterations: 3
+    SORFactor: 1
+    enabled: 0
+  tetherConstraintParameters:
+    evaluationOrder: 1
+    iterations: 2
+    SORFactor: 1
+    enabled: 1
+  pinConstraintParameters:
+    evaluationOrder: 1
+    iterations: 2
+    SORFactor: 1
+    enabled: 1
+  pinholeConstraintParameters:
+    evaluationOrder: 1
+    iterations: 1
+    SORFactor: 1
+    enabled: 1
+  stitchConstraintParameters:
+    evaluationOrder: 1
+    iterations: 5
+    SORFactor: 1
+    enabled: 0
+  densityConstraintParameters:
+    evaluationOrder: 1
+    iterations: 2
+    SORFactor: 1
+    enabled: 0
+  stretchShearConstraintParameters:
+    evaluationOrder: 0
+    iterations: 3
+    SORFactor: 1
+    enabled: 0
+  bendTwistConstraintParameters:
+    evaluationOrder: 0
+    iterations: 3
+    SORFactor: 1
+    enabled: 0
+  chainConstraintParameters:
+    evaluationOrder: 0
+    iterations: 3
+    SORFactor: 1
+    enabled: 1
 --- !u!1001 &2949082380226675465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11864,7 +14447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358132666506446909, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
       propertyPath: m_TagString
-      value: MovableObject
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 4496709363208434159, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
       propertyPath: _inputProcessor
@@ -11913,8 +14496,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4358132666506446909, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8249511168567131791}
   m_SourcePrefab: {fileID: 100100000, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
+--- !u!1 &1483386721270942516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4358132666506446909, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
+  m_PrefabInstance: {fileID: 2949082380226675465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8249511168567131791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483386721270942516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2390324478313047441}
+  m_DistanceField: {fileID: 0}
+--- !u!136 &2390324478313047441 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 702875719080044184, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
+  m_PrefabInstance: {fileID: 2949082380226675465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8990134040716513353 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6065893001950417728, guid: fd9a5645117cf304b8142d33042485a6, type: 3}
@@ -11932,13 +14546,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 329312548796901243, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 682523609692562760, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 682523609692562760, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 1850973738828579790, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850973738828579790, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 1875136539021214627, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11990,35 +14616,303 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3105232070458168593, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_TagString
-      value: MovableObject
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 3258152594085128480, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3258152594085128480, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 3403723026868600166, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403723026868600166, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 6309325985693993202, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6309325985693993202, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 6536818995435218748, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536818995435218748, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 8856914990021432072, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
       propertyPath: m_Name
       value: Ladder Collider
       objectReference: {fileID: 0}
+    - target: {fileID: 8856914990021432072, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8856914990021432072, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3719141368844130088}
+    - targetCorrespondingSourceObject: {fileID: 329312548796901243, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3705763950028383845}
+    - targetCorrespondingSourceObject: {fileID: 3258152594085128480, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7890249492845516236}
+    - targetCorrespondingSourceObject: {fileID: 3403723026868600166, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6725265976078492868}
+    - targetCorrespondingSourceObject: {fileID: 682523609692562760, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7431442351598603628}
+    - targetCorrespondingSourceObject: {fileID: 6536818995435218748, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 428987151567609396}
+    - targetCorrespondingSourceObject: {fileID: 6309325985693993202, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8640128157472995893}
+    - targetCorrespondingSourceObject: {fileID: 1850973738828579790, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 998117956312890383}
   m_SourcePrefab: {fileID: 100100000, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+--- !u!1 &51493756222476707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6536818995435218748, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &428987151567609396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51493756222476707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3066837241090212729}
+  m_DistanceField: {fileID: 0}
+--- !u!136 &155436975418264396 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6352813710741863891, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &383678180766579349 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6868721944998661130, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &976922661258346093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6309325985693993202, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8640128157472995893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976922661258346093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4923958717460074701}
+  m_DistanceField: {fileID: 0}
+--- !u!136 &1717896646506048510 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 5608866750497578337, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2372154777383789975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8856914990021432072, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3719141368844130088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372154777383789975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 383678180766579349}
+  m_DistanceField: {fileID: 0}
+--- !u!136 &3066837241090212729 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 8110449986051028454, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &3367117488431825137 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 8411568475713549934, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &4191514014597484097 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6929558490811480286, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4612901859538810172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1875136539021214627, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
   m_PrefabInstance: {fileID: 6485609465117390495}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4876969298059326801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1850973738828579790, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &998117956312890383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876969298059326801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3367117488431825137}
+  m_DistanceField: {fileID: 0}
+--- !u!136 &4923958717460074701 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 2185628110523655762, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6014923341388927959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 682523609692562760, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7431442351598603628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014923341388927959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8272111578105330470}
+  m_DistanceField: {fileID: 0}
+--- !u!1 &6814077588980732388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 329312548796901243, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3705763950028383845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814077588980732388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 1717896646506048510}
+  m_DistanceField: {fileID: 0}
+--- !u!136 &8272111578105330470 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 2940273129918205369, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8448180594045242361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3403723026868600166, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6725265976078492868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448180594045242361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 155436975418264396}
+  m_DistanceField: {fileID: 0}
+--- !u!1 &8590277604635680703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3258152594085128480, guid: 877c54adfbf4fec47851aa8a25889531, type: 3}
+  m_PrefabInstance: {fileID: 6485609465117390495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7890249492845516236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590277604635680703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4191514014597484097}
+  m_DistanceField: {fileID: 0}
