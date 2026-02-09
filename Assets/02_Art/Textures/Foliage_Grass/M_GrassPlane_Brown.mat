@@ -59,7 +59,7 @@ Material:
     - White: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5943396, g: 0.570655, b: 0.45696867, a: 0}
     - _Color_1: {r: 0.21386614, g: 0.509434, b: 0.35767716, a: 1}
-    - _Color_2: {r: 0.46274513, g: 0.39607847, b: 0.3254902, a: 1}
+    - _Color_2: {r: 0.3679245, g: 0.31481844, b: 0.25858846, a: 1}
     - _GradientRange: {r: -0.5, g: 1.04, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
