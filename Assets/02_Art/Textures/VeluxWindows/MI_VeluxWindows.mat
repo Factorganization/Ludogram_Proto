@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_RoofTiles
+  m_Name: MI_VeluxWindows
   m_Shader: {fileID: -6465566751694194690, guid: dba1310eb9dafa649b05e6a6d939c8b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,11 +25,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 315db093db8907d459c652b9b78a70f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7d42b7445702c23448843a8c625692b4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 5725962a57b18ba4d945611e42886f8c, type: 3}
+        m_Texture: {fileID: 2800000, guid: c5c33d859efc6d34ab0a0cb2d8262027, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
@@ -57,15 +57,15 @@ Material:
     - _Hue: 1
     - _IsRecolor: 1
     - _Metallic: 0
-    - _NormalStrength: 0.7
+    - _NormalStrength: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Roughness_Strength: 0.02
+    - _Roughness_Strength: -0.3
     - _Smoothness: 0
     - _TextureRotation: 0
     m_Colors:
-    - _Recolor_1: {r: 1, g: 0.84876186, b: 0.6179246, a: 1}
-    - _Recolor_2: {r: 0.8867924, g: 0.4337753, b: 0.17150229, a: 1}
+    - _Recolor_1: {r: 0.25, g: 1, b: 0.9761364, a: 1}
+    - _Recolor_2: {r: 0.3962264, g: 0.23679723, b: 0.1439124, a: 1}
     - _Tiling_XY: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
