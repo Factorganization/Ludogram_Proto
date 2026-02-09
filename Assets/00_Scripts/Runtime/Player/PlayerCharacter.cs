@@ -24,6 +24,7 @@ public class PlayerCharacter : Actor
 
     [Header("References")]
     [SerializeField] private Animator _animator;
+    [SerializeField] internal UISwapper _uiSwapper;
     [Tooltip("Pivot transform for camera pitch (up/down look).")]
     [SerializeField] private Transform _headTransform;
 
