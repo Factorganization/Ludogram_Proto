@@ -18,5 +18,5 @@ MonoBehaviour:
   LookSensitivity: 5
   Gravity: -9.81
   UpDownLookRange: 80
-  InteractRadius: 3
+  InteractRadius: 2
   InteractDistance: 1
