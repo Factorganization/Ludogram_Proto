@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 slopeMoveDir;
     [SerializeField] private Transform carrierTransform;
 
-    [SerializeField] private Inputs drivingInputs = new Inputs();
+    [SerializeField] private DrivingInputs drivingDrivingInputs = new DrivingInputs();
     
     private RaycastHit _slopeHit;
     [SerializeField] private float horVelRagdoll = 12;
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         CurrentSpeed = walkSpeed;
         
-        drivingInputs ??= new Inputs();
+        drivingDrivingInputs ??= new DrivingInputs();
     }
 
     private void Start()
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
         
         // Driving input override
         
-        drivingInputs.handbrakeInput = handbrakeAction.ReadValue<float>();
+        drivingDrivingInputs.handbrakeInput = handbrakeAction.ReadValue<float>();
     }
 
     private void FixedUpdate()
@@ -194,17 +194,17 @@ public class PlayerController : MonoBehaviour
     
     public void OnThrottle(InputValue inputValue)
     {
-        drivingInputs.throttleInput = inputValue.Get<float>();
+        drivingDrivingInputs.throttleInput = inputValue.Get<float>();
     }
     
     public void OnSteering(InputValue inputValue)
     {
-        drivingInputs.steerInput = inputValue.Get<float>();
+        drivingDrivingInputs.steerInput = inputValue.Get<float>();
     }
     
     public void OnBrake(InputValue inputValue)
     {
-        drivingInputs.brakeInput = inputValue.Get<float>();
+        drivingDrivingInputs.brakeInput = inputValue.Get<float>();
     }
 
     
@@ -387,7 +387,7 @@ public class PlayerController : MonoBehaviour
                 10f))
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
-                interactable.Interact(this);
+                interactable.Interact(new PlayerCharacter());
         }
     }
     
@@ -414,7 +414,7 @@ public class PlayerController : MonoBehaviour
     {
         // Switch to driving action map and register vehicle input processor
         carController = newCarController;
-        carController.AssignInputs(drivingInputs);
+        carController.AssignInputs(drivingDrivingInputs);
         SwitchActionMap("Driving");
         
         // TODO: CAMERA et tout le reste tia capté 

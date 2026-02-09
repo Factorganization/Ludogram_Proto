@@ -3,10 +3,20 @@ using UnityEngine;
 public class Ladder : MonoBehaviour, IInteractable
 {
     [SerializeField] private float power = 1000;
-    public void Interact(PlayerController interactor)
+    
+    public Transform GetTransform() => transform;
+
+    public void Interact(IInteractable.InteractAction action, Transform interactor)
     {
-        interactor.TryGetComponent(out Rigidbody rb);
-        
-        rb?.AddForce(transform.up * power, ForceMode.Acceleration);
+        var playerCharacter = interactor.GetComponent<PlayerCharacter>();
+        if (playerCharacter != null)
+        {
+            Interact(playerCharacter);
+        }
+    }
+
+    public void Interact(PlayerCharacter interactor)
+    {
+        interactor.transform.localPosition += new Vector3(0, 1 * power, -1f) ;
     }
 }

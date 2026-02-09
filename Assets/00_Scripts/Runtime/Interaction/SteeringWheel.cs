@@ -4,7 +4,20 @@ using UnityEngine;
 public class SteeringWheel : MonoBehaviour, IInteractable
 {
     [SerializeField] private CarController carController;
-    public void Interact(PlayerController interactor)
+    
+    public Transform GetTransform() => transform;
+
+    public void Interact(IInteractable.InteractAction action, Transform interactor)
+    {
+        // Pour l'instant on ignore le type d'action et on route vers l'API legacy
+        var playerCharacter = interactor.GetComponent<PlayerCharacter>();
+        if (playerCharacter != null)
+        {
+            Interact(playerCharacter);
+        }
+    }
+
+    public void Interact(PlayerCharacter interactor)
     {
         if (carController == null)
         {
@@ -12,6 +25,6 @@ public class SteeringWheel : MonoBehaviour, IInteractable
             return;
         }
         
-        interactor.BeginDriving(carController);
+        interactor.Driving.BeginDriving(carController);
     }
 }

@@ -48,7 +48,7 @@ public class PlayerSpawnerDebugger : MonoBehaviour
         }
 
         if (Gamepad.current != null &&
-            Gamepad.current.leftStickButton.wasPressedThisFrame)
+            Gamepad.current.selectButton.wasPressedThisFrame)
         {
             UpdateActivePlayer();
         }

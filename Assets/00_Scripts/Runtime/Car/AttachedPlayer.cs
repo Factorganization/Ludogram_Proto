@@ -24,7 +24,7 @@ public class AttachedPlayer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log($"{other.gameObject.name}");
-        if (other.transform.GetComponentInParent<PlayerController>())
+        if (other.transform.GetComponent<PlayerCharacter>())
         {
             other.transform.parent = transform;
         }
@@ -32,7 +32,7 @@ public class AttachedPlayer : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.GetComponent<PlayerController>())
+        if (other.transform.GetComponent<PlayerCharacter>())
         {
             other.transform.parent = null;
         }
