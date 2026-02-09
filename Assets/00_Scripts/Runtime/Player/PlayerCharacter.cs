@@ -3,6 +3,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(PlayerInput), typeof(CharacterController), typeof(Rigidbody))]
 public class PlayerCharacter : Actor
@@ -15,6 +16,10 @@ public class PlayerCharacter : Actor
 
     public ControllerComponent Controller { get; private set; }
     public DrivingComponent Driving { get; private set; }
+    public InteractComponent Interact { get; private set; }
+    
+    private List<PlayerComponent> _components = new List<PlayerComponent>();
+    
     private StateMachine _stateMachine;
 
     [Header("References")]
@@ -34,17 +39,59 @@ public class PlayerCharacter : Actor
     {
         Controller = new ControllerComponent(this);
         Controller.Initialize();
+        _components.Add(Controller);
         
         Driving = new DrivingComponent(this);
         Driving.Initialize();
+        _components.Add(Driving);
+        
+        Interact = new InteractComponent(this);
+        Interact.Initialize();
+        _components.Add(Interact);
         
         InitStateMachine();
     }
+    
+    #region Unity Callbacks
 
     private void Update()
     {
-        _stateMachine.Update();
+        _stateMachine?.Update();
+        if (_components == null) return;
+        foreach (var component in _components)
+        {
+            component.Update();
+        }
     }
+
+    private void FixedUpdate()
+    {
+        if (_components == null) return;
+        foreach (var component in _components)
+        {
+            component.FixedUpdate();
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (_components == null) return;
+        foreach (var component in _components)
+        {
+            component.OnDrawGizmos();
+        }
+    }
+
+    protected override void OnDrawGizmosSelected()
+    {
+        if (_components == null) return;
+        foreach (var component in _components)
+        {
+            component.OnDrawGizmosSelected();
+        }
+    }
+
+    #endregion
 
 
     #region Inputs

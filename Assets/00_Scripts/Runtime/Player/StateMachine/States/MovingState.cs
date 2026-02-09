@@ -24,10 +24,12 @@ public class MovingState : PlayerBaseState
                 character.Controller.HandleMovementUpdate();
                 break;
             case true :    //SPRINT
-                character.Controller.HandleMovementUpdate(1.7f);
+                character.Controller.HandleMovementUpdate(1.5f);
                 break;
         }
         AnimationUpdate();
+        
+        character.Interact.HandleInteractUpdate();
     }
 
     private void AnimationUpdate()

@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -5535198137848995616, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
       propertyPath: m_Name
       value: SM_House_Window_1
@@ -103,6 +107,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5887882771099038638, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -169,6 +177,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3745545820282890555, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: 7060588581059673493, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -235,6 +251,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3745545820282890555, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: 7060588581059673493, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -293,6 +317,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7238474abbf3a814ba67c9ed6b85470f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e01c42789d29e64088ea134714865cc, type: 2}
     - target: {fileID: 919132149155446097, guid: 7238474abbf3a814ba67c9ed6b85470f, type: 3}
       propertyPath: m_Name
       value: SM_House_Bloc_01
@@ -321,11 +349,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.728876
+      value: 6.728875
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.610787
+      value: 4.110787
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.z
@@ -337,15 +365,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.50000036
+      value: -0.5000002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.49999988
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.49999973
+      value: 0.4999998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -359,6 +387,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -3700373031435029922, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: -558214289168711710, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_Name
       value: SM_House_Velux_5
@@ -367,6 +403,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1682424471379025942, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+    - target: {fileID: 3914046734769388623, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e01c42789d29e64088ea134714865cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -425,6 +469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -5535198137848995616, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
       propertyPath: m_Name
       value: SM_House_Window_3
@@ -433,6 +481,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5887882771099038638, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -491,6 +543,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5dbc674b8afefcb4f950ff25e8c04585, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1290b4f974ecc7f469905ffb7852b8a5, type: 2}
     - target: {fileID: 919132149155446097, guid: 5dbc674b8afefcb4f950ff25e8c04585, type: 3}
       propertyPath: m_Name
       value: SM_House_Line_01
@@ -519,19 +575,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.728877
+      value: 6.728876
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6107864
+      value: 4.1107864
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.292917
+      value: 1.2929168
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.x
@@ -543,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: -0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -557,6 +613,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -3700373031435029922, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: -558214289168711710, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_Name
       value: SM_House_Velux_2
@@ -565,6 +629,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1682424471379025942, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+    - target: {fileID: 3914046734769388623, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e01c42789d29e64088ea134714865cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -623,6 +695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4564827409101076892, guid: 308f8ef995a8e1340ad41b7449b8fcc0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
     - target: {fileID: 919132149155446097, guid: 308f8ef995a8e1340ad41b7449b8fcc0, type: 3}
       propertyPath: m_Name
       value: SM_House_Roof_01
@@ -631,6 +707,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 7967127700922056005, guid: 308f8ef995a8e1340ad41b7449b8fcc0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1290b4f974ecc7f469905ffb7852b8a5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -651,11 +731,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.371124
+      value: -3.371125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.610788
+      value: 4.110788
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.z
@@ -667,15 +747,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.50000036
+      value: -0.5000002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.49999988
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.49999973
+      value: 0.4999998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -689,6 +769,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -3700373031435029922, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: -558214289168711710, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_Name
       value: SM_House_Velux_3
@@ -697,6 +785,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1682424471379025942, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+    - target: {fileID: 3914046734769388623, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e01c42789d29e64088ea134714865cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -755,6 +851,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -5535198137848995616, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
       propertyPath: m_Name
       value: SM_House_Window
@@ -763,6 +863,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5887882771099038638, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -821,6 +925,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ef0bd78900cedb04ba2bbe57cc5cbcd0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
     - target: {fileID: 919132149155446097, guid: ef0bd78900cedb04ba2bbe57cc5cbcd0, type: 3}
       propertyPath: m_Name
       value: SM_House_Door
@@ -849,19 +957,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3711236
+      value: -3.3711245
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6107874
+      value: 4.1107874
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.292917
+      value: 1.2929168
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.x
@@ -873,7 +981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: -0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -887,6 +995,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -3700373031435029922, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: -558214289168711710, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: m_Name
       value: SM_House_Velux
@@ -895,6 +1011,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1682424471379025942, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+    - target: {fileID: 3914046734769388623, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e01c42789d29e64088ea134714865cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -919,11 +1043,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.00000008940697
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.1663399
+      value: 3.6663399
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
       propertyPath: m_LocalRotation.w
@@ -961,6 +1085,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3745545820282890555, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: 7060588581059673493, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1027,6 +1159,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3745545820282890555, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+    - target: {fileID: 7060588581059673493, guid: 0364d0da423fc714f9ce472a54c14680, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1085,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -5535198137848995616, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4968aa9f3207044a95c65279c9f7a72, type: 2}
     - target: {fileID: 919132149155446097, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
       propertyPath: m_Name
       value: SM_House_Window_2
@@ -1093,6 +1237,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5887882771099038638, guid: 0106e3672317a0b43bc6eb6a722b4477, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

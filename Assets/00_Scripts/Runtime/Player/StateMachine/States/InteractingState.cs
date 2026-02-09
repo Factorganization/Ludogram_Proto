@@ -14,7 +14,7 @@ public class InteractingState : PlayerBaseState
         
     public override void Update()
     {
-        // TODO: Handle interaction logic here (e.g., checking for interaction completion)
+        character.Interact.HandleInteractUpdate();
     }
     
         
