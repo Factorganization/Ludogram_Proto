@@ -6,6 +6,7 @@ public class EnemyBehavior : MonoBehaviour
 {
     
     public Transform[] VanPositions => vanPositions;
+    public float SlowSpeedAmount => slowSpeedAmount;
     
     public float PlayerDetectionRange => playerDetectionRange;
     public float NoPlayerDetectedLength => noPlayerDetectedLength;
@@ -15,6 +16,7 @@ public class EnemyBehavior : MonoBehaviour
     public float IncrementSpeedAmount => incrementSpeedAmount;
     public CarController PlayerVehicule=> playerVehicule; // a remplacer par le nouveau script car
     public HoleGenerator HoleGenerator => holeGenerator;
+    public EnemyType Type => type;
    
     public float ShootCooldown => shootCooldown;
     
@@ -38,6 +40,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float obstacleDetectionRange = 5;
     [SerializeField] private float playerDetectionRange = 25;
     [SerializeField] private float noPlayerDetectedLength = 10;
+    [SerializeField] private float slowSpeedAmount = 10;
     
     
     [Header("Bumper")]
@@ -137,7 +140,7 @@ enum EnemyStates
     AttackState
 }
 
-enum EnemyType
+public enum EnemyType
 {
     Bumper,
     Shooter

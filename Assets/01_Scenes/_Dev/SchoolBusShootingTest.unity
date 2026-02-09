@@ -232,6 +232,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10808756}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &17709162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17709164}
+  - component: {fileID: 17709163}
+  m_Layer: 0
+  m_Name: BurstCollisionWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &17709163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17709162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.BurstColliderWorld
+  cellSpans:
+    m_AlignBytes: 16
+--- !u!4 &17709164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17709162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32194417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,52 +3022,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255061259}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &256490393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 256490395}
-  - component: {fileID: 256490394}
-  m_Layer: 0
-  m_Name: BurstCollisionWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &256490394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256490393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.BurstColliderWorld
-  cellSpans:
-    m_AlignBytes: 16
---- !u!4 &256490395
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256490393}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262417973
 GameObject:
   m_ObjectHideFlags: 0
@@ -8206,6 +8206,10 @@ PrefabInstance:
       value: -0.005709648
       objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: initialSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: playerVehicule
       value: 
       objectReference: {fileID: 329729137}
@@ -8301,6 +8305,10 @@ PrefabInstance:
     - target: {fileID: 474641745068669681, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_Center.z
       value: -0.005709648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: initialSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: playerVehicule
@@ -11586,26 +11594,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 474641745068669681, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
-      propertyPath: m_Size.z
-      value: 4.426279
-      objectReference: {fileID: 0}
-    - target: {fileID: 474641745068669681, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
-      propertyPath: m_Center.z
-      value: -0.005709648
-      objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: playerVehicule
       value: 
       objectReference: {fileID: 329729137}
-    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
-      propertyPath: playerDetectionRange
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: 'vanPositions.Array.data[0]'
       value: 
@@ -11665,10 +11657,6 @@ PrefabInstance:
     - target: {fileID: 6664152969994370395, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804980647524461628, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
-      propertyPath: delayToDestroy
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13925,6 +13913,10 @@ PrefabInstance:
       value: -0.005709648
       objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: initialSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: playerVehicule
       value: 
       objectReference: {fileID: 329729137}
@@ -14022,6 +14014,10 @@ PrefabInstance:
       value: -0.005709648
       objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: initialSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: playerVehicule
       value: 
       objectReference: {fileID: 329729137}
@@ -14117,6 +14113,10 @@ PrefabInstance:
     - target: {fileID: 474641745068669681, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_Center.z
       value: -0.005709648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: initialSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: playerVehicule
@@ -18052,6 +18052,10 @@ PrefabInstance:
       value: -0.005709648
       objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: initialSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: playerVehicule
       value: 
       objectReference: {fileID: 329729137}
@@ -21628,4 +21632,4 @@ SceneRoots:
   - {fileID: 1732987843}
   - {fileID: 807503994}
   - {fileID: 1302326321}
-  - {fileID: 256490395}
+  - {fileID: 17709164}

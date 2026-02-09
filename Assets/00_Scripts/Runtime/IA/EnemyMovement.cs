@@ -20,12 +20,23 @@ public class EnemyMovement
     {
         if (!target) { return;}
         brain.transform.position =  Vector3.MoveTowards(brain.transform.position, target.position, Time.deltaTime*brain.currentSpeed);
-        brain.transform.LookAt(target);
+
+        if (Vector3.Distance(brain.transform.position, target.position) <= 3)
+        {
+            brain.transform.LookAt(brain.transform.forward);
+        }
+        else
+        {
+            brain.transform.LookAt(target);
+        }
+        
+        
+        
     }
 
     public void UpdateTarget(Vector3 newPos, Transform newParent = null)
     {
-        target.position = newPos;
+        target.position = new Vector3(newPos.x,brain.transform.position.y,newPos.z);
         target.parent = newParent;
     }
 }

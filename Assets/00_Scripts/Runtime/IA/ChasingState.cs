@@ -38,9 +38,7 @@ public class ChasingState : EnemyState
 
     private void SetNewMoveTarget(Vector3 targetPos)
     {
-        // _brain.Movement.SetNewTarget()   a faire quand yaura un scriptmouvement ennemi
         targetPos += Random.insideUnitSphere*brain.RandomOffsetRange;
-        //brain.transform.position = new Vector3(targetPos.x,brain.transform.position.y,targetPos.z);
         
         brain.SetNewTarget(targetPos, brain.PlayerVehicule.transform);
         
@@ -68,10 +66,11 @@ public class ChasingState : EnemyState
 
                     if (selfDistance > aiDistance)
                     {
-                        //brain.movement.ReduceSpeed  
-                        
-                        //Refacto : c'est pour tester sans brain.Movement
-                        brain.SetNewTarget(brain.transform.position -= (brain.transform.forward*3), brain.PlayerVehicule.transform);
+                        brain.currentSpeed-= brain.SlowSpeedAmount;
+                        if (brain.currentSpeed < 0)
+                        {
+                            brain.currentSpeed = 0;
+                        }
                     }
                 }
             }
