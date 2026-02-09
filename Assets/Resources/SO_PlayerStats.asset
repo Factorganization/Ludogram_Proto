@@ -15,6 +15,6 @@ MonoBehaviour:
   Speed: 5
   JumpHeight: 1.5
   JumpForce: 10
-  LookSensitivity: 3
+  LookSensitivity: 5
   Gravity: -9.81
   UpDownLookRange: 80

@@ -11,6 +11,10 @@ public class ControllerComponent : PlayerComponent
     private CharacterController _controller;
     private float _verticalVelocity;
     private float _verticalRotation; 
+    
+    // Tunables for a more "classic" FPS feel
+    private const float ExtraFallGravityMultiplier = 2.0f;   // Makes falling snappier than going up
+    private const float AirControlMultiplier       = 0.9f;   // Slight reduction of control while in air
 
     public ControllerComponent(PlayerCharacter character) : base(character)
     {
@@ -64,6 +68,12 @@ public class ControllerComponent : PlayerComponent
         Vector3 move = forward * moveInput.y + right * moveInput.x;
         move *= character.Playerstats.Speed;
 
+        // Slightly reduce control in air for a more grounded feeling
+        if (!_controller.isGrounded)
+        {
+            move *= AirControlMultiplier;
+        }
+
         // Gravity & Jump - JumpHeight is in meters, formula: v = sqrt(2 * g * h)
         if (_controller.isGrounded)
         {
@@ -76,7 +86,19 @@ public class ControllerComponent : PlayerComponent
         }
         else
         {
-            _verticalVelocity += character.Playerstats.Gravity * Time.deltaTime;
+            // Apply stronger gravity when falling for less "moon-like" jumps
+            float gravity = character.Playerstats.Gravity;
+
+            if (_verticalVelocity > 0f)
+            {
+                // Going up: normal gravity
+                _verticalVelocity += gravity * Time.deltaTime;
+            }
+            else
+            {
+                // Falling: extra gravity for a snappier feel
+                _verticalVelocity += gravity * ExtraFallGravityMultiplier * Time.deltaTime;
+            }
         }
 
         move.y = _verticalVelocity;
