@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Wood_Window
+  m_Name: M_Bricks_02
   m_Shader: {fileID: -6465566751694194690, guid: dba1310eb9dafa649b05e6a6d939c8b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,15 +25,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 720de0b9ce7058441a4bf75845131840, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5e7d12b457f067a44a24574e82a2bb86, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 8b33e20aecc0ddd44ad0281aed0f3c9a, type: 3}
+        m_Texture: {fileID: 2800000, guid: d245fe965be74b1409c0b347c6cd18b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 025170353fc9fa14d9deecaab180e9d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
@@ -57,16 +57,16 @@ Material:
     - _Hue: 1
     - _IsRecolor: 1
     - _Metallic: 0
-    - _NormalStrength: 0.56
+    - _NormalStrength: 0.66
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Roughness_Strength: -3.45
     - _Smoothness: 0
-    - _TextureRotation: 93.07
+    - _TextureRotation: 90
     m_Colors:
-    - _Recolor_1: {r: 0.735849, g: 0.67455703, b: 0.2672659, a: 1}
-    - _Recolor_2: {r: 0.5372549, g: 0.33139136, b: 0.2784314, a: 1}
-    - _Tiling_XY: {r: 1, g: 1, b: 0, a: 0}
+    - _Recolor_1: {r: 1, g: 0.48879576, b: 0.3820755, a: 1}
+    - _Recolor_2: {r: 0.5188679, g: 0, b: 0.102065325, a: 1}
+    - _Tiling_XY: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7380130833868267941

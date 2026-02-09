@@ -57,16 +57,16 @@ Material:
     - _Hue: 1
     - _IsRecolor: 1
     - _Metallic: 0
-    - _NormalStrength: 0.47
+    - _NormalStrength: -0.24
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Roughness_Strength: -1.58
+    - _Roughness_Strength: -0.79
     - _Smoothness: 0
     - _TextureRotation: 0
     m_Colors:
-    - _Recolor_1: {r: 1, g: 0.7357311, b: 0.6084906, a: 1}
-    - _Recolor_2: {r: 0.4056604, g: 0.23827536, b: 0.08610717, a: 1}
-    - _Tiling_XY: {r: 25, g: 25, b: 0, a: 0}
+    - _Recolor_1: {r: 1, g: 1, b: 1, a: 1}
+    - _Recolor_2: {r: 0.6020826, g: 0.70498395, b: 0.7735849, a: 1}
+    - _Tiling_XY: {r: 15, g: 15, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7380130833868267941
