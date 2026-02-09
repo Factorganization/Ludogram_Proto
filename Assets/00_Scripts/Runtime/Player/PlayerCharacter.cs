@@ -24,6 +24,7 @@ public class PlayerCharacter : Actor
 
     [Header("References")]
     [SerializeField] private Animator _animator;
+    [SerializeField] internal UISwapper _uiSwapper;
     [Tooltip("Pivot transform for camera pitch (up/down look).")]
     [SerializeField] private Transform _headTransform;
 
@@ -108,6 +109,18 @@ public class PlayerCharacter : Actor
         {
             Logs.LogError($"[PlayerCharacter]: Input Action '{actionName}' not found in PlayerInput actions.");
         }
+    }
+    
+    public void SwitchInputMap(string mapName)
+    {
+        if (PlayerInput == null)
+        {
+            Logs.LogError("[PlayerCharacter]: PlayerInput component is missing.");
+            return;
+        }
+        
+        PlayerInput.SwitchCurrentActionMap(mapName);
+        Logs.Log($"[PlayerCharacter]: Switched to input map '{mapName}'.");
     }
 
     #endregion
