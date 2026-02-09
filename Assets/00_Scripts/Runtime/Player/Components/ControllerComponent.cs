@@ -12,9 +12,22 @@ public class ControllerComponent : PlayerComponent
     private float _verticalVelocity;
     private float _verticalRotation; 
     
-    // Tunables for a more "classic" FPS feel
-    private const float ExtraFallGravityMultiplier = 2.0f;   // Makes falling snappier than going up
-    private const float AirControlMultiplier       = 0.9f;   // Slight reduction of control while in air
+
+    private const float ExtraFallGravityMultiplier = 2.0f;   
+    private const float AirControlMultiplier       = 0.9f;   
+    private const float LookInputThresholdSqr      = 0.01f * 0.01f;
+
+    private bool IsCurrentDeviceMouse
+    {
+        get
+        {
+            var playerInput = character?.PlayerInput;
+            if (playerInput == null) return false;
+
+            var scheme = playerInput.currentControlScheme;
+            return scheme == "KeyboardMouse" || scheme == "Keyboard&Mouse";
+        }
+    }
 
     public ControllerComponent(PlayerCharacter character) : base(character)
     {
@@ -46,20 +59,20 @@ public class ControllerComponent : PlayerComponent
 
         float sensitivity = character.Playerstats.LookSensitivity;
         float upDownRange = character.Playerstats.UpDownLookRange;
-
-        // Yaw (horizontal look) - rotates character body
-        if (lookInput.x != 0f)
+        
+        if (lookInput.sqrMagnitude >= LookInputThresholdSqr && character.HeadTransform != null)
         {
-            float yaw = lookInput.x * sensitivity;
-            character.transform.Rotate(0f, yaw, 0f);
-        }
+            float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+            float rotationSpeed = sensitivity;
 
-        // Pitch (vertical look) - rotates head/camera pivot
-        if (lookInput.y != 0f && character.HeadTransform != null)
-        {
-            _verticalRotation -= lookInput.y * sensitivity;
-            _verticalRotation = Mathf.Clamp(_verticalRotation, -upDownRange, upDownRange);
-            character.HeadTransform.localRotation = Quaternion.Euler(_verticalRotation, 0f, 0f);
+            // Pitch (vertical look)
+            _verticalRotation += lookInput.y * rotationSpeed * deltaTimeMultiplier;
+            _verticalRotation = ClampAngle(_verticalRotation, -upDownRange, upDownRange);
+            character.HeadTransform.localRotation = Quaternion.Euler(-_verticalRotation, 0f, 0f);
+
+            // Yaw (horizontal look) - rotation du corps
+            float yaw = lookInput.x * rotationSpeed * deltaTimeMultiplier;
+            character.transform.Rotate(Vector3.up * yaw);
         }
 
         // Movement in local XZ
@@ -67,14 +80,12 @@ public class ControllerComponent : PlayerComponent
         Vector3 forward = Vector3.ProjectOnPlane(character.transform.forward, Vector3.up).normalized;
         Vector3 move = forward * moveInput.y + right * moveInput.x;
         move *= character.Playerstats.Speed;
-
-        // Slightly reduce control in air for a more grounded feeling
+        
         if (!_controller.isGrounded)
         {
             move *= AirControlMultiplier;
         }
-
-        // Gravity & Jump - JumpHeight is in meters, formula: v = sqrt(2 * g * h)
+        
         if (_controller.isGrounded)
         {
             _verticalVelocity = -0.5f;
@@ -86,7 +97,6 @@ public class ControllerComponent : PlayerComponent
         }
         else
         {
-            // Apply stronger gravity when falling for less "moon-like" jumps
             float gravity = character.Playerstats.Gravity;
 
             if (_verticalVelocity > 0f)
@@ -96,7 +106,7 @@ public class ControllerComponent : PlayerComponent
             }
             else
             {
-                // Falling: extra gravity for a snappier feel
+                // Falling: extra gravity
                 _verticalVelocity += gravity * ExtraFallGravityMultiplier * Time.deltaTime;
             }
         }
@@ -104,6 +114,13 @@ public class ControllerComponent : PlayerComponent
         move.y = _verticalVelocity;
 
         _controller.Move(move * Time.deltaTime);
+    }
+    
+    private static float ClampAngle(float angle, float min, float max)
+    {
+        if (angle < -360f) angle += 360f;
+        if (angle > 360f) angle -= 360f;
+        return Mathf.Clamp(angle, min, max);
     }
     
     public void ResetVelocity()
