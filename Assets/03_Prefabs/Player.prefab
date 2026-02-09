@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7407256383173631782}
   - component: {fileID: 2177518196819521932}
-  - component: {fileID: 3880371709590868083}
   - component: {fileID: 4874974076171757249}
   - component: {fileID: 927978451254171654}
   - component: {fileID: 2540015122309300157}
-  m_Layer: 9
+  - component: {fileID: 8317992884655202154}
+  - component: {fileID: 3217597951348072066}
+  m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,50 +130,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 3164259511287397336}
---- !u!114 &3880371709590868083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909969873080997737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77226958b17c7b140bbb45c37acbc021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  walkSpeed: 30
-  sprintSpeed: 70
-  sensitivity: 5
-  upDownLookRange: 80
-  jumpForce: 20
-  airMultiplier: 0.4
-  groundDrag: 5
-  airDrag: 3
-  maxAddedGravity: 70
-  speedAddedGravity: 10
-  coyoteTime: 0.2
-  playerInput: {fileID: 2177518196819521932}
-  playerRigidbody: {fileID: 927978451254171654}
-  playerCollider: {fileID: 4874974076171757249}
-  feet: {fileID: 2718970810235640701}
-  headTransform: {fileID: 8916134758494326139}
-  playerCam: {fileID: 3164259511287397336}
-  rotVector: {x: 0, y: 0}
-  verticalRotation: 0
-  isGrounded: 0
-  currentAddedGravity: 0
-  currentFallTime: 0
-  moveDir: {x: 0, y: 0, z: 0}
-  slopeMoveDir: {x: 0, y: 0, z: 0}
-  carrierTransform: {fileID: 0}
-  drivingInputs:
-    throttleInput: 0
-    steerInput: 0
-    brakeInput: 0
-    handbrakeInput: 0
-  horVelRagdoll: 12
-  vertVelRagdoll: 20
 --- !u!136 &4874974076171757249
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -236,6 +193,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Obi::Obi.ObiRigidbody
   kinematicForParticles: 0
+--- !u!143 &8317992884655202154
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909969873080997737}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3217597951348072066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909969873080997737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d91efb54b31c447897b84b233cbdee04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
+  <Playerstats>k__BackingField: {fileID: 11400000, guid: a1df78eaf896bcc448927979c7e594ec, type: 2}
+  _animator: {fileID: 2375738497673676732}
+  _headTransform: {fileID: 8916134758494326139}
 --- !u!1 &5329622472513978180
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 6473832332038026899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0.638, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -402,8 +399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7769761363158596648}
-  - component: {fileID: 6948035012104630688}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,20 +422,6 @@ Transform:
   - {fileID: 8773145524956609339}
   m_Father: {fileID: 7407256383173631782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6948035012104630688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6731202623140187785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72beaef33f35a364dbecb209376bcefe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
-  animator: {fileID: 2375738497673676732}
-  pc: {fileID: 3880371709590868083}
 --- !u!1 &8944935492146791922
 GameObject:
   m_ObjectHideFlags: 0
