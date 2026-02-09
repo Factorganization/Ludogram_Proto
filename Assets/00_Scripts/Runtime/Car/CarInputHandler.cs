@@ -10,7 +10,7 @@ public class CarInputHandler : MonoBehaviour
     private Vector2 moveVector;
     [SerializeField] InputActionAsset _playerControls;
     [SerializeField] private SCC_InputProcessor inputProcessor;
-    private SCC_Inputs inputs = new SCC_Inputs();
+    private Inputs inputs = new Inputs();
 
     private void Start()
     {

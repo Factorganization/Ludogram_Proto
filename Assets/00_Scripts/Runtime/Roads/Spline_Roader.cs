@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Splines;
 using Unity.Mathematics;
@@ -27,6 +28,13 @@ public class Spline_Sampler : MonoBehaviour
         mesh = new Mesh();
         mesh.name = "Road Mesh";
         GetComponent<MeshFilter>().sharedMesh = mesh;
+    }
+
+    private void Start()
+    {
+        UpdateSpline();
+
+        GetComponent<MeshCollider>().sharedMesh = GetComponent<MeshFilter>().sharedMesh;
     }
 
     [ContextMenu("Update spline")]
