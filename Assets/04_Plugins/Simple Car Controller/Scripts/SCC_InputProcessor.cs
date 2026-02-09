@@ -17,7 +17,7 @@ using UnityEngine;
 [AddComponentMenu("BoneCracker Games/Simple Car Controller/SCC Input Processor")]
 public class SCC_InputProcessor : MonoBehaviour {
 
-    public Inputs inputs = new Inputs();        //  Target inputs.
+    public DrivingInputs drivingInputs = new DrivingInputs();        //  Target inputs.
     
     public bool smoothInputs = true;        //  Smoothly lerp the inputs?
     public float smoothingFactor = 5f;      //  Smoothing factor.
@@ -36,19 +36,19 @@ public class SCC_InputProcessor : MonoBehaviour {
     /// <summary>
     /// Overrides inputs with given inputs. Be sure to disable the receiveInputsFromInputManager while overriding inputs. 
     /// </summary>
-    /// <param name="newInputs"></param>
-    public void OverrideInputs(Inputs newInputs) {
+    /// <param name="newDrivingInputs"></param>
+    public void OverrideInputs(DrivingInputs newDrivingInputs) {
 
         if (!smoothInputs) {
 
-            inputs = newInputs;
+            drivingInputs = newDrivingInputs;
 
         } else {
 
-            inputs.throttleInput = Mathf.MoveTowards(inputs.throttleInput, newInputs.throttleInput, Time.deltaTime * smoothingFactor);
-            inputs.steerInput = Mathf.MoveTowards(inputs.steerInput, newInputs.steerInput, Time.deltaTime * smoothingFactor);
-            inputs.brakeInput = Mathf.MoveTowards(inputs.brakeInput, newInputs.brakeInput, Time.deltaTime * smoothingFactor);
-            inputs.handbrakeInput = Mathf.MoveTowards(inputs.handbrakeInput, newInputs.handbrakeInput, Time.deltaTime * smoothingFactor);
+            drivingInputs.throttleInput = Mathf.MoveTowards(drivingInputs.throttleInput, newDrivingInputs.throttleInput, Time.deltaTime * smoothingFactor);
+            drivingInputs.steerInput = Mathf.MoveTowards(drivingInputs.steerInput, newDrivingInputs.steerInput, Time.deltaTime * smoothingFactor);
+            drivingInputs.brakeInput = Mathf.MoveTowards(drivingInputs.brakeInput, newDrivingInputs.brakeInput, Time.deltaTime * smoothingFactor);
+            drivingInputs.handbrakeInput = Mathf.MoveTowards(drivingInputs.handbrakeInput, newDrivingInputs.handbrakeInput, Time.deltaTime * smoothingFactor);
 
         }
 

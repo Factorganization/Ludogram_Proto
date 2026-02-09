@@ -15,6 +15,7 @@ public class FlyingState : PlayerBaseState
     public override void Update()
     {
         // TODO: Handle flying input and movement 
+        character.Interact.HandleInteractUpdate();
     }
     
         
