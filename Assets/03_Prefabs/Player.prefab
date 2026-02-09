@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2540015122309300157}
   - component: {fileID: 8317992884655202154}
   - component: {fileID: 3217597951348072066}
-  - component: {fileID: 1126093806294012921}
+  - component: {fileID: 4783974365708265213}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -153,7 +153,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -186,7 +186,7 @@ CharacterController:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
@@ -211,8 +211,8 @@ MonoBehaviour:
   _animator: {fileID: 2375738497673676732}
   _uiSwapper: {fileID: 5728362961099746772}
   _headTransform: {fileID: 8916134758494326139}
---- !u!65 &1126093806294012921
-BoxCollider:
+--- !u!136 &4783974365708265213
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -229,9 +229,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.15, z: 0}
 --- !u!1 &1361057726182535859
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,11 +777,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UISwapper
   crosshairImage: {fileID: 6725017224275639861}
   crosshairs:
-  - {fileID: -495334222, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: 1197395306, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: 1592835342, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: 1963297176, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: -379629815, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
+  - {fileID: -455185304, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: 345400840, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: 1915643364, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: -2016699398, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: 1261815208, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
 --- !u!1001 &9100297249575263440
 PrefabInstance:
   m_ObjectHideFlags: 0
