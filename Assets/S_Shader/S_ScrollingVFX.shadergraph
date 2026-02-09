@@ -1755,8 +1755,8 @@
     "m_ObjectId": "5a4da6debeac4e9d8de3c4d2c9d9b3f9",
     "m_Title": "Scrolling Texture",
     "m_Position": {
-        "x": -2063.000244140625,
-        "y": -16.000015258789064
+        "x": -2062.999755859375,
+        "y": -16.00000762939453
     }
 }
 
@@ -2277,8 +2277,8 @@
     "m_ObjectId": "775eafe0abd94c178f0236a3f4956b3b",
     "m_Title": "Edges Opacity",
     "m_Position": {
-        "x": -2117.0,
-        "y": 472.0
+        "x": -2116.999755859375,
+        "y": 471.99993896484377
     }
 }
 

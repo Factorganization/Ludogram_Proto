@@ -110,6 +110,18 @@ public class PlayerCharacter : Actor
             Logs.LogError($"[PlayerCharacter]: Input Action '{actionName}' not found in PlayerInput actions.");
         }
     }
+    
+    public void SwitchInputMap(string mapName)
+    {
+        if (PlayerInput == null)
+        {
+            Logs.LogError("[PlayerCharacter]: PlayerInput component is missing.");
+            return;
+        }
+        
+        PlayerInput.SwitchCurrentActionMap(mapName);
+        Logs.Log($"[PlayerCharacter]: Switched to input map '{mapName}'.");
+    }
 
     #endregion
 
