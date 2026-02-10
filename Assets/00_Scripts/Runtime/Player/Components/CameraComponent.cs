@@ -3,9 +3,12 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
+using UnityEditor.Experimental.GraphView;
 
 public class CameraComponent : PlayerComponent
 {
+
+    private LayerMask _layerMaskToSet;
     
     public CameraComponent(PlayerCharacter character) : base(character)
     {
@@ -14,12 +17,26 @@ public class CameraComponent : PlayerComponent
     public override void Initialize()
     {
         // Set the player layer to the corresponding layer depending on his PlayerIndex
-        character.gameObject.layer = LayerMask.NameToLayer($"Player_{character.PlayerIndex}");
+        _layerMaskToSet = LayerMask.NameToLayer($"Player_{character.PlayerIndex}");
+        
+        // Set this layer to the player gameobject and all its children
+        SetLayerRecursively(character.gameObject, _layerMaskToSet);
         
         // Then exclude this layer from this player main camera culling mask 
         character.MainCamera.cullingMask = ~(1 << LayerMask.NameToLayer($"Player_{character.PlayerIndex}"));
     }
-    
+
+    private void SetLayerRecursively(GameObject characterGameObject, LayerMask layerMaskToSet)
+    {
+        // Si le jeu crash c'est ptet a cause de ça... a méditer
+        characterGameObject.layer = layerMaskToSet;
+        
+        foreach (Transform child in characterGameObject.transform)
+        {
+            SetLayerRecursively(child.gameObject, layerMaskToSet);
+        }
+    }
+
     private CinemachineCamera _cinemachine;
     private CinemachineBasicMultiChannelPerlin _perlin;
 

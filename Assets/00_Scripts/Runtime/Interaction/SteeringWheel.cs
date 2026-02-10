@@ -20,7 +20,7 @@ public class SteeringWheel : MonoBehaviour, IInteractable
 
     public void Interact(PlayerCharacter interactor)
     {
-        if (carController)
+        if (!carController)
         {
             Logs.LogWarning("Car Controller not assigned on SteeringWheel.");
             return;
