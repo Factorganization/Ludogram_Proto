@@ -36,7 +36,7 @@ public class InteractComponent : PlayerComponent
     
     public void HandleInteractUpdate()
     {
-        if (character == null || _interactAction == null) return;
+        if (!character || _interactAction == null) return;
         
         if (character.IsStunned) return;
 

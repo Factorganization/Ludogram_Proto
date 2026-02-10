@@ -17,6 +17,7 @@ public class PlayerCharacter : Actor
     public ControllerComponent Controller { get; private set; }
     public DrivingComponent Driving { get; private set; }
     public InteractComponent Interact { get; private set; }
+    public CameraComponent Camera { get; private set; }
     
     private List<PlayerComponent> _components = new List<PlayerComponent>();
     
@@ -29,9 +30,11 @@ public class PlayerCharacter : Actor
     [SerializeField] private Transform _headTransform;
 
     [SerializeField] private Transform _feetTransform;
+    [SerializeField] private Camera _mainCamera;
 
     public Transform HeadTransform => _headTransform;
     public Transform FeetTransform => _feetTransform;
+    public Camera MainCamera => _mainCamera;
 
     // State flags for transitions (set these when entering/exiting states)
     public bool IsStunned { get; set; }
@@ -52,6 +55,10 @@ public class PlayerCharacter : Actor
         Interact = new InteractComponent(this);
         Interact.Initialize();
         _components.Add(Interact);
+        
+        Camera = new CameraComponent(this);
+        Camera.Initialize();
+        _components.Add(Camera);
         
         InitStateMachine();
     }
