@@ -45,13 +45,14 @@ public class InteractComponent : PlayerComponent
         
         if (currentInteractable == null)
         {
-            Logs.Log($"[InteractComponent] No interactable found");
+            //Logs.Log($"[InteractComponent] No interactable found");
             character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.NONE);
             return;
         }
 
         var targetTransform = currentInteractable.GetTransform();
-        Logs.Log($"[InteractComponent] Interacting with {targetTransform.name} at {hitPosition}");
+        //Logs.Log($"[InteractComponent] Interacting with {targetTransform.name} at {hitPosition}");
+        
         // Update CrosshairUI
         switch (currentInteractable)
         {
@@ -94,7 +95,7 @@ public class InteractComponent : PlayerComponent
         float distance = character.Playerstats.InteractDistance;
 
         int hitCount = Physics.SphereCastNonAlloc(origin, radius, direction, _hitBuffer, distance, _interactableLayerMask, QueryTriggerInteraction.Ignore);
-        Logs.Log($"[InteractComponent] SphereCast found {hitCount} hits");
+        //Logs.Log($"[InteractComponent] SphereCast found {hitCount} hits");
         if (hitCount == 0) return (null, Vector3.zero);
 
         var interactables = new List<IInteractable>();
