@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     
-    public Transform[] VanPositions => vanPositions;
     public float SlowSpeedAmount => slowSpeedAmount;
     
     public float PlayerDetectionRange => playerDetectionRange;
@@ -14,8 +13,14 @@ public class EnemyBehavior : MonoBehaviour
     public float ObstacleDetectionRange => obstacleDetectionRange;
     public float IncrementSpeedTreshold => incrementSpeedTreshold;
     public float IncrementSpeedAmount => incrementSpeedAmount;
+    public int BulletPerShot => bulletPerShot;
+    public int TotalBulletAmount => totalBulletAmount;
+    public float ReloadTime => reloadTime;
     public CarController PlayerVehicule=> playerVehicule; // a remplacer par le nouveau script car
     public HoleGenerator HoleGenerator => holeGenerator;
+    
+
+    public float DistanceToVan => distanceToVan;
     public EnemyType Type => type;
    
     public float ShootCooldown => shootCooldown;
@@ -25,9 +30,7 @@ public class EnemyBehavior : MonoBehaviour
 
     [Header("Global References")]
     [SerializeField] private CarController playerVehicule; // a remplacer par le nouveau script car
-
-    [Tooltip("Left, Back, Right, Front")]
-    [SerializeField] private Transform[] vanPositions;
+    
     [SerializeField] private float randomOffsetRange = 5;
 
     public float currentSpeed;
@@ -41,6 +44,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float playerDetectionRange = 25;
     [SerializeField] private float noPlayerDetectedLength = 10;
     [SerializeField] private float slowSpeedAmount = 10;
+    [SerializeField] private float distanceToVan = 15;
     
     
     [Header("Bumper")]
@@ -49,8 +53,11 @@ public class EnemyBehavior : MonoBehaviour
     [Header("Shooter")]
     [SerializeField] private HoleGenerator holeGenerator;
     [SerializeField] private float shootCooldown = 2; //in seconds
+    [SerializeField] private int bulletPerShot=1;
+    [SerializeField] private int totalBulletAmount=3;
+    [SerializeField] private float reloadTime = 10;
     
-    EnemyState _neutralState,_chasingState;
+    EnemyState _neutralState,_chasingState,_aimingState;
     private EnemyMovement _movement;
     private EnemyDetection _detection;
     
@@ -63,15 +70,15 @@ public class EnemyBehavior : MonoBehaviour
     {
         _neutralState = new NeutralState(this);
         _chasingState = new ChasingState(this);
+        _aimingState = new AimingState(this);
         _movement = new EnemyMovement(this);
         _detection = new EnemyDetection(this);
     }
-
-
+    
     private void Start()
     {
         currentSpeed = initialSpeed;
-        
+
         SetState(_neutralState);
     }
     
@@ -112,9 +119,24 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    public void ResetTarget()
+    public void ResetState()
     {
-        _movement.UpdateTarget(transform.position,transform);
+        SetState(_neutralState);
+    }
+
+    public void TryAttack() //refacto: hardcodé mais aaaaaaaaaaaaaa
+    {
+        if (_movement.TargetReached())
+        {
+            if(type == EnemyType.Shooter)
+            {
+                SetState(_aimingState);
+            }
+            else
+            {
+                
+            }
+        }
     }
     
     private void OnDrawGizmos()
@@ -122,10 +144,6 @@ public class EnemyBehavior : MonoBehaviour
         if (!showGizmos) return;
         
         Gizmos.color = Color.black;
-        foreach (Transform pos in vanPositions)
-        {
-            Gizmos.DrawWireSphere(pos.position , RandomOffsetRange);
-        }
         Gizmos.DrawWireSphere(transform.position, playerDetectionRange);
         
         Gizmos.color = Color.white;
@@ -137,7 +155,7 @@ enum EnemyStates
 {
     NeutralState,
     ChasingState,
-    AttackState
+    AimingState
 }
 
 public enum EnemyType
