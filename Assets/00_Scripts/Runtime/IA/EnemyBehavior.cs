@@ -13,8 +13,12 @@ public class EnemyBehavior : MonoBehaviour
     public float ObstacleDetectionRange => obstacleDetectionRange;
     public float IncrementSpeedTreshold => incrementSpeedTreshold;
     public float IncrementSpeedAmount => incrementSpeedAmount;
+    public int BulletPerShot => bulletPerShot;
+    public int TotalBulletAmount => totalBulletAmount;
+    public float ReloadTime => reloadTime;
     public CarController PlayerVehicule=> playerVehicule; // a remplacer par le nouveau script car
     public HoleGenerator HoleGenerator => holeGenerator;
+    
 
     public float DistanceToVan => distanceToVan;
     public EnemyType Type => type;
@@ -49,8 +53,11 @@ public class EnemyBehavior : MonoBehaviour
     [Header("Shooter")]
     [SerializeField] private HoleGenerator holeGenerator;
     [SerializeField] private float shootCooldown = 2; //in seconds
+    [SerializeField] private int bulletPerShot=1;
+    [SerializeField] private int totalBulletAmount=3;
+    [SerializeField] private float reloadTime = 10;
     
-    EnemyState _neutralState,_chasingState;
+    EnemyState _neutralState,_chasingState,_aimingState;
     private EnemyMovement _movement;
     private EnemyDetection _detection;
     
@@ -63,11 +70,11 @@ public class EnemyBehavior : MonoBehaviour
     {
         _neutralState = new NeutralState(this);
         _chasingState = new ChasingState(this);
+        _aimingState = new AimingState(this);
         _movement = new EnemyMovement(this);
         _detection = new EnemyDetection(this);
     }
-
-
+    
     private void Start()
     {
         currentSpeed = initialSpeed;
@@ -112,9 +119,24 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    public void ResetTarget()
+    public void ResetState()
     {
-        _movement.UpdateTarget(transform.position,transform);
+        SetState(_neutralState);
+    }
+
+    public void TryAttack() //refacto: hardcodé mais aaaaaaaaaaaaaa
+    {
+        if (_movement.TargetReached())
+        {
+            if(type == EnemyType.Shooter)
+            {
+                SetState(_aimingState);
+            }
+            else
+            {
+                
+            }
+        }
     }
     
     private void OnDrawGizmos()
@@ -133,7 +155,7 @@ enum EnemyStates
 {
     NeutralState,
     ChasingState,
-    AttackState
+    AimingState
 }
 
 public enum EnemyType
