@@ -12,6 +12,7 @@ public class EnemyMovement
     }
 
     public Vector3 CurrentTarget => target.position;
+    public bool TargetReached() => Vector3.Distance(brain.transform.position, target.position) <= 3;
     
     private EnemyBehavior brain;
     private Transform target;
@@ -21,7 +22,7 @@ public class EnemyMovement
         if (!target) { return;}
         brain.transform.position =  Vector3.MoveTowards(brain.transform.position, target.position, Time.deltaTime*brain.currentSpeed);
 
-        if (Vector3.Distance(brain.transform.position, target.position) <= 3)
+        if (TargetReached())
         {
             brain.transform.LookAt(brain.transform.forward);
         }
@@ -29,9 +30,6 @@ public class EnemyMovement
         {
             brain.transform.LookAt(target);
         }
-        
-        
-        
     }
 
     public void UpdateTarget(Vector3 newPos, Transform newParent = null)
@@ -39,4 +37,5 @@ public class EnemyMovement
         target.position = new Vector3(newPos.x,brain.transform.position.y,newPos.z);
         target.parent = newParent;
     }
+
 }
