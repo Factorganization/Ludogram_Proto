@@ -22,6 +22,11 @@ public class StateMachine : IDisposable
         {
             _current.State?.FixedUpdate();
         }
+        
+        public void LateUpdate()
+        {
+            _current.State?.LateUpdate();
+        }
 
         public void SetState(IState state)
         {
@@ -106,4 +111,6 @@ public class StateMachine : IDisposable
                 Transitions.Add(new Transition(to, condition));
             }
         }
+
+        
     }   

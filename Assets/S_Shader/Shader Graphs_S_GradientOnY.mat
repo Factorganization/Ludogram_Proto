@@ -55,8 +55,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float: 0
-    - _Float_1: 0.39
+    - _Float: 1
+    - _Float_1: -3.34
     - _Gradient: 0.022
     - _Gradient_Range: 66.2
     - _Invert: 1
@@ -64,9 +64,9 @@ Material:
     - _QueueOffset: 0
     - _Strength: 1
     m_Colors:
-    - _Color: {r: 0.764151, g: 0, b: 0, a: 1}
-    - _Color_1: {r: 0.41718584, g: 0.631902, b: 0.7075472, a: 1}
-    - _Color_2: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0.31764707, g: 0.6901961, b: 0.9960785, a: 1}
+    - _Color_1: {r: 0.24283554, g: 0.3499251, b: 0.4811321, a: 1}
+    - _Color_2: {r: 0.3160377, g: 0.6955341, b: 1, a: 0}
     - _Vector2: {r: 0, g: 108.21, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
