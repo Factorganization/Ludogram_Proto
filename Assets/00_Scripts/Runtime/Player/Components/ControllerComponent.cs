@@ -89,6 +89,9 @@ public class ControllerComponent : PlayerComponent
         Vector3 targetVelocity = worldMoveDirection * character.Playerstats.Speed * speedMultiplier;
         Vector3 velocityChange = targetVelocity - _rigidbody.linearVelocity;
         
+        //Apply Y-negative force
+        _rigidbody.AddForce(Vector3.up * character.Playerstats.Gravity, ForceMode.Acceleration);
+        
         // Only change horizontal velocity, preserve vertical velocity
         velocityChange.y = 0;
         _rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
@@ -96,7 +99,7 @@ public class ControllerComponent : PlayerComponent
         // Handle jumping
         if (jumpRequested && isGrounded)
         {
-            _rigidbody.AddForce(Vector3.up * character.Playerstats.JumpForce, ForceMode.Impulse);
+            _rigidbody.AddForce(Vector3.up * character.Playerstats.JumpHeight, ForceMode.Impulse);
             jumpRequested = false; 
         }
     }

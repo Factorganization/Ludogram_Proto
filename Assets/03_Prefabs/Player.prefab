@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 927978451254171654}
   - component: {fileID: 2540015122309300157}
   - component: {fileID: 3217597951348072066}
-  - component: {fileID: 1126093806294012921}
   - component: {fileID: 3191411937858171851}
   m_Layer: 13
   m_Name: Player
@@ -188,27 +187,6 @@ MonoBehaviour:
   _headTransform: {fileID: 8916134758494326139}
   _feetTransform: {fileID: 2718970810235640701}
   _mainCamera: {fileID: 3164259511287397336}
---- !u!65 &1126093806294012921
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909969873080997737}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &3191411937858171851
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -216,7 +194,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909969873080997737}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d514e900ab7e2ea418797d34f2a52901, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -355,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &797909102915432872
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +364,7 @@ MonoBehaviour:
   Priority:
     Enabled: 0
     m_Value: 0
-  OutputChannel: 1
+  OutputChannel: 2
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
@@ -633,7 +611,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8944935492146791922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
