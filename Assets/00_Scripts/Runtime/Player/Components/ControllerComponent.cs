@@ -88,13 +88,22 @@ public class ControllerComponent : PlayerComponent
         Vector3 worldMoveDirection = character.transform.TransformDirection(moveDirection);
         Vector3 targetVelocity = worldMoveDirection * character.Playerstats.Speed * speedMultiplier;
         Vector3 velocityChange = targetVelocity - _rigidbody.linearVelocity;
-        
+
         //Apply Y-negative force
         _rigidbody.AddForce(Vector3.up * character.Playerstats.Gravity, ForceMode.Acceleration);
-        
-        // Only change horizontal velocity, preserve vertical velocity
-        velocityChange.y = 0;
-        _rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
+
+        if (isGrounded)
+        {
+            // Only change horizontal velocity, preserve vertical velocity
+            velocityChange.y = 0;
+            _rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
+        }
+        else
+        {
+            // In air, apply reduced control
+            velocityChange.y = 0;
+            _rigidbody.AddForce(velocityChange * character.Playerstats.AirControl, ForceMode.VelocityChange);
+        }
         
         // Handle jumping
         if (jumpRequested && isGrounded)

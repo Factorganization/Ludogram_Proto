@@ -34,6 +34,7 @@ public class ChasingState : EnemyState
     {
         CheckIncrementingSpeed();
         CheckObstacleClose();
+        brain.TryAttack();
     }
 
     void CheckIncrementingSpeed()
