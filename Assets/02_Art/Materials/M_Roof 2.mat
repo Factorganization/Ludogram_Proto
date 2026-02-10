@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Roof 1
+  m_Name: M_Roof 2
   m_Shader: {fileID: -6465566751694194690, guid: dba1310eb9dafa649b05e6a6d939c8b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -149,8 +149,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Recolor_1: {r: 0.9811321, g: 0.8933466, b: 0.7358491, a: 1}
-    - _Recolor_2: {r: 0.7924528, g: 0.32116133, b: 0.04111784, a: 1}
+    - _Recolor_1: {r: 0.9339623, g: 0.58493745, b: 0.5066305, a: 1}
+    - _Recolor_2: {r: 0.8301887, g: 0.20754717, b: 0.21411635, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling_XY: {r: 10, g: 10, b: 0, a: 0}
   m_BuildTextureStacks: []
