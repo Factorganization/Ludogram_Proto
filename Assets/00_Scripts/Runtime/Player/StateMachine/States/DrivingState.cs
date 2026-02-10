@@ -9,7 +9,9 @@ public class DrivingState : PlayerBaseState
     public override void OnEnter()
     {
         Logs.Log($"[Player {character.PlayerIndex}] Driving state entered");
-        animator?.CrossFade("Driving", k_crossFadeDuration);
+        // TODO animator?.CrossFade("Driving", k_crossFadeDuration);
+        
+        character.SwitchInputMap("Driving");
     }
         
     public override void Update()
@@ -22,5 +24,6 @@ public class DrivingState : PlayerBaseState
     public override void OnExit()
     {
         Logs.Log($"[Player {character.PlayerIndex}] Driving state exited");
+        character.SwitchInputMap("Player");
     }
 }

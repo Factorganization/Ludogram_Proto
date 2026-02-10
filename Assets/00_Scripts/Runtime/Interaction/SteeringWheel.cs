@@ -25,6 +25,6 @@ public class SteeringWheel : MonoBehaviour, IInteractable
             return;
         }
         
-        //interactor.Driving.BeginDriving();
+        interactor.Driving.BeginDriving(carController);
     }
 }

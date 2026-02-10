@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour,IInteractable
+public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monobehaviour et faire instancier par enemybehavior
 {
     public int CurrentHealth => currentHealth;
     
@@ -25,6 +25,10 @@ public class EnemyHealth : MonoBehaviour,IInteractable
         if (currentHealth < 0)
         {
             currentHealth = 0;
+            
+            var brain = GetComponentInParent<EnemyBehavior>(); // Refacto
+            if (brain ) brain.currentSpeed = 0;
+            
             LaunchAutoDestruction();
         }
     }
