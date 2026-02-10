@@ -10,6 +10,7 @@ public class AimingState : EnemyState
 
     public override void Enter()
     {
+        Reset();
         ResetBulletAmount();
     }
 
@@ -32,7 +33,7 @@ public class AimingState : EnemyState
 
     public override void Exit()
     {
-        throw new System.NotImplementedException();
+        Reset();
     }
 
     void TryShoot()
@@ -66,7 +67,14 @@ public class AimingState : EnemyState
         if (!brain.HoleGenerator)
             brain.ResetState();
         
-        brain.HoleGenerator.PlaceHoles(brain.PlayerVehicule.BankColliders,brain.BulletPerShot);
-        currentBulletAmount-= brain.BulletPerShot;
+        brain.HoleGenerator.PlaceHoles(brain.PlayerVehicule.BankColliders,brain.HolePerAttack);
+        currentBulletAmount-= brain.HolePerAttack;
+    }
+
+    void Reset()
+    {
+        shootDelayTimer = 0;
+        currentBulletAmount = 0;
+        reloadTimer = 0; 
     }
 }
