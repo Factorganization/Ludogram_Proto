@@ -11,7 +11,7 @@ public class EnemyMovement
         target.parent = brain.transform;
     }
 
-    public Vector3 CurrentTarget => target.position;
+    public Vector3 CurrentTarget => target != null? target.position: Vector3.zero;
     public bool TargetReached() => Vector3.Distance(brain.transform.position, target.position) <= 3;
     
     private EnemyBehavior brain;
