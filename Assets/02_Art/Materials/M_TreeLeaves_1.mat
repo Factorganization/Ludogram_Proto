@@ -55,7 +55,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AO: 0.602
+    - _AO: 1
     - _AlphaClipping: 0.88
     - _Gradient_1: 2.59
     - _Gradient_2: 10.3
@@ -66,8 +66,8 @@ Material:
     - _Wind: 0.1
     - _WindScale: 5
     m_Colors:
-    - _Color: {r: 0.39035243, g: 0.6415094, b: 0.62644, a: 0}
-    - _Color_1: {r: 0.49381453, g: 0.764151, b: 0.54023594, a: 0}
+    - _Color: {r: 0.34963512, g: 0.764151, b: 0.4183872, a: 0}
+    - _Color_1: {r: 0.70187616, g: 0.8113208, b: 0.4783731, a: 0}
     - _Color_2: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
