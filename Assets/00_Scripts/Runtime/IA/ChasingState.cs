@@ -8,7 +8,7 @@ public class ChasingState : EnemyState
 
     public override void Enter()
     {
-        int randomDirection = Mathf.RoundToInt(Random.value*2);
+        int randomDirection = Mathf.RoundToInt(Random.value*3);
         SetNewMoveTarget(brain.VanPositions[randomDirection].position);
     }
 
