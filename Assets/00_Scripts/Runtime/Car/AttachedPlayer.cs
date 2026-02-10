@@ -24,17 +24,19 @@ public class AttachedPlayer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log($"{other.gameObject.name}");
-        if (other.transform.GetComponent<PlayerCharacter>())
+        if (other.transform.TryGetComponent<PlayerCharacter>(out var player))
         {
             other.transform.parent = transform;
+            player.Controller.EnterVehicle(transform);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.GetComponent<PlayerCharacter>())
+        if (other.transform.TryGetComponent<PlayerCharacter>(out var player))
         {
             other.transform.parent = null;
+            player.Controller.ExitVehicle();
         }
     }
     
