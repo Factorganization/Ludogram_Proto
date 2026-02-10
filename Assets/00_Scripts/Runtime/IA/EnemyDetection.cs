@@ -12,6 +12,9 @@ public class EnemyDetection
 
     public bool DetectPlayer() 
     {
+        if(!brain.PlayerVehicule)
+            return false;
+        
         return Vector3.Distance(brain.transform.position, brain.PlayerVehicule.transform.position) <= brain.PlayerDetectionRange;
     }
 
