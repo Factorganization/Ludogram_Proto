@@ -24,12 +24,7 @@ public class HoleGenerator : MonoBehaviour
             Debug.LogError("No HolePrefab reference found");
         }
     }
-
-    [ContextMenu("Generate Hole")]
-    void TestPlaceHole()
-    {
-        PlaceHoles(targetWallstest,1);
-    }
+    
     
     public void PlaceHoles(List<Collider> targetWalls, int amount)
     {
