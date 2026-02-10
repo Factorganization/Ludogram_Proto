@@ -774,11 +774,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UISwapper
   crosshairImage: {fileID: 6725017224275639861}
   crosshairs:
-  - {fileID: -495334222, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: 1197395306, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: 1592835342, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: 1963297176, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
-  - {fileID: -379629815, guid: 39a4e5def52cbff459bfc7ee645e1856, type: 3}
+  - {fileID: -455185304, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: 345400840, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: 1915643364, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: -2016699398, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
+  - {fileID: 1261815208, guid: a419b40234d830a4cbb425d7641c30ce, type: 3}
 --- !u!1001 &9100297249575263440
 PrefabInstance:
   m_ObjectHideFlags: 0

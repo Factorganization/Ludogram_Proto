@@ -50,7 +50,8 @@ public class InteractComponent : PlayerComponent
         }
 
         var targetTransform = currentInteractable.GetTransform();
-        Logs.Log($"[InteractComponent] Interacting with {targetTransform.name} at {hitPosition}");
+        //Logs.Log($"[InteractComponent] Interacting with {targetTransform.name} at {hitPosition}");
+        
         // Update CrosshairUI
         switch (currentInteractable)
         {
