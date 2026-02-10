@@ -56,8 +56,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClipping: 0.63
-    - _Gradient_1: -1.36
-    - _Gradient_2: 1.96
+    - _Gradient_1: 1
+    - _Gradient_2: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.2
