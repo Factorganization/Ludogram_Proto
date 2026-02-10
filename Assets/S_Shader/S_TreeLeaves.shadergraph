@@ -238,6 +238,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "0daa3ca32187467b9e999ea6721e7da1"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b3b6ec4d9a06463e98e8e4e26c24d769"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "1632917a6bde48358576c2dc4c77a0e0"
                 },
                 "m_SlotId": 3
@@ -357,20 +371,6 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "9f9dd5b8f55c48809c0e93cacb220970"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "7ae6cdc33b2d4489a5df60c586aca309"
-                },
-                "m_SlotId": 1
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "b3b6ec4d9a06463e98e8e4e26c24d769"
                 },
                 "m_SlotId": 0
             }
@@ -957,7 +957,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_Space": 2,
+    "m_Space": 0,
     "m_PositionSource": 0
 }
 
@@ -3683,8 +3683,8 @@
     "m_ObjectId": "c5378bc1c8c040bc88ff8adff5f3ea08",
     "m_Title": "Gradient over Y ",
     "m_Position": {
-        "x": -2909.000244140625,
-        "y": -65.9999008178711
+        "x": -2909.0,
+        "y": -66.0
     }
 }
 
