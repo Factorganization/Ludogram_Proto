@@ -18,4 +18,6 @@ public class SO_PlayerStats : ScriptableObject
     
     [Tooltip("Maximum distance for interaction checks in front of the player.")]
     public float InteractDistance = 10f;
+
+    public float AirControl = 0.25f;
 }

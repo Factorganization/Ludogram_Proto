@@ -22,6 +22,7 @@ public class MovingState : PlayerBaseState
         
         character.Controller.HandleMovementUpdate();
         character.Interact.HandleInteractUpdate();
+        character.Rope.HandleRope();
         
         AnimationUpdate();
     }
