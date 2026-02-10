@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 
-[RequireComponent(typeof(PlayerInput), typeof(CharacterController), typeof(Rigidbody))]
+[RequireComponent(typeof(PlayerInput), typeof(Rigidbody))]
 public class PlayerCharacter : Actor
 {
     public PlayerInput PlayerInput => GetCachedComponent<PlayerInput>();
@@ -17,6 +18,7 @@ public class PlayerCharacter : Actor
     public ControllerComponent Controller { get; private set; }
     public DrivingComponent Driving { get; private set; }
     public InteractComponent Interact { get; private set; }
+    public CameraComponent Camera { get; private set; }
     
     private List<PlayerComponent> _components = new List<PlayerComponent>();
     
@@ -28,7 +30,14 @@ public class PlayerCharacter : Actor
     [Tooltip("Pivot transform for camera pitch (up/down look).")]
     [SerializeField] private Transform _headTransform;
 
+    [SerializeField] private Transform _feetTransform;
+    [SerializeField] private Camera _mainCamera;
+    [SerializeField] private CinemachineCamera _cinemachineCamera;
+
     public Transform HeadTransform => _headTransform;
+    public Transform FeetTransform => _feetTransform;
+    public Camera MainCamera => _mainCamera;
+    public CinemachineCamera CinemachineCamera => _cinemachineCamera;
 
     // State flags for transitions (set these when entering/exiting states)
     public bool IsStunned { get; set; }
@@ -50,6 +59,10 @@ public class PlayerCharacter : Actor
         Interact.Initialize();
         _components.Add(Interact);
         
+        Camera = new CameraComponent(this);
+        Camera.Initialize();
+        _components.Add(Camera);
+        
         InitStateMachine();
     }
     
@@ -67,11 +80,17 @@ public class PlayerCharacter : Actor
 
     private void FixedUpdate()
     {
+        _stateMachine?.FixedUpdate();
         if (_components == null) return;
         foreach (var component in _components)
         {
             component.FixedUpdate();
         }
+    }
+
+    private void LateUpdate()
+    {
+        _stateMachine?.LateUpdate();
     }
 
     private void OnDrawGizmos()
