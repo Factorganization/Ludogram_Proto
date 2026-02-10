@@ -72,7 +72,7 @@ public class ControllerComponent : PlayerComponent
         else
         {
             // When not in vehicle, rotate normally in world space
-            character.transform.Rotate(Vector3.up * lookInput.x * sensitivity);
+            character.transform.rotation *= Quaternion.Euler(0, lookInput.x * sensitivity, 0);
         }
     }
     
