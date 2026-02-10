@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(PlayerInput), typeof(CharacterController), typeof(Rigidbody))]
+[RequireComponent(typeof(PlayerInput), typeof(Rigidbody))]
 public class PlayerCharacter : Actor
 {
     public PlayerInput PlayerInput => GetCachedComponent<PlayerInput>();
@@ -28,7 +28,10 @@ public class PlayerCharacter : Actor
     [Tooltip("Pivot transform for camera pitch (up/down look).")]
     [SerializeField] private Transform _headTransform;
 
+    [SerializeField] private Transform _feetTransform;
+
     public Transform HeadTransform => _headTransform;
+    public Transform FeetTransform => _feetTransform;
 
     // State flags for transitions (set these when entering/exiting states)
     public bool IsStunned { get; set; }
@@ -67,11 +70,17 @@ public class PlayerCharacter : Actor
 
     private void FixedUpdate()
     {
+        _stateMachine?.FixedUpdate();
         if (_components == null) return;
         foreach (var component in _components)
         {
             component.FixedUpdate();
         }
+    }
+
+    private void LateUpdate()
+    {
+        _stateMachine?.LateUpdate();
     }
 
     private void OnDrawGizmos()

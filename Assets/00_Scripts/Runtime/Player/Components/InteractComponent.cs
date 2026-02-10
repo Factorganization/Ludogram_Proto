@@ -45,7 +45,6 @@ public class InteractComponent : PlayerComponent
         
         if (currentInteractable == null)
         {
-            Logs.Log($"[InteractComponent] No interactable found");
             character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.NONE);
             return;
         }
@@ -94,7 +93,6 @@ public class InteractComponent : PlayerComponent
         float distance = character.Playerstats.InteractDistance;
 
         int hitCount = Physics.SphereCastNonAlloc(origin, radius, direction, _hitBuffer, distance, _interactableLayerMask, QueryTriggerInteraction.Ignore);
-        Logs.Log($"[InteractComponent] SphereCast found {hitCount} hits");
         if (hitCount == 0) return (null, Vector3.zero);
 
         var interactables = new List<IInteractable>();
