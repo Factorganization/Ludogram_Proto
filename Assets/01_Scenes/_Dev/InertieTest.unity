@@ -21377,6 +21377,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 489597121561593904, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2795495755648056782, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.25
@@ -21417,25 +21421,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4114082139707472905, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5193267738364587032, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_Size.y
-      value: 10.754089
-      objectReference: {fileID: 0}
-    - target: {fileID: 5193267738364587032, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_Center.y
-      value: 5.8770447
-      objectReference: {fileID: 0}
     - target: {fileID: 8602002093846356947, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
       propertyPath: m_Name
       value: PF_Vehicule
-      objectReference: {fileID: 0}
-    - target: {fileID: 8768053815322974678, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: centerOfMass.y
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

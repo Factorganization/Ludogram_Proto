@@ -1508,8 +1508,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.8, y: 8.448098, z: 19.643871}
-  m_Center: {x: 0, y: 4.724049, z: 0.39463615}
+  m_Size: {x: 6.8, y: 10.754089, z: 19.643871}
+  m_Center: {x: 0, y: 5.8770447, z: 0.39463615}
 --- !u!1 &1164305891434049392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2183,7 @@ Transform:
   m_GameObject: {fileID: 1929422599317422207}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5999999, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2879,7 +2879,7 @@ Transform:
   m_GameObject: {fileID: 2426049863137164642}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5999999, z: 0}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7973,7 +7973,7 @@ Transform:
   m_GameObject: {fileID: 6980219338797425317}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.9975455}
+  m_LocalPosition: {x: 0, y: 0.142, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9907,15 +9907,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarScripts.CarController
   speedTxt: {fileID: 5692180121161980315}
-  carMass: 1500
-  centerOfMass: {x: 0, y: -0.5, z: 0}
+  carMass: 2200
+  centerOfMass: {x: 0, y: 0.5, z: 0}
   FrontRSuspension: {fileID: 6302659651951628964}
   FrontLSuspension: {fileID: 4441336785023260235}
   RearRSuspension: {fileID: 8604801042158271454}
   RearLSuspension: {fileID: 712461736264842595}
-  suspensionRestDistance: 1.03
-  suspensionStrength: 30000
-  suspensionDamping: 7500
+  suspensionRestDistance: 1.05
+  suspensionStrength: 20000
+  suspensionDamping: 4000
   steeringAngleLowSpeed: 50
   steeringAngleHighSpeed: 25
   steeringSmoothingLowSpeed: 12
@@ -9925,7 +9925,7 @@ MonoBehaviour:
   tireMassLowSpeed: 60
   tireMassHighSpeed: 40
   rearSteeringAllowed: 0
-  wheelDriveMode: 0
+  wheelDriveMode: 2
   maxEngineTorque: 750
   engineResponse: 5
   engineBrakeTorque: 50
@@ -9938,7 +9938,7 @@ MonoBehaviour:
   FrontLTire: {fileID: 1817569115841017018}
   RearRTire: {fileID: 4096975468356269824}
   RearLTire: {fileID: 217266422685602002}
-  tireMeshRadius: 1.25
+  tireMeshRadius: 0.9
   frictionCoefficient: 0.3
   carFrontalSurface: 2.2
   airDensity: 1.29
