@@ -1,5 +1,6 @@
 using CarScripts;
 using MortierFu.Shared;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class DrivingComponent : PlayerComponent
@@ -12,6 +13,7 @@ public class DrivingComponent : PlayerComponent
     public DrivingInputs DrivingInputs = new DrivingInputs();
     
     private CarController currentCarController;
+    private Transform _seatTransform;
     
     
     public DrivingComponent(PlayerCharacter character) : base(character)
@@ -35,6 +37,8 @@ public class DrivingComponent : PlayerComponent
     {
         if (currentCarController == null) return;
 
+        character.transform.position = _seatTransform.position;
+
         DrivingInputs.throttleInput = _throttleAction.ReadValue<float>();
         DrivingInputs.brakeInput = _brakeAction.ReadValue<float>();
         DrivingInputs.steerInput = _steerAction.ReadValue<float>();
@@ -45,18 +49,25 @@ public class DrivingComponent : PlayerComponent
         }
     }
 
-    public void BeginDriving(CarController carController)
+    public void BeginDriving(CarController carController, Transform seatTransform)
     {
             if (carController == null)
             {
                 Logs.LogWarning("[DrivingComponent] CarController is null. Cannot begin driving.");
                 return;
             }
+            if (seatTransform == null)
+            {
+                Logs.LogWarning("[DrivingComponent] SeatTransform is null.");
+                return;
+            }
             
             carController.AssignInputs(DrivingInputs);
             currentCarController = carController;
             character.IsDriving = true;
-            
+
+            _seatTransform = seatTransform;
+
     }
     
     private void EndDriving()
@@ -64,5 +75,7 @@ public class DrivingComponent : PlayerComponent
         currentCarController.ClearInputs();
         currentCarController = null;
         character.IsDriving = false;
+
+        _seatTransform = null;
     }
 }
