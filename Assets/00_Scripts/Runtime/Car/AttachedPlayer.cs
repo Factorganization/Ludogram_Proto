@@ -23,7 +23,7 @@ public class AttachedPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"{other.gameObject.name}");
+        //Debug.Log($"{other.gameObject.name}");
         if (other.transform.TryGetComponent<PlayerCharacter>(out var player))
         {
             other.transform.parent = transform;

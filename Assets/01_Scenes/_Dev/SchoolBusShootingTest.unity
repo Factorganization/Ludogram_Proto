@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4628349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4628351}
+  - component: {fileID: 4628350}
+  m_Layer: 0
+  m_Name: BurstCollisionWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4628350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4628349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.BurstColliderWorld
+  cellSpans:
+    m_AlignBytes: 16
+--- !u!4 &4628351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4628349}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &10808756
 GameObject:
   m_ObjectHideFlags: 0
@@ -8030,38 +8076,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1797531681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &736080545 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2072181885737878447, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
-  m_PrefabInstance: {fileID: 1090221199}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &736080550
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736080545}
-  serializedVersion: 5
-  m_Mass: 1000
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &797597443
 GameObject:
   m_ObjectHideFlags: 0
@@ -8235,6 +8249,10 @@ PrefabInstance:
       propertyPath: delayToDestroy
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4797150973422761571, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 7392106406328791080, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.20972
@@ -8316,6 +8334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Bumper_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4797150973422761571, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 7392106406328791080, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
       propertyPath: m_LocalPosition.x
       value: -44.54028
@@ -8618,6 +8640,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 417218004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &844398706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2775176492417983528, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+  m_PrefabInstance: {fileID: 2121149469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &844398709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844398706}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.447628, y: 1.6597828, z: 4.100293}
+  m_Center: {x: 0.028383255, y: 0.32989138, z: 0.021706104}
 --- !u!1 &863781424
 GameObject:
   m_ObjectHideFlags: 0
@@ -11572,6 +11620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Bumper
       objectReference: {fileID: 0}
+    - target: {fileID: 4797150973422761571, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 7392106406328791080, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
       propertyPath: m_LocalPosition.x
       value: -43.79028
@@ -11615,10 +11667,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2072181885737878447, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 736080550}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
 --- !u!1 &1102654491
 GameObject:
@@ -13913,6 +13962,10 @@ PrefabInstance:
       propertyPath: delayToDestroy
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4797150973422761571, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 7392106406328791080, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.45972
@@ -14018,6 +14071,10 @@ PrefabInstance:
       propertyPath: delayToDestroy
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4797150973422761571, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 7392106406328791080, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.04028
@@ -14123,6 +14180,10 @@ PrefabInstance:
       propertyPath: delayToDestroy
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4797150973422761571, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 7392106406328791080, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.20972
@@ -15519,52 +15580,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442535515}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1443479841
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1443479843}
-  - component: {fileID: 1443479842}
-  m_Layer: 0
-  m_Name: BurstCollisionWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1443479842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443479841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.BurstColliderWorld
-  cellSpans:
-    m_AlignBytes: 16
---- !u!4 &1443479843
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443479841}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457578529
 GameObject:
   m_ObjectHideFlags: 0
@@ -18110,6 +18125,10 @@ PrefabInstance:
       propertyPath: delayToDestroy
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4797150973422761571, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 7392106406328791080, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.04028
@@ -21334,6 +21353,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2474208368034424486, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
     - target: {fileID: 2354815670745126667, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
       propertyPath: playerVehicule
       value: 
@@ -21350,10 +21373,6 @@ PrefabInstance:
       propertyPath: playerVehicule
       value: 
       objectReference: {fileID: 329729137}
-    - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
-      propertyPath: randomOffsetRange
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3434841016137045683, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
       propertyPath: yBoost
       value: 8
@@ -21417,7 +21436,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2775176492417983528, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 844398709}
   m_SourcePrefab: {fileID: 100100000, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
 --- !u!1 &2132519509
 GameObject:
@@ -21671,4 +21693,4 @@ SceneRoots:
   - {fileID: 1732987843}
   - {fileID: 807503994}
   - {fileID: 1302326321}
-  - {fileID: 1443479843}
+  - {fileID: 4628351}

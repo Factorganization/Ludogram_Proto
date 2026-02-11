@@ -17,6 +17,6 @@ public class Ladder : MonoBehaviour, IInteractable
 
     public void Interact(PlayerCharacter interactor)
     {
-        interactor.transform.localPosition += new Vector3(0, 1 * power, -1f) ;
+        interactor.transform.localPosition += new Vector3(0, 1 * power, -2f) ;
     }
 }
