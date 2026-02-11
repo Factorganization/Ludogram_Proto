@@ -8,21 +8,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: bumpOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: recoilPower
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: holeGenerator
+      value: 
+      objectReference: {fileID: 4797150973422761571}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: attackReadyDelay
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_Name
       value: PF_Bumper
       objectReference: {fileID: 0}
     - target: {fileID: 6664152969994370395, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -43.79028
       objectReference: {fileID: 0}
     - target: {fileID: 6664152969994370395, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.6912199
       objectReference: {fileID: 0}
     - target: {fileID: 6664152969994370395, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 49.403625
       objectReference: {fileID: 0}
     - target: {fileID: 6664152969994370395, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,5 +71,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4797150973422761571}
   m_SourcePrefab: {fileID: 100100000, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+--- !u!1 &2072181885737878447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+  m_PrefabInstance: {fileID: 4246290051727428979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4797150973422761571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072181885737878447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453501805fae3fc469d18c3389072445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoleGenerator
+  holePrefab: {fileID: 2872654400384901377, guid: c6b3fcbc9be911d4bbd43c9231005637, type: 3}
+  aimPrecision: 1
+  distanceMax: 100
+  yBoost: 4
+  targetWallstest: []
