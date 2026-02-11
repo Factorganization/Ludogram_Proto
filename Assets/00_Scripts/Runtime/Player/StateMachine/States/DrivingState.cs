@@ -18,9 +18,15 @@ public class DrivingState : PlayerBaseState
     {
         character.Driving.HandleDrivingUpdate();
         character.Interact.HandleInteractUpdate();
+        character.Controller.HandleMovementUpdate();
     }
-    
-        
+
+    public override void LateUpdate()
+    {
+        character.Controller.HandleLookUpdate();
+    }
+
+
     public override void OnExit()
     {
         Logs.Log($"[Player {character.PlayerIndex}] Driving state exited");
