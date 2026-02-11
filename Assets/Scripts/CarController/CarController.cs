@@ -105,8 +105,8 @@ namespace CarScripts {
         
         //float wheelRPM => carRb.linearVelocity.magnitude / (2 * Mathf.PI * wheelRadius) * 60f;
 
-        public Collider[] BankColliders => bankCollider;
-        [SerializeField] private Collider[] bankCollider;
+        public List<Collider> BankColliders => bankCollider;
+        [SerializeField] private List<Collider> bankCollider;
         
         private Dictionary<Transform, WheelContact> wheelsContact = new();
         

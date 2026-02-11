@@ -19,6 +19,7 @@ public class PlayerCharacter : Actor
     public DrivingComponent Driving { get; private set; }
     public InteractComponent Interact { get; private set; }
     public CameraComponent Camera { get; private set; }
+    public RopeComponent Rope { get; private set; }
     
     private List<PlayerComponent> _components = new List<PlayerComponent>();
     
@@ -44,6 +45,7 @@ public class PlayerCharacter : Actor
     public bool IsInteracting { get; set; }
     public bool IsDriving { get; set; }
     public bool IsFlying { get; set; }
+    public bool IsAttached { get; set; }
     
     protected override void BeginPlay()
     {
@@ -62,6 +64,10 @@ public class PlayerCharacter : Actor
         Camera = new CameraComponent(this);
         Camera.Initialize();
         _components.Add(Camera);
+        
+        Rope = new RopeComponent(this);
+        Rope.Initialize();
+        _components.Add(Rope);
         
         InitStateMachine();
     }

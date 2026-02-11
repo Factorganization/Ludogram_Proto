@@ -16,7 +16,7 @@ TagManager:
   - Interactable
   - TriggerZone
   - MovingObject
-  - 
+  - Rope
   - Car
   - Ghost
   - AI

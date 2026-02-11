@@ -11,8 +11,10 @@ public class RopeAttacher : MonoBehaviour
     {
         if (other.TryGetComponent<PlayerCharacter>(out var player))
         {
+            if (player.IsAttached) return;
             //rope.
-            //ropeAnchor.target = player.transform;
+            ropeAnchor.target = player.transform;
+            player.Rope.AttachRope(rope);
         }
     }
 }

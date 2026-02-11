@@ -8,6 +8,7 @@ public class ChasingState : EnemyState
 
     public override void Enter()
     {
+        Reset();
         int randomDirection = Mathf.RoundToInt(Random.value*(3));
         Vector3 targetPos = brain.transform.position;
 
@@ -34,6 +35,7 @@ public class ChasingState : EnemyState
     {
         CheckIncrementingSpeed();
         CheckObstacleClose();
+        brain.TryAttack();
     }
 
     void CheckIncrementingSpeed()
@@ -97,5 +99,12 @@ public class ChasingState : EnemyState
 
     public override void Exit()
     {
+        Reset();
+    }
+
+    void Reset()
+    {
+        incrementSpeedTimer = 0;
+        brain.currentSpeed = brain.InitialSpeed;
     }
 }

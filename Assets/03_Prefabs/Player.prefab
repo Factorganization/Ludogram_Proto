@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2540015122309300157}
   - component: {fileID: 3217597951348072066}
   - component: {fileID: 3191411937858171851}
+  - component: {fileID: 5121152947158739932}
   m_Layer: 13
   m_Name: Player
   m_TagString: Untagged
@@ -155,7 +156,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2540015122309300157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   _headTransform: {fileID: 8916134758494326139}
   _feetTransform: {fileID: 2718970810235640701}
   _mainCamera: {fileID: 3164259511287397336}
+  _cinemachineCamera: {fileID: 0}
 --- !u!136 &3191411937858171851
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -210,6 +212,24 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: -0.15, z: 0}
+--- !u!114 &5121152947158739932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909969873080997737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3191411937858171851}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1361057726182535859
 GameObject:
   m_ObjectHideFlags: 0
