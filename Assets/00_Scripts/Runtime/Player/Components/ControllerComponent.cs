@@ -112,10 +112,11 @@ public class ControllerComponent : PlayerComponent
             jumpRequested = false; 
         }
         
-        if (!_isInVehicle && carTransform && !isGrounded)
+        //TODO : Update this line
+        /*if (!_isInVehicle && carTransform && !isGrounded)
         {
             _rigidbody.AddForce(carTransform.GetComponent<AttachedPlayer>().carRef.GetComponent<Rigidbody>().linearVelocity * 0.75f, ForceMode.VelocityChange);
-        }
+        }*/
 
         if (carTransform != null && !_isInVehicle && isGrounded)
         {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SteeringWheel : MonoBehaviour, IInteractable
 {
     [SerializeField] private CarController carController;
-    
+    [SerializeField] private Transform seatTransform;
     public Transform GetTransform() => transform;
 
     public void Interact(IInteractable.InteractAction action, Transform interactor)
@@ -26,6 +26,6 @@ public class SteeringWheel : MonoBehaviour, IInteractable
             return;
         }
         
-        interactor.Driving.BeginDriving(carController);
+        interactor.Driving.BeginDriving(carController, seatTransform);
     }
 }
