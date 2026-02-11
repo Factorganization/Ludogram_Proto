@@ -7,6 +7,7 @@ public class EnemyMovement
     {
         brain = _brain;
         target = new GameObject().transform;
+        target.gameObject.name = brain.gameObject.name+" Target";
         target.position = brain.transform.position;
         target.parent = brain.transform;
     }
