@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AttachedPlayer : MonoBehaviour
 {
-    [SerializeField] private Transform carRef;
+    [SerializeField] internal Transform carRef;
 
     private void Start()
     {

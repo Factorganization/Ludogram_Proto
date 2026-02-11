@@ -13,8 +13,14 @@ public class EnemyBehavior : MonoBehaviour
     public float ObstacleDetectionRange => obstacleDetectionRange;
     public float IncrementSpeedTreshold => incrementSpeedTreshold;
     public float IncrementSpeedAmount => incrementSpeedAmount;
+    public float InitialSpeed => initialSpeed;
+    public int HolePerAttack => holePerAttack;
+    public float BumpOffset => bumpOffset;
+    public int TotalBulletAmount => totalBulletAmount;
+    public float ReloadTime => reloadTime;
     public CarController PlayerVehicule=> playerVehicule; // a remplacer par le nouveau script car
     public HoleGenerator HoleGenerator => holeGenerator;
+    
 
     public float DistanceToVan => distanceToVan;
     public EnemyType Type => type;
@@ -26,13 +32,14 @@ public class EnemyBehavior : MonoBehaviour
 
     [Header("Global References")]
     [SerializeField] private CarController playerVehicule; // a remplacer par le nouveau script car
+    [SerializeField] private HoleGenerator holeGenerator;
     
-    [SerializeField] private float randomOffsetRange = 5;
 
     public float currentSpeed;
     
     [Header("Global Variables")]
     [SerializeField] private EnemyType type;
+    [SerializeField] private float randomOffsetRange = 5;
     [SerializeField] private float initialSpeed = 10;
     [SerializeField] private float incrementSpeedAmount = 5;
     [SerializeField] private float incrementSpeedTreshold = 10;
@@ -41,18 +48,24 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float noPlayerDetectedLength = 10;
     [SerializeField] private float slowSpeedAmount = 10;
     [SerializeField] private float distanceToVan = 15;
+    [SerializeField] private float attackReadyDelay = 0;
+    [SerializeField] private int holePerAttack=1;
     
     
     [Header("Bumper")]
-    
+    [SerializeField] private float bumpOffset = 3;
+
+    [SerializeField] private float recoilPower = 500;
     
     [Header("Shooter")]
-    [SerializeField] private HoleGenerator holeGenerator;
     [SerializeField] private float shootCooldown = 2; //in seconds
+    [SerializeField] private int totalBulletAmount=3;
+    [SerializeField] private float reloadTime = 10;
     
-    EnemyState _neutralState,_chasingState;
+    private EnemyState _neutralState,_chasingState,_attackState;
     private EnemyMovement _movement;
     private EnemyDetection _detection;
+    private float attackReadyTimer;
     
     [Header("Debug")]
     [SerializeField] private bool showGizmos = true;
@@ -63,11 +76,11 @@ public class EnemyBehavior : MonoBehaviour
     {
         _neutralState = new NeutralState(this);
         _chasingState = new ChasingState(this);
+        _attackState = new AttackState(this);
         _movement = new EnemyMovement(this);
         _detection = new EnemyDetection(this);
     }
-
-
+    
     private void Start()
     {
         currentSpeed = initialSpeed;
@@ -112,9 +125,39 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    public void ResetTarget()
+    public void ResetState()
     {
-        _movement.UpdateTarget(transform.position,transform);
+        SetState(_neutralState);
+    }
+
+    public void TryAttack() //refacto: hardcodé mais aaaaaaaaaaaaaa
+    {
+        if(_currentState == _attackState)
+            return;
+        
+        if (_movement.TargetReached())
+        {
+            if (attackReadyTimer < attackReadyDelay)
+            {
+                attackReadyTimer += Time.deltaTime;
+            }
+            else
+            {
+                attackReadyTimer = 0;
+                SetState(_attackState);
+            }
+        }
+    }
+
+    public void TryBump() //Refacto : collegues, forgive me for my sins
+    {
+        if (_movement.TargetReached())
+        {
+            holeGenerator.PlaceHoles(playerVehicule.BankColliders,holePerAttack);
+            PlayerVehicule.GetRB().AddForce((PlayerVehicule.transform.position-transform.position).normalized*recoilPower*10, ForceMode.Impulse);
+            GetComponent<Rigidbody>().AddForce((transform.position-PlayerVehicule.transform.position).normalized*recoilPower*100, ForceMode.Impulse);
+            SetState(_chasingState);
+        }
     }
     
     private void OnDrawGizmos()
@@ -123,7 +166,13 @@ public class EnemyBehavior : MonoBehaviour
         
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, playerDetectionRange);
-        
+
+        if (_movement != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(_movement.CurrentTarget, obstacleDetectionRange);
+        }
+
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, obstacleDetectionRange);
     }
@@ -133,7 +182,7 @@ enum EnemyStates
 {
     NeutralState,
     ChasingState,
-    AttackState
+    AimingState
 }
 
 public enum EnemyType
