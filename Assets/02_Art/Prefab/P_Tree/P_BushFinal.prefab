@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2869115119474303949
+--- !u!1 &3122223846292130452
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 154252254569242388}
-  - component: {fileID: 1819212199555646138}
-  - component: {fileID: 9153753470725559554}
-  - component: {fileID: 3250683044369783948}
-  - component: {fileID: 7275969812929296092}
+  - component: {fileID: 6617824130926097815}
+  - component: {fileID: 8427932691837912961}
+  - component: {fileID: 3246080918264941150}
+  - component: {fileID: 7275921895450820751}
   m_Layer: 0
-  m_Name: P_TreeFinal_4
+  m_Name: P_BushFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &154252254569242388
+--- !u!4 &6617824130926097815
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869115119474303949}
+  m_GameObject: {fileID: 3122223846292130452}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.394051, y: -0.000000008466486, z: 42.851173}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 671.14026, y: 0, z: -193.23329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1819212199555646138
+--- !u!33 &8427932691837912961
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869115119474303949}
-  m_Mesh: {fileID: 1308562117911394746, guid: c28d2c3e03228394b8448a723de3fc7a, type: 3}
---- !u!23 &9153753470725559554
+  m_GameObject: {fileID: 3122223846292130452}
+  m_Mesh: {fileID: 2672751535346009769, guid: c2d4947bb4baa014e947619c9dc54bd5, type: 3}
+--- !u!23 &3246080918264941150
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869115119474303949}
+  m_GameObject: {fileID: 3122223846292130452}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,8 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69322245a5713c04ea3b824ce5521475, type: 2}
-  - {fileID: 2100000, guid: 02af7ad2d483905488d57c4db0d927b8, type: 2}
+  - {fileID: 2100000, guid: 95cd7b1121030bb4b87ce9114a537055, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,45 +91,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3250683044369783948
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869115119474303949}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.34
-  m_Height: 10.0070505
-  m_Direction: 1
-  m_Center: {x: 0.0013922453, y: 4.8160024, z: 0.08785224}
---- !u!205 &7275969812929296092
+--- !u!205 &7275921895450820751
 LODGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869115119474303949}
+  m_GameObject: {fileID: 3122223846292130452}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0013923645, y: 4.8160024, z: 0.08785224}
-  m_Size: 10.0070505
+  m_LocalReferencePoint: {x: 0.080587864, y: 0.41119468, z: -0.13926125}
+  m_Size: 2.7919035
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.096746065
+  - screenRelativeHeight: 0.0981888
     fadeTransitionWidth: 0
     renderers:
-    - renderer: {fileID: 9153753470725559554}
+    - renderer: {fileID: 3246080918264941150}
   m_Enabled: 1
