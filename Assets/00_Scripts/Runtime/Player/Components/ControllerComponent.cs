@@ -101,8 +101,8 @@ public class ControllerComponent : PlayerComponent
         else
         {
             // In air, apply reduced control
-            velocityChange.y = 0;
-            _rigidbody.AddForce(velocityChange * character.Playerstats.AirControl, ForceMode.VelocityChange);
+            Vector3 airVelocity = new Vector3(velocityChange.x, 0, velocityChange.z) * character.Playerstats.AirControl;
+            _rigidbody.AddForce(airVelocity, ForceMode.VelocityChange);
         }
         
         // Handle jumping
