@@ -67,8 +67,9 @@ public class EnemyBehavior : MonoBehaviour
     private EnemyDetection _detection;
     private float attackReadyTimer;
     
-    [Header("Debug")]
-    [SerializeField] private bool showGizmos = true;
+    [Header("Debug")] 
+        [SerializeField] private bool debugLog = false;
+    [SerializeField] private bool showGizmos = false;
 
     
 
@@ -94,7 +95,8 @@ public class EnemyBehavior : MonoBehaviour
         _currentState = newState;
         _currentState?.Enter();
         
-        Debug.Log("Entered state : "+ _currentState);
+        if(debugLog)
+            Debug.Log("Entered state : "+ _currentState);
     }
 
     public void SetNewTarget(Vector3 newPos, Transform newParent=null)
