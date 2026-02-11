@@ -5733,11 +5733,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465187374}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &497550140 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8956483734203774802, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-  m_PrefabInstance: {fileID: 1277623881}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &510842503
 GameObject:
   m_ObjectHideFlags: 0
@@ -8676,11 +8671,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836308119}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!137 &838066740 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7829568209781808905, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-  m_PrefabInstance: {fileID: 1277623881}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &842710919
 GameObject:
   m_ObjectHideFlags: 0
@@ -13548,14 +13538,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 459167532002636369, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.592
-      objectReference: {fileID: 0}
-    - target: {fileID: 459167532002636369, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.5
-      objectReference: {fileID: 0}
     - target: {fileID: 706911688483382138, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -13563,30 +13545,6 @@ PrefabInstance:
     - target: {fileID: 1144808424545324637, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550563277763022567, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.7955697
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550563277763022567, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550563277763022567, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1615
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391268965364637936, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391268965364637936, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.408
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391268965364637936, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2681518182224485208, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
       propertyPath: m_LocalScale.x
@@ -13664,18 +13622,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Vehicule
       objectReference: {fileID: 0}
-    - target: {fileID: 7512873984681854837, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: c467cd302f4fab24186ae10b06b7ed6a, type: 2}
-    - target: {fileID: 7829568209781808905, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[0]'
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7829568209781808905, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[1]'
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8321752425684778591, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 512
@@ -13683,26 +13629,6 @@ PrefabInstance:
     - target: {fileID: 8343580789606602858, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456765138919921548, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: yOffset
-      value: 3.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456765138919921548, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: maxYSize
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456765138919921548, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: moneyPile
-      value: 
-      objectReference: {fileID: 838066740}
-    - target: {fileID: 8456765138919921548, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: boxCollider
-      value: 
-      objectReference: {fileID: 497550140}
-    - target: {fileID: 8456765138919921548, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
-      propertyPath: fillPercentage
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -21669,6 +21595,10 @@ PrefabInstance:
       propertyPath: holePrefab
       value: 
       objectReference: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
+    - target: {fileID: -2474208368034424486, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      propertyPath: distanceMax
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
       propertyPath: playerVehicule
       value: 
@@ -21686,13 +21616,33 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
-      propertyPath: shootCooldown
+      propertyPath: initialSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      propertyPath: holePerAttack
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      propertyPath: shootCooldown
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
       propertyPath: playerVehicule
       value: 
       objectReference: {fileID: 1459015345}
+    - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      propertyPath: totalBulletAmount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      propertyPath: incrementSpeedAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093845053411074320, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
+      propertyPath: incrementSpeedTreshold
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3434841016137045683, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
       propertyPath: yBoost
       value: 8
