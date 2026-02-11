@@ -34,6 +34,8 @@ public class UISwapper : MonoBehaviour
 
     public void SwapCrosshair(InteractionUI crosshair)
     {
+        if (!crosshairImage) return;
+        
         switch (crosshair)
         {
             case InteractionUI.NONE:
