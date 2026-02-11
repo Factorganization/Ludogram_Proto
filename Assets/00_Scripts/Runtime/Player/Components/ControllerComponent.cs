@@ -21,7 +21,7 @@ public class ControllerComponent : PlayerComponent
     // Track if player is in a vehicle
     private bool _isInVehicle = false;
     private float _yawInVehicle = 0f; // Local yaw relative to vehicle
-
+    private Transform carTransform;
     public ControllerComponent(PlayerCharacter character) : base(character)
     {
         if (character == null) return;
@@ -111,6 +111,16 @@ public class ControllerComponent : PlayerComponent
             _rigidbody.AddForce(Vector3.up * character.Playerstats.JumpHeight, ForceMode.Impulse);
             jumpRequested = false; 
         }
+        
+        if (!_isInVehicle && carTransform && !isGrounded)
+        {
+            _rigidbody.AddForce(carTransform.GetComponent<AttachedPlayer>().carRef.GetComponent<Rigidbody>().linearVelocity * 0.75f, ForceMode.VelocityChange);
+        }
+
+        if (carTransform != null && !_isInVehicle && isGrounded)
+        {
+            carTransform = null;
+        }
     }
     
     /// <summary>
@@ -119,14 +129,15 @@ public class ControllerComponent : PlayerComponent
     public void EnterVehicle(Transform vehicleTransform)
     {
         _isInVehicle = true;
+        carTransform = vehicleTransform;
         
         // Calculate initial local yaw relative to vehicle
         float currentWorldYaw = character.transform.eulerAngles.y;
-        float vehicleWorldYaw = vehicleTransform.eulerAngles.y;
+        float vehicleWorldYaw = carTransform.eulerAngles.y;
         _yawInVehicle = Mathf.DeltaAngle(vehicleWorldYaw, currentWorldYaw);
         
         // Parent to vehicle
-        character.transform.SetParent(vehicleTransform);
+        character.transform.SetParent(carTransform);
         
         Logs.Log($"[ControllerComponent] Entered vehicle. Local yaw: {_yawInVehicle}");
     }
@@ -138,6 +149,8 @@ public class ControllerComponent : PlayerComponent
     {
         _isInVehicle = false;
         _yawInVehicle = 0f;
+        
+        //carTransform = null;
         
         // Unparent from vehicle
         character.transform.SetParent(originalParent);
