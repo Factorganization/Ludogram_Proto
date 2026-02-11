@@ -12,6 +12,8 @@ public class DrivingState : PlayerBaseState
         // TODO animator?.CrossFade("Driving", k_crossFadeDuration);
         
         character.SwitchInputMap("Driving");
+        character._uiSwapper.SwitchCrosshairVisibility(false);
+        
     }
         
     public override void Update()
@@ -31,5 +33,6 @@ public class DrivingState : PlayerBaseState
     {
         Logs.Log($"[Player {character.PlayerIndex}] Driving state exited");
         character.SwitchInputMap("Player");
+        character._uiSwapper.SwitchCrosshairVisibility(true);
     }
 }

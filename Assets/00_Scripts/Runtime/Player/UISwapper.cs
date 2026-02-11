@@ -1,11 +1,28 @@
+using System;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UISwapper : MonoBehaviour
 {
-    [SerializeField] private Image crosshairImage;
+    [SerializeField] private Canvas canvas;
     [SerializeField] private Sprite[] crosshairs;
-    
+    private Image crosshairImage;
+
+    private void Start()
+    {
+        crosshairImage = canvas.GetComponentInChildren<Image>();
+        SetUILayer().Forget();
+    }
+
+    private async UniTask SetUILayer()
+    {
+        await UniTask.Delay(TimeSpan.FromSeconds(0.1f));
+        Debug.Log("change layer");
+        canvas.gameObject.layer = 5;
+        crosshairImage.gameObject.layer = 5;
+    }
+
     public enum InteractionUI
     {
         NONE,
@@ -35,5 +52,10 @@ public class UISwapper : MonoBehaviour
                 crosshairImage.sprite = crosshairs[4];
                 break;
         }
+    }
+
+    public void SwitchCrosshairVisibility(bool state)
+    {
+        crosshairImage.enabled = state;
     }
 }
