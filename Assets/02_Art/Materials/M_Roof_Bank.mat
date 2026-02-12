@@ -36,11 +36,21 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _BaseColor:
+        m_Texture: {fileID: 2800000, guid: 315db093db8907d459c652b9b78a70f7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 5725962a57b18ba4d945611e42886f8c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _IsRecolor: 1
     - _Metallic: 0
     - _NormalStrength: 1.96
+    - _QueueControl: 0
     - _Roughness_Strength: 0.09
     m_Colors:
     - _Recolor_1: {r: 0.49411762, g: 0.77491724, b: 1, a: 1}
