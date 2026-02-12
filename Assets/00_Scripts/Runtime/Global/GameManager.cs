@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateMoneyAmount(maxMoneyVan);
+        UpdateMoneyAmount(0);
         UpdateMoneyText();
     }
 
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
     {
         if (moneyText)
         {
-            moneyText.text = "You delivered " + moneyDeliveredTotal + "$  Goal = " + moneyDeliveredGoal + "$";
+            moneyText.text = "You have :" + (int)currentMoney+ "$                You delivered " + (int)moneyDeliveredTotal + "/" + moneyDeliveredGoal + "$";
         }
     }
 }

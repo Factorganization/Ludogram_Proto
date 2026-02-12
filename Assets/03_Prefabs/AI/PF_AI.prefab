@@ -393,6 +393,7 @@ MonoBehaviour:
   destructionMaterial: {fileID: 2100000, guid: 5926a4f661a72ba40a0c2ca4bcaad527, type: 2}
   meshRenderers:
   - {fileID: 4455098805455811937}
+  explosionFeedback: {fileID: 1666131492130620534}
 --- !u!1 &5375051577449325380
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +439,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_Explosion Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 430353359337137389, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284995070647641209, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035489074338710205, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035489074338710205, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4142533746997909761, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.08649826
@@ -478,11 +495,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6143157467177296009, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143157467177296009, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711295086331865911, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711295086331865911, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831481502909631922, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831481502909631922, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+--- !u!198 &1666131492130620534 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 430353359337137389, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
+  m_PrefabInstance: {fileID: 1362239768538521755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3141992622739356058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4142533746997909761, guid: 84ff79fba4fd3b143b7b5b6c03a38300, type: 3}
