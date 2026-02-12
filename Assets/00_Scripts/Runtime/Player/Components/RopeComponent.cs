@@ -14,19 +14,10 @@ public class RopeComponent : PlayerComponent
     public void HandleRope()
     {
         if (!AttachedRope) return;
-        
-        if (RopeTensionMonitor.IsUnderTension)
-        {
-            _attachedObiRigidbody.kinematicForParticles = true;
-            AttachedRope.distanceConstraintsEnabled = true;
-        }
-        else
-        {
-            _attachedObiRigidbody.kinematicForParticles = false;
-            AttachedRope.distanceConstraintsEnabled = false;
-        }
-        
-        
+
+        _attachedObiRigidbody.kinematicForParticles = !RopeTensionMonitor.IsUnderTension;
+        //AttachedRope.distanceConstraintsEnabled = true;
+        //AttachedRope.distanceConstraintsEnabled = false;
     }
 
     public override void Initialize()
