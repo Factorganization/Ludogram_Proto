@@ -110,16 +110,16 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightMultiplier: 1.22
-    - _LightRange: 0
+    - _LightMultiplier: 0.58
+    - _LightRange: 0.4
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ShadowMultiplier: -1.25
-    - _ShadowRange: 0.503
+    - _ShadowMultiplier: -1.51
+    - _ShadowRange: 0.35
     - _Shadow_color_multiplier: 0.9
     - _Smoothness: 0.153
     - _SmoothnessTextureChannel: 0
