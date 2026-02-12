@@ -68,9 +68,10 @@ public class PlayerCharacter : Actor
         Rope.Initialize();
         _components.Add(Rope);
         
-        InitStateMachine();
-
         transform.position = FindAnyObjectByType<SpawnPoint>().transform.position;
+        transform.rotation = FindAnyObjectByType<SpawnPoint>().transform.rotation;
+        
+        InitStateMachine();
     }
     
     #region Unity Callbacks
