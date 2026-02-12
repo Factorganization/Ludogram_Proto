@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -30,10 +31,12 @@ public class GameManager : MonoBehaviour
     private int bankDeliveredCount;
     private float moneyDeliveredTotal;
 
+    [SerializeField] float moneyDeliveredGoal;
     [SerializeField] private int maxMoneyVan;
     [SerializeField] private int bankMoneyAmount;
     [SerializeField] private bool debug;
     [SerializeField] MoneyAmount moneyPile;
+    [SerializeField] TextMeshProUGUI moneyText;
     
     private void Awake()
     {
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateMoneyAmount(maxMoneyVan);
+        UpdateMoneyText();
     }
 
     public void OnBankInteraction(Bank bank)
@@ -66,6 +70,8 @@ public class GameManager : MonoBehaviour
             if(currentMoney == 0)
                 UpdateMoneyAmount(bankMoneyAmount);
         }
+
+        UpdateMoneyText();
     }
     
     public void UpdateMoneyAmount(float addedAmount)
@@ -89,5 +95,13 @@ public class GameManager : MonoBehaviour
         
         if(debug)
             Debug.Log("New Amount Of Money "+CurrentMoney);
+    }
+
+    void UpdateMoneyText()
+    {
+        if (moneyText)
+        {
+            moneyText.text = "You delivered " + moneyDeliveredTotal + "$  Goal = " + moneyDeliveredGoal + "$";
+        }
     }
 }
