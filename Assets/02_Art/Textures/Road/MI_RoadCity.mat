@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_RoadLine
+  m_Name: MI_RoadCity
   m_Shader: {fileID: -6465566751694194690, guid: dba1310eb9dafa649b05e6a6d939c8b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -66,7 +66,7 @@ Material:
     m_Colors:
     - _Recolor_1: {r: 0.6698113, g: 0.59461033, b: 0.48340157, a: 1}
     - _Recolor_2: {r: 0.2735849, g: 0.20007832, b: 0.15873086, a: 1}
-    - _Tiling_XY: {r: 1, g: 4.78, b: 0, a: 0}
+    - _Tiling_XY: {r: 1, g: 26, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7380130833868267941
