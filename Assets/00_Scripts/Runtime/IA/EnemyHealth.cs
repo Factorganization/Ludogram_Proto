@@ -10,12 +10,19 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
     [SerializeField] private Material destructionMaterial;
 
     [SerializeField] private MeshRenderer[] meshRenderers;
+    [SerializeField] private ParticleSystem explosionFeedback;
+    
     private int currentHealth;
-    private float destroyTimer;
+    private float destroyTimer, explosionTimer;
 
     void Awake()
     {
         currentHealth = maxHealth;
+    }
+
+    private void Start()
+    {
+        GameManager.Instance.enemyCount++;
     }
 
     public void UpdateHealth(int amount)
@@ -43,6 +50,16 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
                 AutoDestruction();
             }
         }
+
+        if (explosionTimer > 0)
+        {
+            explosionTimer -= Time.deltaTime;
+            if (explosionTimer < 0)
+            {
+                GameManager.Instance.enemyCount--;
+                Destroy(gameObject);
+            }
+        }
     }
 
     void LaunchAutoDestruction()
@@ -58,7 +75,10 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
 
     void AutoDestruction()
     {
-        Destroy(gameObject);
+        if(explosionFeedback)
+            explosionFeedback.Play();
+
+        explosionTimer = 0.5f;
     }
 
     public Transform GetTransform() => transform;

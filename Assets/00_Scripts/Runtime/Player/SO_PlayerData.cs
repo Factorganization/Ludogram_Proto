@@ -11,6 +11,7 @@ public class SO_PlayerStats : ScriptableObject
     public float Gravity = -9.81f;
     [Tooltip("Vertical look range in degrees (up/down).")]
     public float UpDownLookRange = 80f;
+    public float AirControl = 0.25f;
     
     [Header("Interaction")]
     [Tooltip("Radius of the interaction sphere cast in front of the player.")]
@@ -19,5 +20,7 @@ public class SO_PlayerStats : ScriptableObject
     [Tooltip("Maximum distance for interaction checks in front of the player.")]
     public float InteractDistance = 10f;
 
-    public float AirControl = 0.25f;
+    [Header("Rope")][Tooltip("la tension en Newton avant que le perso soit callback (c'est des Newton approximatif c pas une science exact)")] 
+    public float MaxRopeTension = 150f;
+    
 }

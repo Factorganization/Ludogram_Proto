@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections.Generic;
+using CarScripts;
 using Unity.Cinemachine;
 
 [RequireComponent(typeof(PlayerInput), typeof(Rigidbody))]
@@ -33,12 +34,10 @@ public class PlayerCharacter : Actor
 
     [SerializeField] private Transform _feetTransform;
     [SerializeField] private Camera _mainCamera;
-    [SerializeField] private CinemachineCamera _cinemachineCamera;
 
     public Transform HeadTransform => _headTransform;
     public Transform FeetTransform => _feetTransform;
     public Camera MainCamera => _mainCamera;
-    public CinemachineCamera CinemachineCamera => _cinemachineCamera;
 
     // State flags for transitions (set these when entering/exiting states)
     public bool IsStunned { get; set; }
@@ -69,11 +68,14 @@ public class PlayerCharacter : Actor
         Rope.Initialize();
         _components.Add(Rope);
         
+        transform.position = FindAnyObjectByType<SpawnPoint>().transform.position;
+        transform.rotation = FindAnyObjectByType<SpawnPoint>().transform.rotation;
+        
         InitStateMachine();
     }
     
     #region Unity Callbacks
-
+    
     private void Update()
     {
         _stateMachine?.Update();
@@ -145,6 +147,7 @@ public class PlayerCharacter : Actor
         }
         
         PlayerInput.SwitchCurrentActionMap(mapName);
+        Controller.Initialize();
         Logs.Log($"[PlayerCharacter]: Switched to input map '{mapName}'.");
     }
 

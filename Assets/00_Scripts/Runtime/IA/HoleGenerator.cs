@@ -12,10 +12,8 @@ public class HoleGenerator : MonoBehaviour
 
     [SerializeField] private float distanceMax = 100;
     [SerializeField] private float yBoost = 4;
-    
-    
-    //Test
-    public List<Collider> targetWallstest;
+
+    [SerializeField] private ParticleSystem gunshotFeedback;
 
     private void Start()
     {
@@ -30,11 +28,23 @@ public class HoleGenerator : MonoBehaviour
     {
         if (!holePrefab || targetWalls.Count==0 || amount<=0) return;
         
-        Collider targetWall = targetWalls[Random.Range(0, targetWalls.Count-1)];
-        Vector3 closestPoint = targetWall.ClosestPoint(transform.position+ Vector3.up * yBoost);
+        Collider targetWall = targetWalls[Random.Range(0, targetWalls.Count)];
+        Vector3 origin = transform.position + Vector3.up * yBoost;
+        Vector3 closestPoint = targetWall.ClosestPoint(origin);
         Debug.DrawLine(transform.position, closestPoint, Color.red,2);
         
-        if (Vector3.Distance(closestPoint, transform.position) > distanceMax) return;
+        float dist = Vector3.Distance(closestPoint, origin);
+        if (dist > distanceMax) return;
+        
+        Vector3 direction = (closestPoint - origin).normalized;
+        
+        if (Physics.Raycast(origin, direction, out RaycastHit hit, dist + 0.1f, LayerMask.GetMask("Default")))
+        {
+            if (hit.collider != targetWall)
+            {
+                return;
+            }
+        }
         
         for (int i = 0; i < amount; i++)
         {
@@ -49,6 +59,9 @@ public class HoleGenerator : MonoBehaviour
             
             GameObject hole = Instantiate(holePrefab, holePos, targetWall.transform.rotation);
             hole.transform.parent = targetWall.transform;
+            
+            if(gunshotFeedback)
+                gunshotFeedback.Play();
         }
     }
 }
