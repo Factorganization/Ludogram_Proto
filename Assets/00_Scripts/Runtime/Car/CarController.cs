@@ -160,6 +160,11 @@ namespace CarScripts {
             MyInputs();
             WheelsSteering();
             HandleWheelsGrip();
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                transform.position += Vector3.up * 3;
+            }
         }
 
         private void HandleWheelsGrip() {
@@ -217,7 +222,7 @@ namespace CarScripts {
         void LateUpdate() {
             if (speedTxt != null)
             {
-                speedTxt.text = $"{carRb.linearVelocity.magnitude:F0}km/h";
+                speedTxt.text = $"{carRb.linearVelocity.magnitude*1.7f:F0}km/h";
             }
         }
         

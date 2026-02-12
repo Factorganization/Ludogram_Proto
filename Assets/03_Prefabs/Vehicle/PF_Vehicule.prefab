@@ -10592,7 +10592,7 @@ Camera:
   far clip plane: 1000
   field of view: 100
   orthographic: 1
-  orthographic size: 100
+  orthographic size: 150
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -11800,7 +11800,7 @@ MonoBehaviour:
   tireMassHighSpeed: 35
   rearSteeringAllowed: 0
   wheelDriveMode: 2
-  maxEngineTorque: 670
+  maxEngineTorque: 620
   engineResponse: 5
   engineBrakeTorque: 80
   wheelRadius: 0.3
