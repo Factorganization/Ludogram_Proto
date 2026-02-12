@@ -11,6 +11,7 @@ public class Hole : MonoBehaviour, IInteractable
     private void Start()
     {
         gm = GameManager.Instance;
+        gm.holesCount++;
     }
 
     private void Update()
@@ -29,6 +30,7 @@ public class Hole : MonoBehaviour, IInteractable
 
     public void Interact(PlayerCharacter interactor)
     {
+        gm.holesCount--;
         Destroy(gameObject);
     }
 }

@@ -1,4 +1,6 @@
 using System;
+using CarScripts;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -28,12 +30,17 @@ public class GameManager : MonoBehaviour
     
     private float currentMoney=0;
     private int bankDeliveredCount;
-    private float moneyDeliveredTotal;
+    private float moneyDeliveredTotal; 
+    [HideInInspector] public int enemyCount, holesCount;
+    
+    public CarController playerCar;
 
+    [SerializeField] float moneyDeliveredGoal;
     [SerializeField] private int maxMoneyVan;
     [SerializeField] private int bankMoneyAmount;
     [SerializeField] private bool debug;
     [SerializeField] MoneyAmount moneyPile;
+    [SerializeField] TextMeshProUGUI moneyText;
     
     private void Awake()
     {
@@ -49,7 +56,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateMoneyAmount(maxMoneyVan);
+        if (!playerCar)
+            playerCar = FindFirstObjectByType<CarController>();
+        
+        if (!moneyPile)
+            moneyPile = FindFirstObjectByType<MoneyAmount>();
+        
+        UpdateMoneyAmount(0);
+        UpdateMoneyText();
     }
 
     public void OnBankInteraction(Bank bank)
@@ -66,6 +80,8 @@ public class GameManager : MonoBehaviour
             if(currentMoney == 0)
                 UpdateMoneyAmount(bankMoneyAmount);
         }
+
+        UpdateMoneyText();
     }
     
     public void UpdateMoneyAmount(float addedAmount)
@@ -89,5 +105,13 @@ public class GameManager : MonoBehaviour
         
         if(debug)
             Debug.Log("New Amount Of Money "+CurrentMoney);
+    }
+
+    void UpdateMoneyText()
+    {
+        if (moneyText)
+        {
+            moneyText.text = "You have :" + (int)currentMoney+ "$                You delivered " + (int)moneyDeliveredTotal + "/" + moneyDeliveredGoal + "$";
+        }
     }
 }

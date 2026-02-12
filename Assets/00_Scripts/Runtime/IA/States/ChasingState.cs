@@ -9,7 +9,7 @@ public class ChasingState : EnemyState
     public override void Enter()
     {
         Reset();
-        int randomDirection = Mathf.RoundToInt(Random.value*(3));
+        int randomDirection = Mathf.RoundToInt(Random.value*2);
         Vector3 targetPos = brain.transform.position;
 
         switch (randomDirection)
@@ -18,13 +18,13 @@ public class ChasingState : EnemyState
                 targetPos = brain.PlayerVehicule.transform.position + (-brain.PlayerVehicule.transform.right)*brain.DistanceToVan -brain.PlayerVehicule.transform.forward*10;
                 break;
             case 1:
-                targetPos = brain.PlayerVehicule.transform.position + brain.PlayerVehicule.transform.forward*brain.DistanceToVan*0.75f;
+                targetPos = brain.PlayerVehicule.transform.position + (-brain.PlayerVehicule.transform.forward)*brain.DistanceToVan*2f;
                 break;
             case 2:
                 targetPos = brain.PlayerVehicule.transform.position + brain.PlayerVehicule.transform.right*brain.DistanceToVan -brain.PlayerVehicule.transform.forward*10;
                 break;
             case 3:
-                targetPos = brain.PlayerVehicule.transform.position + (-brain.PlayerVehicule.transform.forward)*brain.DistanceToVan*2f;
+                targetPos = brain.PlayerVehicule.transform.position +brain.PlayerVehicule.transform.forward*brain.DistanceToVan*0.75f; 
                 break;
         }
         
