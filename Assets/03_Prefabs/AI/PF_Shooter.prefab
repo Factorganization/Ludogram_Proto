@@ -13,9 +13,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: debugLog
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: showGizmos
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: holeGenerator
       value: 
       objectReference: {fileID: -2474208368034424486}
+    - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: slowSpeedAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_Name
       value: PF_Shooter
@@ -87,6 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HoleGenerator
   holePrefab: {fileID: 2872654400384901377, guid: c6b3fcbc9be911d4bbd43c9231005637, type: 3}
   aimPrecision: 0.15
-  distanceMax: 100
+  distanceMax: 15
   yBoost: 4
   targetWallstest: []

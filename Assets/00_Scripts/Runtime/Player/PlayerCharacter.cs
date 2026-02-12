@@ -33,12 +33,10 @@ public class PlayerCharacter : Actor
 
     [SerializeField] private Transform _feetTransform;
     [SerializeField] private Camera _mainCamera;
-    [SerializeField] private CinemachineCamera _cinemachineCamera;
 
     public Transform HeadTransform => _headTransform;
     public Transform FeetTransform => _feetTransform;
     public Camera MainCamera => _mainCamera;
-    public CinemachineCamera CinemachineCamera => _cinemachineCamera;
 
     // State flags for transitions (set these when entering/exiting states)
     public bool IsStunned { get; set; }
@@ -145,6 +143,7 @@ public class PlayerCharacter : Actor
         }
         
         PlayerInput.SwitchCurrentActionMap(mapName);
+        Controller.Initialize();
         Logs.Log($"[PlayerCharacter]: Switched to input map '{mapName}'.");
     }
 

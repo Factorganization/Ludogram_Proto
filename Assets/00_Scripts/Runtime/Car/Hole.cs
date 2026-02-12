@@ -1,8 +1,22 @@
+using System;
 using UnityEngine;
 
 public class Hole : MonoBehaviour, IInteractable
 {
     public Transform GetTransform() => transform;
+
+    [SerializeField] private float moneyLossPerSecond = 1f;
+    private GameManager gm; 
+
+    private void Start()
+    {
+        gm = GameManager.Instance;
+    }
+
+    private void Update()
+    {
+        gm?.UpdateMoneyAmount(-moneyLossPerSecond*Time.deltaTime);
+    }
 
     public void Interact(IInteractable.InteractAction action, Transform interactor)
     {

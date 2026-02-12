@@ -93,7 +93,7 @@ public class InteractComponent : PlayerComponent
         float radius = character.Playerstats.InteractRadius;
         float distance = character.Playerstats.InteractDistance;
 
-        int hitCount = Physics.SphereCastNonAlloc(origin, radius, direction, _hitBuffer, distance, _interactableLayerMask, QueryTriggerInteraction.Ignore);
+        int hitCount = Physics.SphereCastNonAlloc(origin, radius, direction, _hitBuffer, distance, _interactableLayerMask);
         if (hitCount == 0) return (null, Vector3.zero);
 
         var interactables = new List<IInteractable>();

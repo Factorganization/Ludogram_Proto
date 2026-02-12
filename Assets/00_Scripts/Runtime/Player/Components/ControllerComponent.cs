@@ -101,8 +101,8 @@ public class ControllerComponent : PlayerComponent
         else
         {
             // In air, apply reduced control
-            velocityChange.y = 0;
-            _rigidbody.AddForce(velocityChange * character.Playerstats.AirControl, ForceMode.VelocityChange);
+            Vector3 airVelocity = new Vector3(velocityChange.x, 0, velocityChange.z) * character.Playerstats.AirControl;
+            _rigidbody.AddForce(airVelocity, ForceMode.VelocityChange);
         }
         
         // Handle jumping
@@ -112,10 +112,11 @@ public class ControllerComponent : PlayerComponent
             jumpRequested = false; 
         }
         
-        if (!_isInVehicle && carTransform && !isGrounded)
+        //TODO : Update this line
+        /*if (!_isInVehicle && carTransform && !isGrounded)
         {
             _rigidbody.AddForce(carTransform.GetComponent<AttachedPlayer>().carRef.GetComponent<Rigidbody>().linearVelocity * 0.75f, ForceMode.VelocityChange);
-        }
+        }*/
 
         if (carTransform != null && !_isInVehicle && isGrounded)
         {

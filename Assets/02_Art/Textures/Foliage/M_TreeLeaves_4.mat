@@ -60,7 +60,7 @@ Material:
     - _ColorStrength: 2
     - _Gradient_1: 2.76
     - _Gradient_2: 9.82
-    - _Outline_strength: 0
+    - _Outline_strength: 0.828
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.2
