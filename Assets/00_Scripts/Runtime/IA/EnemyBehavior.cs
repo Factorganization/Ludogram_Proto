@@ -71,8 +71,6 @@ public class EnemyBehavior : MonoBehaviour
         [SerializeField] private bool debugLog = false;
     [SerializeField] private bool showGizmos = false;
 
-    
-
     private void Awake()
     {
         _neutralState = new NeutralState(this);
@@ -84,6 +82,7 @@ public class EnemyBehavior : MonoBehaviour
     
     private void Start()
     {
+        playerVehicule = GameManager.Instance.playerCar;
         currentSpeed = initialSpeed;
 
         SetState(_neutralState);
