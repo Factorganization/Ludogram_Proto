@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections.Generic;
+using CarScripts;
 using Unity.Cinemachine;
 
 [RequireComponent(typeof(PlayerInput), typeof(Rigidbody))]
@@ -68,10 +69,12 @@ public class PlayerCharacter : Actor
         _components.Add(Rope);
         
         InitStateMachine();
+
+        transform.position = FindAnyObjectByType<SpawnPoint>().transform.position;
     }
     
     #region Unity Callbacks
-
+    
     private void Update()
     {
         _stateMachine?.Update();
