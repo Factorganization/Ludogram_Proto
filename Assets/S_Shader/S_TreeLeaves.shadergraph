@@ -3662,7 +3662,7 @@
     "m_AlphaMode": 0,
     "m_RenderFace": 0,
     "m_AlphaClip": true,
-    "m_CastShadows": false,
+    "m_CastShadows": true,
     "m_ReceiveShadows": true,
     "m_DisableTint": false,
     "m_Sort3DAs2DCompatible": false,
@@ -4002,8 +4002,8 @@
     "m_ObjectId": "c5378bc1c8c040bc88ff8adff5f3ea08",
     "m_Title": "Gradient over Y ",
     "m_Position": {
-        "x": -2909.000244140625,
-        "y": -65.99991607666016
+        "x": -2909.0,
+        "y": -66.0
     }
 }
 

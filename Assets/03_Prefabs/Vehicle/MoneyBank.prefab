@@ -81,6 +81,8 @@ MonoBehaviour:
   fillPercentage: 1
   maxYSize: 0
   boxCollider: {fileID: 0}
+  moneyPile: {fileID: 0}
+  yOffset: 1
 --- !u!1 &3246852095039023398
 GameObject:
   m_ObjectHideFlags: 0

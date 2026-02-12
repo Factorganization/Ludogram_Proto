@@ -12,10 +12,8 @@ public class HoleGenerator : MonoBehaviour
 
     [SerializeField] private float distanceMax = 100;
     [SerializeField] private float yBoost = 4;
-    
-    
-    //Test
-    public List<Collider> targetWallstest;
+
+    [SerializeField] private ParticleSystem gunshotFeedback;
 
     private void Start()
     {
@@ -44,7 +42,6 @@ public class HoleGenerator : MonoBehaviour
         {
             if (hit.collider != targetWall)
             {
-                Debug.DrawLine(origin, hit.point, Color.yellow, 2f);
                 return;
             }
         }
@@ -62,6 +59,9 @@ public class HoleGenerator : MonoBehaviour
             
             GameObject hole = Instantiate(holePrefab, holePos, targetWall.transform.rotation);
             hole.transform.parent = targetWall.transform;
+            
+            if(gunshotFeedback)
+                gunshotFeedback.Play();
         }
     }
 }

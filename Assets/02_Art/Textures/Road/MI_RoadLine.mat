@@ -9,11 +9,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MI_RoadLine
   m_Shader: {fileID: -6465566751694194690, guid: dba1310eb9dafa649b05e6a6d939c8b1, type: 3}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 2100000, guid: 39baffbb8253a0b4d9751bd26c6ceddf, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -23,49 +23,10 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 6395a482aad6b1d4f842b59cdc90c0bd, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: cc57cd79d2d636b428371ad6f522614f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Roughness:
-        m_Texture: {fileID: 2800000, guid: ee5ade137de78f846935d00e4f41a2db, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture:
-        m_Texture: {fileID: 2800000, guid: 4d709c4480c9e2a4ab920da856d517a6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
-    m_Floats:
-    - _Hue: 1
-    - _IsRecolor: 0.395
-    - _Metallic: 0
-    - _NormalStrength: 0.5
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _Roughness_Strength: 0.54
-    - _Smoothness: 0
-    - _TextureRotation: 0
+    m_Floats: []
     m_Colors:
-    - _Recolor_1: {r: 0.6698113, g: 0.59461033, b: 0.48340157, a: 1}
-    - _Recolor_2: {r: 0.2735849, g: 0.20007832, b: 0.15873086, a: 1}
     - _Tiling_XY: {r: 1, g: 4.78, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
