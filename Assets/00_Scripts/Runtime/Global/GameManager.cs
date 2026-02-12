@@ -1,4 +1,5 @@
 using System;
+using CarScripts;
 using TMPro;
 using UnityEngine;
 
@@ -29,7 +30,10 @@ public class GameManager : MonoBehaviour
     
     private float currentMoney=0;
     private int bankDeliveredCount;
-    private float moneyDeliveredTotal;
+    private float moneyDeliveredTotal; 
+    [HideInInspector] public int enemyCount, holesCount;
+    
+    public CarController playerCar;
 
     [SerializeField] float moneyDeliveredGoal;
     [SerializeField] private int maxMoneyVan;
@@ -52,6 +56,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (!playerCar)
+            playerCar = FindFirstObjectByType<CarController>();
+        
+        if (!moneyPile)
+            moneyPile = FindFirstObjectByType<MoneyAmount>();
+        
         UpdateMoneyAmount(0);
         UpdateMoneyText();
     }

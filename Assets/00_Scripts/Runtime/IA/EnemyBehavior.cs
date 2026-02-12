@@ -82,6 +82,7 @@ public class EnemyBehavior : MonoBehaviour
     
     private void Start()
     {
+        playerVehicule = GameManager.Instance.playerCar;
         currentSpeed = initialSpeed;
 
         SetState(_neutralState);

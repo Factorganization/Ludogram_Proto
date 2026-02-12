@@ -20,6 +20,11 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
         currentHealth = maxHealth;
     }
 
+    private void Start()
+    {
+        GameManager.Instance.enemyCount++;
+    }
+
     public void UpdateHealth(int amount)
     {
         currentHealth += amount;
@@ -51,6 +56,7 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
             explosionTimer -= Time.deltaTime;
             if (explosionTimer < 0)
             {
+                GameManager.Instance.enemyCount--;
                 Destroy(gameObject);
             }
         }

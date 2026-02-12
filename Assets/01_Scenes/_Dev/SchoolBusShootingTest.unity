@@ -13198,6 +13198,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
+--- !u!4 &1277623882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2795495755648056782, guid: 0946f711a7d3b2e4baa22cea4843cab5, type: 3}
+  m_PrefabInstance: {fileID: 1277623881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1283325794
 GameObject:
   m_ObjectHideFlags: 0
@@ -18675,6 +18680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1901734349}
   - component: {fileID: 1901734350}
+  - component: {fileID: 1901734351}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -18709,12 +18715,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53959d30c7ea4da45824feeecdce58ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  enemyCount: 0
+  holesCount: 0
+  spawner: {fileID: 0}
   moneyDeliveredGoal: 2000
   maxMoneyVan: 1000
   bankMoneyAmount: 500
   debug: 0
   moneyPile: {fileID: 923185622}
   moneyText: {fileID: 1027823667}
+--- !u!114 &1901734351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901734348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84e5c0acd9e463468c2646384714d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AISpawner
+  gm: {fileID: 1901734350}
+  playerCar: {fileID: 1277623882}
+  distanceSpawn: 20
+  spawnCooldown: 5
+  maxEnemies: 3
+  maxHoles: 5
+  enemiesPrefab:
+  - {fileID: 2072181885737878447, guid: 68eb5aea3ee452049bbba9ca5e7a4107, type: 3}
+  - {fileID: 3201623862755801287, guid: eb9d53260cc12e14eb438074c8e8e690, type: 3}
 --- !u!1 &1930852427
 GameObject:
   m_ObjectHideFlags: 0
