@@ -24,22 +24,30 @@ public class HoleGenerator : MonoBehaviour
             Debug.LogError("No HolePrefab reference found");
         }
     }
-
-    [ContextMenu("Generate Hole")]
-    void TestPlaceHole()
-    {
-        PlaceHoles(targetWallstest,1);
-    }
+    
     
     public void PlaceHoles(List<Collider> targetWalls, int amount)
     {
         if (!holePrefab || targetWalls.Count==0 || amount<=0) return;
         
-        Collider targetWall = targetWalls[Random.Range(0, targetWalls.Count-1)];
-        Vector3 closestPoint = targetWall.ClosestPoint(transform.position+ Vector3.up * yBoost);
+        Collider targetWall = targetWalls[Random.Range(0, targetWalls.Count)];
+        Vector3 origin = transform.position + Vector3.up * yBoost;
+        Vector3 closestPoint = targetWall.ClosestPoint(origin);
         Debug.DrawLine(transform.position, closestPoint, Color.red,2);
         
-        if (Vector3.Distance(closestPoint, transform.position) > distanceMax) return;
+        float dist = Vector3.Distance(closestPoint, origin);
+        if (dist > distanceMax) return;
+        
+        Vector3 direction = (closestPoint - origin).normalized;
+        
+        if (Physics.Raycast(origin, direction, out RaycastHit hit, dist + 0.1f, LayerMask.GetMask("Default")))
+        {
+            if (hit.collider != targetWall)
+            {
+                Debug.DrawLine(origin, hit.point, Color.yellow, 2f);
+                return;
+            }
+        }
         
         for (int i = 0; i < amount; i++)
         {

@@ -16,14 +16,14 @@ TagManager:
   - Interactable
   - TriggerZone
   - MovingObject
-  - Player
+  - Rope
   - Car
   - Ghost
   - AI
-  - 
-  - 
-  - 
-  - 
+  - Player_1
+  - Player_2
+  - Player_3
+  - Player_4
   - 
   - 
   - 

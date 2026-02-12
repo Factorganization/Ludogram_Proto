@@ -8,13 +8,20 @@ public class ControllerComponent : PlayerComponent
     private InputAction _lookAction;
     private InputAction _jumpAction;
     internal InputAction _sprintAction;
-
-    internal CharacterController _controller;
+    
+    private Rigidbody _rigidbody;
+    public Rigidbody Rigidbody => _rigidbody;
+    
     private float _verticalVelocity;
     private float _verticalRotation; 
     
     internal Vector2 moveInput, lookInput;
-
+    internal bool jumpRequested;
+    
+    // Track if player is in a vehicle
+    private bool _isInVehicle = false;
+    private float _yawInVehicle = 0f; // Local yaw relative to vehicle
+    private Transform carTransform;
     public ControllerComponent(PlayerCharacter character) : base(character)
     {
         if (character == null) return;
@@ -26,76 +33,148 @@ public class ControllerComponent : PlayerComponent
         character.FindInputAction("Look", out _lookAction);
         character.FindInputAction("Jump", out _jumpAction);
         character.FindInputAction("Sprint", out _sprintAction);
-
-        _controller = character.GetCachedComponent<CharacterController>();
-        if (_controller == null)
-        {
-            Logs.LogError("[PlayerControllerComponent] CharacterController not found on character.");
-        }
+        
+        _rigidbody = character.GetCachedComponent<Rigidbody>();
 
         Logs.Log("[PlayerControllerComponent] Initialized for " + character.name);
     }
 
-    public void HandleMovementUpdate(float speedMultiplier = 1)
+    public void HandleMovementUpdate()
     {
-        if (character == null || _controller == null) return;
+        // Read input values
+        moveInput = _moveAction.ReadValue<Vector2>();
+        lookInput = _lookAction.ReadValue<Vector2>();
 
-        moveInput = _moveAction != null ? _moveAction.ReadValue<Vector2>() : Vector2.zero;
-        lookInput = _lookAction != null ? _lookAction.ReadValue<Vector2>() : Vector2.zero;
-        bool jumpRequested = _jumpAction != null && _jumpAction.triggered;
-
+        if (_jumpAction.triggered) jumpRequested = true;
+    }
+    
+    public void HandleLookUpdate()
+    {
+        if (character.IsStunned) return;
+        
         float sensitivity = character.Playerstats.LookSensitivity;
-        float upDownRange = character.Playerstats.UpDownLookRange;
-
-        // Yaw (horizontal look) - rotates character body
-        if (lookInput.x != 0f)
+        
+        // Vertical look (pitch) - always local to head
+        _verticalRotation -= lookInput.y * sensitivity;
+        _verticalRotation = Mathf.Clamp(_verticalRotation, -90f, 90f);
+        character.HeadTransform.localRotation = Quaternion.Euler(_verticalRotation, 0, 0);
+        
+        // Horizontal look (yaw) - depends on vehicle state
+        if (_isInVehicle)
         {
-            float yaw = lookInput.x * sensitivity;
-            character.transform.Rotate(0f, yaw, 0f);
-        }
-
-        // Pitch (vertical look) - rotates head/camera pivot
-        if (lookInput.y != 0f && character.HeadTransform != null)
-        {
-            _verticalRotation -= lookInput.y * sensitivity;
-            _verticalRotation = Mathf.Clamp(_verticalRotation, -upDownRange, upDownRange);
-            character.HeadTransform.localRotation = Quaternion.Euler(_verticalRotation, 0f, 0f);
-        }
-
-        // Movement in local XZ
-        Vector3 right = character.transform.right;
-        Vector3 forward = Vector3.ProjectOnPlane(character.transform.forward, Vector3.up).normalized;
-        Vector3 move = forward * moveInput.y + right * moveInput.x;
-        move *= (character.Playerstats.Speed * speedMultiplier);
-
-        // Gravity & Jump - JumpHeight is in meters, formula: v = sqrt(2 * g * h)
-        if (_controller.isGrounded)
-        {
-            _verticalVelocity = -0.5f;
-            if (jumpRequested)
-            {
-                float g = Mathf.Abs(character.Playerstats.Gravity);
-                _verticalVelocity = Mathf.Sqrt(2f * g * character.Playerstats.JumpHeight);
-            }
+            // When in vehicle, only rotate relative to vehicle (local yaw)
+            _yawInVehicle += lookInput.x * sensitivity;
+            
+            // Apply rotation: vehicle's world rotation + local yaw
+            float targetYaw = character.transform.parent.eulerAngles.y + _yawInVehicle;
+            character.transform.rotation = Quaternion.Euler(0, targetYaw, 0);
         }
         else
         {
-            _verticalVelocity += character.Playerstats.Gravity * Time.deltaTime;
+            // When not in vehicle, rotate normally in world space
+            character.transform.rotation *= Quaternion.Euler(0, lookInput.x * sensitivity, 0);
         }
+    }
+    
+    public void HandleFixedMovementUpdate(float speedMultiplier = 1)
+    {
+        if (_rigidbody == null) return;
+        
+        // Ground check
+        GroundCheck(out bool isGrounded);
+        
+        // Apply movement
+        Vector3 moveDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized;
+        Vector3 worldMoveDirection = character.transform.TransformDirection(moveDirection);
+        Vector3 targetVelocity = worldMoveDirection * character.Playerstats.Speed * speedMultiplier;
+        Vector3 velocityChange = targetVelocity - _rigidbody.linearVelocity;
 
-        move.y = _verticalVelocity;
+        //Apply Y-negative force
+        _rigidbody.AddForce(Vector3.up * character.Playerstats.Gravity, ForceMode.Acceleration);
 
-        _controller.Move(move * Time.deltaTime);
+        if (isGrounded)
+        {
+            // Only change horizontal velocity, preserve vertical velocity
+            velocityChange.y = 0;
+            _rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
+        }
+        else
+        {
+            // In air, apply reduced control
+            Vector3 airVelocity = new Vector3(velocityChange.x, 0, velocityChange.z) * character.Playerstats.AirControl;
+            _rigidbody.AddForce(airVelocity, ForceMode.VelocityChange);
+        }
+        
+        // Handle jumping
+        if (jumpRequested && isGrounded)
+        {
+            _rigidbody.AddForce(Vector3.up * character.Playerstats.JumpHeight, ForceMode.Impulse);
+            jumpRequested = false; 
+        }
+        
+        //TODO : Update this line
+        /*if (!_isInVehicle && carTransform && !isGrounded)
+        {
+            _rigidbody.AddForce(carTransform.GetComponent<AttachedPlayer>().carRef.GetComponent<Rigidbody>().linearVelocity * 0.75f, ForceMode.VelocityChange);
+        }*/
+
+        if (carTransform != null && !_isInVehicle && isGrounded)
+        {
+            carTransform = null;
+        }
+    }
+    
+    /// <summary>
+    /// Call this when the player enters a vehicle
+    /// </summary>
+    public void EnterVehicle(Transform vehicleTransform)
+    {
+        _isInVehicle = true;
+        carTransform = vehicleTransform;
+        
+        // Calculate initial local yaw relative to vehicle
+        float currentWorldYaw = character.transform.eulerAngles.y;
+        float vehicleWorldYaw = carTransform.eulerAngles.y;
+        _yawInVehicle = Mathf.DeltaAngle(vehicleWorldYaw, currentWorldYaw);
+        
+        // Parent to vehicle
+        character.transform.SetParent(carTransform);
+        
+        Logs.Log($"[ControllerComponent] Entered vehicle. Local yaw: {_yawInVehicle}");
+    }
+    
+    /// <summary>
+    /// Call this when the player exits a vehicle
+    /// </summary>
+    public void ExitVehicle(Transform originalParent = null)
+    {
+        _isInVehicle = false;
+        _yawInVehicle = 0f;
+        
+        //carTransform = null;
+        
+        // Unparent from vehicle
+        character.transform.SetParent(originalParent);
+        
+        Logs.Log("[ControllerComponent] Exited vehicle");
     }
     
     public void ResetVelocity()
     {
-        // Stop all movement immediately by moving the controller with zero velocity
-        if (_controller != null)
-        {
-            _controller.Move(Vector3.zero);
-        }
-        _verticalVelocity = 0f;
+        if (_rigidbody == null) return;
+        _rigidbody.linearVelocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;
+    }
+    
+    private void GroundCheck(out bool isGrounded)
+    {
+        Color color = Color.red;
+
+        isGrounded = Physics.Raycast(character.FeetTransform.position + new Vector3(0, 0.1f, 0), Vector3.down, 0.5f);
+
+        if(isGrounded) color = Color.green;
+
+        Debug.DrawRay(character.FeetTransform.position, Vector3.down * 0.5f, color);
     }
 
     public override void Dispose()
@@ -104,6 +183,6 @@ public class ControllerComponent : PlayerComponent
         _moveAction = null;
         _lookAction = null;
         _jumpAction = null;
-        _controller = null;
+        _rigidbody = null;
     }
 }

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SO_PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::SO_PlayerStats
   Speed: 5
-  JumpHeight: 2
-  JumpForce: 10
-  LookSensitivity: 5
-  Gravity: -9.81
+  JumpHeight: 12
+  LookSensitivity: 2.5
+  Gravity: -23
   UpDownLookRange: 80
   InteractRadius: 1
   InteractDistance: 1.3
+  AirControl: 0.5

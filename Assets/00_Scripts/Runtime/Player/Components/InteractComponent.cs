@@ -36,7 +36,7 @@ public class InteractComponent : PlayerComponent
     
     public void HandleInteractUpdate()
     {
-        if (character == null || _interactAction == null) return;
+        if (!character || _interactAction == null) return;
         
         if (character.IsStunned) return;
 
@@ -45,7 +45,6 @@ public class InteractComponent : PlayerComponent
         
         if (currentInteractable == null)
         {
-            //Logs.Log($"[InteractComponent] No interactable found");
             character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.NONE);
             return;
         }
@@ -94,8 +93,7 @@ public class InteractComponent : PlayerComponent
         float radius = character.Playerstats.InteractRadius;
         float distance = character.Playerstats.InteractDistance;
 
-        int hitCount = Physics.SphereCastNonAlloc(origin, radius, direction, _hitBuffer, distance, _interactableLayerMask, QueryTriggerInteraction.Ignore);
-        //Logs.Log($"[InteractComponent] SphereCast found {hitCount} hits");
+        int hitCount = Physics.SphereCastNonAlloc(origin, radius, direction, _hitBuffer, distance, _interactableLayerMask);
         if (hitCount == 0) return (null, Vector3.zero);
 
         var interactables = new List<IInteractable>();

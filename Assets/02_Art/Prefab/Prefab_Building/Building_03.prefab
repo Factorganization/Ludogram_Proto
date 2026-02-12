@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8516241640815171857}
+  - component: {fileID: 7142063791808001199}
   m_Layer: 0
   m_Name: Building_03
   m_TagString: Untagged
@@ -35,6 +36,27 @@ Transform:
   - {fileID: 2102766985983922005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7142063791808001199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213609888899274705}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.948087, y: 18.405327, z: 12.364301}
+  m_Center: {x: -0.03749323, y: 8.702663, z: -0.05981207}
 --- !u!1001 &247458321211296240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,9 +294,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e251dc1f7d6530b4fb94af0531ef0535, type: 2}
     - target: {fileID: -7511558181221131132, guid: e537b3df68ef8974dbc866f088970462, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b8fa6ec4ff1976849b46e2778686dc7c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e537b3df68ef8974dbc866f088970462, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
       objectReference: {fileID: 2100000, guid: 26c4b8acb6dbf974b94ea9bc68efbbea, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e537b3df68ef8974dbc866f088970462, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b322955477e06b84b9df91badfa2cc5b, type: 2}
     - target: {fileID: 919132149155446097, guid: e537b3df68ef8974dbc866f088970462, type: 3}
       propertyPath: m_Name
       value: SM_Base_Building_4m_02

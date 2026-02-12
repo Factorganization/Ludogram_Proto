@@ -9,6 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5002692808744674868}
+  - component: {fileID: 6485277674540262377}
+  - component: {fileID: 4692129265156324414}
+  - component: {fileID: 3618136483564711674}
+  - component: {fileID: 4737098244881463970}
+  - component: {fileID: 4646266703119529066}
   m_Layer: 0
   m_Name: House_02
   m_TagString: Untagged
@@ -89,6 +94,111 @@ Transform:
   - {fileID: 498529735044626945}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6485277674540262377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765276911787973208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.151618, y: 4.2103148, z: 4.2521496}
+  m_Center: {x: -7.561135, y: 1.6051571, z: 1.6687212}
+--- !u!65 &4692129265156324414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765276911787973208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.8893259, y: 4.0238047, z: 2.659804}
+  m_Center: {x: -0.07472384, y: 1.5119023, z: 0.36820874}
+--- !u!65 &3618136483564711674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765276911787973208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.8348236, y: 12.9306135, z: 15.422625}
+  m_Center: {x: -0.43222523, y: 5.9653068, z: 8.81116}
+--- !u!65 &4737098244881463970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765276911787973208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.565535, y: 10.051192, z: 8.079338}
+  m_Center: {x: -6.6048126, y: 4.525596, z: 6.013173}
+--- !u!65 &4646266703119529066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765276911787973208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.6293526, y: 5.789223, z: 5.819067}
+  m_Center: {x: -12.836632, y: 2.3946116, z: 5.778617}
 --- !u!1001 &33469233554931770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 1682424471379025942, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+      objectReference: {fileID: 2100000, guid: 0e6f8ea1da18652448ec922ca1741d89, type: 2}
     - target: {fileID: 3914046734769388623, guid: e1d15b9f7ec8c7d4b881a9bdd4747462, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1822,7 +1932,7 @@ PrefabInstance:
     - target: {fileID: 556420722309878230, guid: 5f9a8c9a48ef8e34e8ba53397451b57b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+      objectReference: {fileID: 2100000, guid: 0e6f8ea1da18652448ec922ca1741d89, type: 2}
     - target: {fileID: 919132149155446097, guid: 5f9a8c9a48ef8e34e8ba53397451b57b, type: 3}
       propertyPath: m_Name
       value: SM_House_Roof_02
@@ -2188,7 +2298,7 @@ PrefabInstance:
     - target: {fileID: 6248927857535590234, guid: ed19082e7ffd51348abf4b2e3bcbf429, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+      objectReference: {fileID: 2100000, guid: 0e6f8ea1da18652448ec922ca1741d89, type: 2}
     - target: {fileID: 6996296905583807041, guid: ed19082e7ffd51348abf4b2e3bcbf429, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -2254,7 +2364,7 @@ PrefabInstance:
     - target: {fileID: -4564827409101076892, guid: 308f8ef995a8e1340ad41b7449b8fcc0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+      objectReference: {fileID: 2100000, guid: 0e6f8ea1da18652448ec922ca1741d89, type: 2}
     - target: {fileID: 919132149155446097, guid: 308f8ef995a8e1340ad41b7449b8fcc0, type: 3}
       propertyPath: m_Name
       value: SM_House_Roof_01
@@ -4122,7 +4232,7 @@ PrefabInstance:
     - target: {fileID: -2862732295113066241, guid: cec0b4ef72dfdd24f9bcd70ca1969b08, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 41aeae5116083de40b0ac91520c34210, type: 2}
+      objectReference: {fileID: 2100000, guid: 0e6f8ea1da18652448ec922ca1741d89, type: 2}
     - target: {fileID: 919132149155446097, guid: cec0b4ef72dfdd24f9bcd70ca1969b08, type: 3}
       propertyPath: m_Name
       value: SM_House_Roofdoor
