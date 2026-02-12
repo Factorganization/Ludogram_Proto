@@ -111,15 +111,15 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _LightMultiplier: 1.22
-    - _LightRange: 0.09
+    - _LightRange: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ShadowMultiplier: -0.91
-    - _ShadowRange: 0.633
+    - _ShadowMultiplier: -1.25
+    - _ShadowRange: 0.682
     - _Shadow_color_multiplier: 0.9
     - _Smoothness: 0.153
     - _SmoothnessTextureChannel: 0
@@ -136,7 +136,7 @@ Material:
     - _Color_1: {r: 0.7924528, g: 0.6600822, b: 0.3999644, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 1, g: 0.9032301, b: 0.8443396, a: 0}
+    - _ShadowColor: {r: 1, g: 0.6904481, b: 0.504717, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
