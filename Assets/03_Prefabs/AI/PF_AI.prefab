@@ -285,7 +285,7 @@ MonoBehaviour:
   playerDetectionRange: 50
   noPlayerDetectedLength: 10
   slowSpeedAmount: 10
-  distanceToVan: 15
+  distanceToVan: 8
   attackReadyDelay: 0
   holePerAttack: 1
   bumpOffset: 3
