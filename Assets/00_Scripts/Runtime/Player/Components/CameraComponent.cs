@@ -27,8 +27,13 @@ public class CameraComponent : PlayerComponent
 
     private void SetLayerRecursively(GameObject characterGameObject, LayerMask layerMaskToSet)
     {
+        // Exception, if gameobject is player.Hips, we don't set the layer to avoid breaking the ragdoll physics
+        if (characterGameObject == character.RopeRenderer.gameObject) return;
         // Si le jeu crash c'est ptet a cause de ça... a méditer
         characterGameObject.layer = layerMaskToSet;
+        
+        
+        
         
         foreach (Transform child in characterGameObject.transform)
         {

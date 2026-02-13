@@ -23,7 +23,7 @@ public class RopeComponent : PlayerComponent
         _attachedObiRigidbody = character.GetCachedComponent<ObiRigidbody>();
     }
 
-    public void AttachRope(SpringJoint rope = null)
+    public void AttachRope(SpringJoint rope)
     {
         character.IsAttached = true;
         AttachedRope = rope;

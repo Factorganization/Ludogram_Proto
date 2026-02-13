@@ -23,6 +23,9 @@ public class SimpleRopeRenderer : MonoBehaviour
     {
         SetupLineRenderer();
         swayOffset = Random.Range(0f, 100f);
+        
+        // set gameobject layer to default
+        gameObject.layer = LayerMask.NameToLayer("Default");
     }
 
     void SetupLineRenderer()

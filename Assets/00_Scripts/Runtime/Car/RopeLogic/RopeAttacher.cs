@@ -14,6 +14,7 @@ public class RopeAttacher : MonoBehaviour
     private bool rope4Used = false;
     
     private SimpleRopeRenderer[] _ropeRenderer = new SimpleRopeRenderer[3];
+    [SerializeField] private Transform _ropeAnchorPoint;
     
 
     private void Start()
@@ -34,9 +35,9 @@ public class RopeAttacher : MonoBehaviour
             // Connect the rope's spring joint to the player's Rigidbody
             ropeSpringJoint[ropeIndex].connectedBody = player.GetCachedComponent<Rigidbody>();
             ropeSpringJoint[ropeIndex].maxDistance = player.Playerstats.MaxRopeDistance;
-            player.RopeRenderer.endPoint = transform;
+            player.RopeRenderer.endPoint = _ropeAnchorPoint;
             _ropeRenderer[ropeIndex] = player.RopeRenderer;
-            player.Rope.AttachRope(); // We can pass null here since we're not using
+            player.Rope.AttachRope(ropeSpringJoint[ropeIndex]); 
         }
     }
 
