@@ -22,5 +22,7 @@ public class SO_PlayerStats : ScriptableObject
 
     [Header("Rope")][Tooltip("la tension en Newton avant que le perso soit callback (c'est des Newton approximatif c pas une science exact)")] 
     public float MaxRopeTension = 150f;
-    
+
+    public float MaxRopeDistance = 10f;
+
 }
