@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_PlayerStats
   Speed: 5
   JumpHeight: 12
-  LookSensitivity: 5
+  LookSensitivity: 6
   Gravity: -23
   UpDownLookRange: 80
   AirControl: 0.5
   InteractRadius: 1
   InteractDistance: 1.3
   MaxRopeTension: 100
-  MaxRopeDistance: 15
+  MaxRopeDistance: 17
