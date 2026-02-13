@@ -41,6 +41,7 @@ public class RopeAttacher : MonoBehaviour
             // Connect the rope's spring joint to the player's Rigidbody
             ropeSpringJoint[ropeIndex].connectedBody = player.GetCachedComponent<Rigidbody>();
             ropeSpringJoint[ropeIndex].maxDistance = player.Playerstats.MaxRopeDistance;
+            player.RopeRenderer.endPoint = transform;
         }
     }
 

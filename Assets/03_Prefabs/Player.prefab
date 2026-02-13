@@ -36,6 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2718970810235640701}
+  - {fileID: 5574022693688689264}
   - {fileID: 8916134758494326139}
   - {fileID: 7769761363158596648}
   - {fileID: 2357550904818316585}
@@ -188,6 +189,7 @@ MonoBehaviour:
   _uiSwapper: {fileID: 5728362961099746772}
   _headTransform: {fileID: 8916134758494326139}
   _feetTransform: {fileID: 2718970810235640701}
+  _ropeRenderer: {fileID: 1415886688909567402}
   _mainCamera: {fileID: 3164259511287397336}
 --- !u!136 &3191411937858171851
 CapsuleCollider:
@@ -429,6 +431,58 @@ MonoBehaviour:
   AmplitudeGain: 0.5
   FrequencyGain: 0.2
   m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!1 &5956122758579616956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5574022693688689264}
+  - component: {fileID: 1415886688909567402}
+  m_Layer: 13
+  m_Name: Hips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5574022693688689264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5956122758579616956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7407256383173631782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1415886688909567402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5956122758579616956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6989a4ca5b46d881f3bf22f96214c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleRopeRenderer
+  startPoint: {fileID: 5574022693688689264}
+  endPoint: {fileID: 0}
+  curveResolution: 20
+  ropeWidth: 0.1
+  ropeMaterial: {fileID: 0}
+  sagAmount: 2
+  swaySpeed: 1
+  swayAmount: 0.2
 --- !u!1 &6473832332038026899
 GameObject:
   m_ObjectHideFlags: 0
