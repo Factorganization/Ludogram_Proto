@@ -2,6 +2,7 @@ using System;
 using CarScripts;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool debug;
     [SerializeField] MoneyAmount moneyPile;
     [SerializeField] TextMeshProUGUI moneyText;
+
+    [SerializeField] private Transform endScreen;
+    [SerializeField] TextMeshProUGUI scoreEndScreen;
     
     private void Awake()
     {
@@ -56,13 +60,18 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Init();
+    }
+
+    private void Init()
+    {
         if (!playerCar)
             playerCar = FindFirstObjectByType<CarController>();
         
         if (!moneyPile)
             moneyPile = FindFirstObjectByType<MoneyAmount>();
         
-        UpdateMoneyAmount(1000);
+        UpdateMoneyAmount(bankMoneyAmount);
         UpdateMoneyText();
     }
 
@@ -74,6 +83,8 @@ public class GameManager : MonoBehaviour
             UpdateMoneyAmount(-currentMoney);
             bankDeliveredCount++;
             bank.delivered = true;
+            
+            EndGame(); 
         }
         else 
         {
@@ -83,7 +94,26 @@ public class GameManager : MonoBehaviour
 
         UpdateMoneyText();
     }
-    
+
+    private void EndGame()
+    {
+        if (endScreen)
+        {
+            endScreen.gameObject.SetActive(true);
+            scoreEndScreen.text = moneyDeliveredTotal+"$";
+        }
+    }
+
+    public void ReloadGame()
+    {
+        if (endScreen)
+        {
+            endScreen.gameObject.SetActive(false);
+            scoreEndScreen.text = Mathf.RoundToInt(moneyDeliveredTotal).ToString();
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void UpdateMoneyAmount(float addedAmount)
     {
         float newTotal = currentMoney + addedAmount;
@@ -112,7 +142,7 @@ public class GameManager : MonoBehaviour
     {
         if (moneyText)
         {
-            moneyText.text = "You have :" + (int)currentMoney+ "$                You delivered " + (int)moneyDeliveredTotal + "/" + moneyDeliveredGoal + "$";
+            moneyText.text = "You have :" + (int)currentMoney+ "$                You delivered " + (int)moneyDeliveredTotal + "$";
         }
     }
 }
