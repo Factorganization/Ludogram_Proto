@@ -279,8 +279,8 @@ MonoBehaviour:
   type: 0
   randomOffsetRange: 5
   initialSpeed: 25
-  incrementSpeedAmount: 5
-  incrementSpeedTreshold: 10
+  incrementSpeedAmount: 10
+  incrementSpeedTreshold: 5
   obstacleDetectionRange: 3
   playerDetectionRange: 50
   noPlayerDetectedLength: 10
