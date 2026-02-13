@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         if (!moneyPile)
             moneyPile = FindFirstObjectByType<MoneyAmount>();
         
-        UpdateMoneyAmount(0);
+        UpdateMoneyAmount(1000);
         UpdateMoneyText();
     }
 
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
             currentMoney = newTotal;
         }
         
-        moneyPile?.UpdateAmount(currentMoney/maxMoneyVan);
+        moneyPile?.UpdateAmount(currentMoney/(maxMoneyVan*1.5f));
         UpdateMoneyText();
         
         if(debug)
