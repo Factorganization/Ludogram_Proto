@@ -606,10 +606,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8389795223786571688, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
+    - target: {fileID: -7606772387014693172, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cabb96eb1a10b5146b5800f9bca3a450, type: 2}
+    - target: {fileID: -7606772387014693172, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac86efe8c1df204fbd2baf2110a07cc, type: 2}
+    - target: {fileID: -7606772387014693172, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6e3ea078fe8c3547b7a1b076f6a9d9a, type: 2}
+    - target: {fileID: -6198819138526134817, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
+    - target: {fileID: -4894380869143118469, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
     - target: {fileID: -2417993413579002496, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.5200411
       objectReference: {fileID: 0}
+    - target: {fileID: -1780928239212188804, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
     - target: {fileID: -1580797074905053400, guid: 4c666f5c7fd1fe94d8de152f7cd3e677, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.5200411
