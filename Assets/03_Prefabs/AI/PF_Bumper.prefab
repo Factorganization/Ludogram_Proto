@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163746716926436978, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
+    - target: {fileID: 1706664785888241366, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
+    - target: {fileID: 2318673908349690869, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: debugLog
       value: 0
@@ -36,6 +48,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Bumper
       objectReference: {fileID: 0}
+    - target: {fileID: 4455098805455811937, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cabb96eb1a10b5146b5800f9bca3a450, type: 2}
+    - target: {fileID: 4455098805455811937, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac86efe8c1df204fbd2baf2110a07cc, type: 2}
+    - target: {fileID: 4455098805455811937, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6e3ea078fe8c3547b7a1b076f6a9d9a, type: 2}
+    - target: {fileID: 5545126450715390161, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
     - target: {fileID: 6664152969994370395, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -43.79028
