@@ -4,6 +4,7 @@ using UnityEngine;
 public class RopeComponent : PlayerComponent
 {
     public SpringJoint AttachedRope { get; private set; }
+    public RopeAttacher RopeAttacher { get; private set; }
     
     private ObiRigidbody _attachedObiRigidbody;
     
@@ -23,16 +24,18 @@ public class RopeComponent : PlayerComponent
         _attachedObiRigidbody = character.GetCachedComponent<ObiRigidbody>();
     }
 
-    public void AttachRope(SpringJoint rope)
+    public void AttachRope(SpringJoint rope, RopeAttacher ropeAttacher)
     {
         character.IsAttached = true;
         AttachedRope = rope;
+        RopeAttacher = ropeAttacher;
     }
     
     public void RemoveRope()
     {
         character.IsAttached = false;
         AttachedRope = null;
+        RopeAttacher = null;
     }
     
     

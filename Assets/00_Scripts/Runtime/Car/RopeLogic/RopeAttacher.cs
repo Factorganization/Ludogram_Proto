@@ -37,7 +37,7 @@ public class RopeAttacher : MonoBehaviour
             ropeSpringJoint[ropeIndex].maxDistance = player.Playerstats.MaxRopeDistance;
             player.RopeRenderer.endPoint = _ropeAnchorPoint;
             _ropeRenderer[ropeIndex] = player.RopeRenderer;
-            player.Rope.AttachRope(ropeSpringJoint[ropeIndex]); 
+            player.Rope.AttachRope(ropeSpringJoint[ropeIndex], this); 
         }
     }
 
