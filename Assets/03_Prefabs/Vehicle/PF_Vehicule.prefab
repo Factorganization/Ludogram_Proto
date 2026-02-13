@@ -13154,6 +13154,7 @@ GameObject:
   - component: {fileID: 3053700913104601582}
   - component: {fileID: 8768053815322974678}
   - component: {fileID: 5328927199319797646}
+  - component: {fileID: 3221543550736389819}
   m_Layer: 10
   m_Name: PF_Vehicule
   m_TagString: Car
@@ -13297,6 +13298,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AddComponentToChild
   componentToAdd: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+--- !u!114 &3221543550736389819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8602002093846356947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a2ea78f02d3b44ebf1ba5b4ca19f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugCar
+  carController: {fileID: 8768053815322974678}
 --- !u!1 &8646465627835249858
 GameObject:
   m_ObjectHideFlags: 0

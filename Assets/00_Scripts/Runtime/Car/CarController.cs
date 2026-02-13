@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
@@ -161,10 +163,7 @@ namespace CarScripts {
             WheelsSteering();
             HandleWheelsGrip();
 
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                transform.position += Vector3.up * 3;
-            }
+            
         }
 
         private void HandleWheelsGrip() {
@@ -227,6 +226,7 @@ namespace CarScripts {
         }
         
         void FixedUpdate() {
+            
             foreach (var suspension in allSuspensions) {
                 var ray = new Ray(suspension.position, -suspension.up);
                 WheelContact contact;
