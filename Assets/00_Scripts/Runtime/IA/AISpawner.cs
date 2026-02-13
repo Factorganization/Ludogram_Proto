@@ -51,7 +51,7 @@ public class AISpawner : MonoBehaviour
         Debug.Log("spawner : SPAWN");
         gm.enemyCount++;
         
-        int randomIndex = 0;
+        int randomIndex = Mathf.RoundToInt(Random.Range(0, 1));
         
         Vector2 randomDir = Random.insideUnitCircle.normalized; 
         Vector3 spawnOffset = new Vector3(randomDir.x, 0, randomDir.y) * distanceSpawn;

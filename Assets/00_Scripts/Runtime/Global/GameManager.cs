@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
             currentMoney = newTotal;
         }
         
-        moneyPile?.UpdateAmount(currentMoney/maxMoneyVan);
+        moneyPile?.UpdateAmount(currentMoney/(maxMoneyVan*1.5f));
         UpdateMoneyText();
         
         if(debug)
