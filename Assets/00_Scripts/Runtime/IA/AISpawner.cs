@@ -1,4 +1,5 @@
 using System;
+using CarScripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +19,7 @@ public class AISpawner : MonoBehaviour
 
     private void Update()
     {
+        
         if (spawnTimer < spawnCooldown)
         {
             spawnTimer += Time.deltaTime;
@@ -30,6 +32,8 @@ public class AISpawner : MonoBehaviour
 
     void TrySpawn()
     {
+        if (playerCar.GetComponent<CarController>()._drivingInputs == null && playerCar.GetComponent<Rigidbody>().linearVelocity.magnitude > 5) ;
+        
         if (gm.enemyCount < maxEnemies &&  gm.holesCount < maxHoles)
         {
             Spawn();
