@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebad8be43af4534bad7eb702f52035e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hole
-  moneyLossPerSecond: 0.01
+  moneyLossPerSecond: 0.1
 --- !u!1001 &3085323611308166579
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,10 +33,13 @@ public class PlayerCharacter : Actor
     [SerializeField] private Transform _headTransform;
 
     [SerializeField] private Transform _feetTransform;
+    [SerializeField] private SimpleRopeRenderer _ropeRenderer;
     [SerializeField] private Camera _mainCamera;
 
     public Transform HeadTransform => _headTransform;
     public Transform FeetTransform => _feetTransform;
+    
+    public SimpleRopeRenderer RopeRenderer => _ropeRenderer;
     public Camera MainCamera => _mainCamera;
 
     // State flags for transitions (set these when entering/exiting states)

@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163746716926436978, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
+    - target: {fileID: 1706664785888241366, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
+    - target: {fileID: 2318673908349690869, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
     - target: {fileID: 2354815670745126667, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: debugLog
       value: 0
@@ -36,6 +48,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Bumper
       objectReference: {fileID: 0}
+    - target: {fileID: 4455098805455811937, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cabb96eb1a10b5146b5800f9bca3a450, type: 2}
+    - target: {fileID: 4455098805455811937, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac86efe8c1df204fbd2baf2110a07cc, type: 2}
+    - target: {fileID: 4455098805455811937, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6e3ea078fe8c3547b7a1b076f6a9d9a, type: 2}
+    - target: {fileID: 5545126450715390161, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b54931ab66cada74ab6df47a7f672457, type: 2}
     - target: {fileID: 6664152969994370395, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -43.79028
@@ -83,36 +111,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4797150973422761571}
-    - targetCorrespondingSourceObject: {fileID: 3224893578408186419, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2633702584777580670}
   m_SourcePrefab: {fileID: 100100000, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
---- !u!1 &1597869475439861568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3224893578408186419, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
-  m_PrefabInstance: {fileID: 4246290051727428979}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2633702584777580670
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597869475439861568}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.089611, y: 1.4091907, z: 4.3143272}
-  m_Center: {x: 0.009305954, y: 0.20459533, z: 0.22502708}
 --- !u!1 &2072181885737878447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
@@ -131,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoleGenerator
   holePrefab: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
-  aimPrecision: 1
+  aimPrecision: 0.71
   distanceMax: 100
-  yBoost: 4
+  yBoost: 2.5
   gunshotFeedback: {fileID: 0}
