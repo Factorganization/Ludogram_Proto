@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3858611294646076055}
   - component: {fileID: 229990205488264327}
   - component: {fileID: 5613517232406509267}
-  - component: {fileID: 6990192669558945748}
   m_Layer: 0
   m_Name: P_TreeFinal_Bonus
   m_TagString: Untagged
@@ -42,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2322707769743755361}
-  m_Mesh: {fileID: 5612064003866912917, guid: d03ae0bdd2506c04c81996a5d4533e39, type: 3}
+  m_Mesh: {fileID: 5612064003866912917, guid: 74eb508e92d60a640b588fd77e439d64, type: 3}
 --- !u!23 &229990205488264327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +63,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
+  m_MeshLodSelectionBias: -2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -116,22 +115,3 @@ CapsuleCollider:
   m_Height: 9.246599
   m_Direction: 1
   m_Center: {x: -0.07, y: 4.622761, z: 0.11}
---- !u!205 &6990192669558945748
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2322707769743755361}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.33819008, y: 4.622761, z: 0.7008679}
-  m_Size: 11.794909
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.08792698
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 229990205488264327}
-  m_Enabled: 1
