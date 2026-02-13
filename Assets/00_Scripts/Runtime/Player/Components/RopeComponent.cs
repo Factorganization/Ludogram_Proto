@@ -15,7 +15,7 @@ public class RopeComponent : PlayerComponent
     {
         if (!AttachedRope) return;
 
-        _attachedObiRigidbody.kinematicForParticles = !RopeTensionMonitor.IsUnderTension;
+        //_attachedObiRigidbody.kinematicForParticles = !RopeTensionMonitor.IsUnderTension;
         //AttachedRope.distanceConstraintsEnabled = true;
         //AttachedRope.distanceConstraintsEnabled = false;
     }

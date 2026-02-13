@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Obi::Obi.ObiRigidbody
-  kinematicForParticles: 0
+  kinematicForParticles: 1
 --- !u!114 &3217597951348072066
 MonoBehaviour:
   m_ObjectHideFlags: 0

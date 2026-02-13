@@ -1,3 +1,4 @@
+using System;
 using MortierFu.Shared;
 using Obi;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class RopeAttacher : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private ObiRope[] rope;
+    [SerializeField] private SpringJoint[] ropeSpringJoint;
     
     private bool rope1Used = false;
     private bool rope2Used = false;
@@ -14,7 +16,13 @@ public class RopeAttacher : MonoBehaviour
     
     
     [SerializeField] private ObiParticleAttachment[] ropeAnchor;
-    
+
+    private void Start()
+    {
+        // Populate ropeSpringJoint array by getting the 4 springJoint component from THIS gameObject
+        ropeSpringJoint = GetComponents<SpringJoint>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<PlayerCharacter>(out var player))
@@ -29,6 +37,10 @@ public class RopeAttacher : MonoBehaviour
             ropeAnchor[ropeIndex].target =player.transform;
             
             rope[ropeIndex].gameObject.SetActive(true);
+            
+            // Connect the rope's spring joint to the player's Rigidbody
+            ropeSpringJoint[ropeIndex].connectedBody = player.GetCachedComponent<Rigidbody>();
+            ropeSpringJoint[ropeIndex].maxDistance = player.Playerstats.MaxRopeDistance;
         }
     }
 
@@ -65,21 +77,25 @@ public class RopeAttacher : MonoBehaviour
         {
             rope1Used = false;
             rope[0].gameObject.SetActive(false);
+            ropeSpringJoint[0].connectedBody = null;
         }
         else if (ropeToFree == rope[1]) 
         { 
             rope2Used = false; 
             rope[1].gameObject.SetActive(false);
+            ropeSpringJoint[1].connectedBody = null;
         } 
         else if (ropeToFree == rope[2])
         {
             rope3Used = false;
             rope[2].gameObject.SetActive(false);
+            ropeSpringJoint[2].connectedBody = null;
         } 
         else if (ropeToFree == rope[3])
         {
             rope4Used = false;
             rope[3].gameObject.SetActive(false);
+            ropeSpringJoint[3].connectedBody = null;
         }
     }
     
