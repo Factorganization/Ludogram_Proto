@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HoleGenerator
   holePrefab: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
   aimPrecision: 0.15
-  distanceMax: 8
+  distanceMax: 20
   yBoost: 4
   gunshotFeedback: {fileID: 2481013496302543061}
 --- !u!4 &6213177609715649344 stripped
