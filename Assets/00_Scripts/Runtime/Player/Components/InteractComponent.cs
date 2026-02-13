@@ -69,7 +69,10 @@ public class InteractComponent : PlayerComponent
                 break;
             case EnemyHealth :
                 character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.DESTROY);
-                break; 
+                break;
+            case CrankItUp :
+                character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.ELSE);
+                break;
             
             //TODO : Rope crank
             
