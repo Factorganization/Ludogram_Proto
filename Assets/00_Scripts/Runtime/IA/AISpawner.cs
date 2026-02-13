@@ -22,7 +22,6 @@ public class AISpawner : MonoBehaviour
 
         if (spawnTimer < spawnCooldown)
         {
-            Debug.Log("spawner : waiting for cooldown");
             spawnTimer += Time.deltaTime;
         }
         else
@@ -40,15 +39,10 @@ public class AISpawner : MonoBehaviour
             spawnTimer = 0;
             Spawn();
         }
-        else
-        {
-            Debug.Log("spawner : conditions not met");
-        }
     }
 
     private void Spawn()
     {
-        Debug.Log("spawner : SPAWN");
         gm.enemyCount++;
         
         int randomIndex = Mathf.RoundToInt(Random.Range(0, 1));
