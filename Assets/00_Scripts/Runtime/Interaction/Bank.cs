@@ -1,9 +1,11 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class Bank : MonoBehaviour, IInteractable
 {
     public bool delivered;
+    [SerializeField] private TextMeshPro text;
     public Transform GetTransform()
     {
         return transform;
@@ -23,6 +25,10 @@ public class Bank : MonoBehaviour, IInteractable
         if (GameManager.Instance != null)
         {
             GameManager.Instance.OnBankInteraction(this);
+            if (text != null)
+            {
+                text.text = "";
+            }
         }
         else
         {

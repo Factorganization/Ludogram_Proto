@@ -1,9 +1,10 @@
 using Obi;
+using UnityEngine;
 
 public class RopeComponent : PlayerComponent
 {
-    public ObiRope AttachedRope { get; private set; }
-    public RopeTensionMonitor RopeTensionMonitor { get; private set; }
+    public SpringJoint AttachedRope { get; private set; }
+    public RopeAttacher RopeAttacher { get; private set; }
     
     private ObiRigidbody _attachedObiRigidbody;
     
@@ -13,9 +14,7 @@ public class RopeComponent : PlayerComponent
 
     public void HandleRope()
     {
-        if (!AttachedRope) return;
-
-        _attachedObiRigidbody.kinematicForParticles = !RopeTensionMonitor.IsUnderTension;
+        //_attachedObiRigidbody.kinematicForParticles = !RopeTensionMonitor.IsUnderTension;
         //AttachedRope.distanceConstraintsEnabled = true;
         //AttachedRope.distanceConstraintsEnabled = false;
     }
@@ -25,20 +24,18 @@ public class RopeComponent : PlayerComponent
         _attachedObiRigidbody = character.GetCachedComponent<ObiRigidbody>();
     }
 
-    public void AttachRope(ObiRope rope)
+    public void AttachRope(SpringJoint rope, RopeAttacher ropeAttacher)
     {
         character.IsAttached = true;
         AttachedRope = rope;
-        RopeTensionMonitor = rope.GetComponent<RopeTensionMonitor>();
-
-        RopeTensionMonitor.tensionThreshold = character.Playerstats.MaxRopeTension;
-        
+        RopeAttacher = ropeAttacher;
     }
     
     public void RemoveRope()
     {
         character.IsAttached = false;
         AttachedRope = null;
+        RopeAttacher = null;
     }
     
     

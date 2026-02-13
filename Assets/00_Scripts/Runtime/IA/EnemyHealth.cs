@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
     [SerializeField] private MeshRenderer[] meshRenderers;
     [SerializeField] private ParticleSystem explosionFeedback;
     
+    [SerializeField] Rigidbody rigidbody;
+    
     private int currentHealth;
     private float destroyTimer, explosionTimer;
 
@@ -27,9 +29,11 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
 
     public void UpdateHealth(int amount)
     {
+        if (destroyTimer > 0)
+            return; 
         currentHealth += amount;
 
-        if (currentHealth < 0)
+        if (currentHealth < 1)
         {
             currentHealth = 0;
             
@@ -57,12 +61,13 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
             if (explosionTimer < 0)
             {
                 GameManager.Instance.enemyCount--;
-                Destroy(gameObject);
+                
+                Destroy(GetComponentInParent<EnemyBehavior>().gameObject);
             }
         }
     }
 
-    void LaunchAutoDestruction()
+    public void LaunchAutoDestruction()
     {
         destroyTimer = delayToDestroy;
         if (meshRenderers.Length > 0){
@@ -94,6 +99,7 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
 
     public void Interact(PlayerCharacter interactor)
     {
-        UpdateHealth(-(maxHealth/3)); // refacto : à changer par une valeur de degat sur l'interactor
+        rigidbody.AddForce(Vector3.up*2000, ForceMode.Impulse);
+        UpdateHealth(-1); // refacto : à changer par une valeur de degat sur l'interactor
     }
 }

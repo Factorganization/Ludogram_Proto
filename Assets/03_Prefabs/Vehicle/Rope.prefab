@@ -1,1024 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &608360750500851235
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8950576834574255790}
-  m_Layer: 9
-  m_Name: LeftDoor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8950576834574255790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608360750500851235}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.01, y: 0, z: -4.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 438783258191970198}
-  - {fileID: 497534884792801339}
-  - {fileID: 5108901546601537202}
-  - {fileID: 4311408093101138006}
-  m_Father: {fileID: 4723629636660618153}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1 &869680426073283638
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3486950502856509418}
-  - component: {fileID: 8789994040669139687}
-  - component: {fileID: 2490248365638921885}
-  - component: {fileID: 5703990720868483870}
-  - component: {fileID: 3797845015104775334}
-  - component: {fileID: 6325015735556961497}
-  - component: {fileID: 4988469248326843788}
-  m_Layer: 9
-  m_Name: Obi Rope_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &3486950502856509418
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869680426073283638}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: 0.68}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2595397887313291490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8789994040669139687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869680426073283638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 1
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
-  m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 0
-    particle2: 1
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 1
-    particle2: 2
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 2
-    particle2: 3
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 3
-    particle2: 4
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 4
-    particle2: 5
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 5
-    particle2: 6
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 6
-    particle2: 7
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 7
-    particle2: 8
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 8
-    particle2: 9
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 9
-    particle2: 10
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 10
-    particle2: 11
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 11
-    particle2: 12
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 12
-    particle2: 13
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 13
-    particle2: 14
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 14
-    particle2: 15
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 15
-    particle2: 16
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 16
-    particle2: 17
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 17
-    particle2: 18
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 18
-    particle2: 19
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 19
-    particle2: 20
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 20
-    particle2: 21
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 21
-    particle2: 22
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 22
-    particle2: 23
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 23
-    particle2: 24
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 24
-    particle2: 25
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 25
-    particle2: 26
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 26
-    particle2: 27
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 27
-    particle2: 28
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 28
-    particle2: 29
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 29
-    particle2: 30
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 30
-    particle2: 31
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &2490248365638921885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869680426073283638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 1
---- !u!114 &5703990720868483870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869680426073283638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &3797845015104775334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869680426073283638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 8789994040669139687}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &6325015735556961497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869680426073283638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 8789994040669139687}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &4988469248326843788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869680426073283638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 2382824123654855158}
-  tensionThreshold: 100
---- !u!1 &929329574055430952
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7347273860805503554}
-  - component: {fileID: 4446700720693496235}
-  - component: {fileID: 4348442124436142561}
-  - component: {fileID: 3039688259704948001}
-  - component: {fileID: 8730685354553662887}
-  - component: {fileID: 8088060660244257274}
-  - component: {fileID: 6572595932663840393}
-  m_Layer: 9
-  m_Name: Obi Rope
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7347273860805503554
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929329574055430952}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: -0.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2595397887313291490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4446700720693496235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929329574055430952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 4
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
-  m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 396
-    particle2: 397
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 397
-    particle2: 398
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 398
-    particle2: 399
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 399
-    particle2: 400
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 400
-    particle2: 401
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 401
-    particle2: 402
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 402
-    particle2: 403
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 403
-    particle2: 404
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 404
-    particle2: 405
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 405
-    particle2: 406
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 406
-    particle2: 407
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 407
-    particle2: 408
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 408
-    particle2: 409
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 409
-    particle2: 410
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 410
-    particle2: 411
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 411
-    particle2: 412
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 412
-    particle2: 413
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 413
-    particle2: 414
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 414
-    particle2: 415
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 415
-    particle2: 416
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 416
-    particle2: 417
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 417
-    particle2: 418
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 418
-    particle2: 419
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 419
-    particle2: 420
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 420
-    particle2: 421
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 421
-    particle2: 422
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 422
-    particle2: 423
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 423
-    particle2: 424
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 424
-    particle2: 425
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 425
-    particle2: 426
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 426
-    particle2: 427
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &4348442124436142561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929329574055430952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 3
---- !u!114 &3039688259704948001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929329574055430952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &8730685354553662887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929329574055430952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 4446700720693496235}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &8088060660244257274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929329574055430952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 4446700720693496235}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &6572595932663840393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929329574055430952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 4446700720693496235}
-  tensionThreshold: 100
---- !u!1 &1125825929726822305
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5598860697729692996}
-  - component: {fileID: 692028862596738440}
-  - component: {fileID: 6175492517478774430}
-  - component: {fileID: 7243093440536742702}
-  - component: {fileID: 419438783801696312}
-  - component: {fileID: 4636534331380386486}
-  - component: {fileID: 2754181260154773980}
-  m_Layer: 9
-  m_Name: Obi Rope_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &5598860697729692996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125825929726822305}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: -0.62}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2595397887313291490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &692028862596738440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125825929726822305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 2
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
-  m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 132
-    particle2: 133
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 133
-    particle2: 134
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 134
-    particle2: 135
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 135
-    particle2: 136
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 136
-    particle2: 137
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 137
-    particle2: 138
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 138
-    particle2: 139
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 139
-    particle2: 140
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 140
-    particle2: 141
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 141
-    particle2: 142
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 142
-    particle2: 143
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 143
-    particle2: 144
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 144
-    particle2: 145
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 145
-    particle2: 146
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 146
-    particle2: 147
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 147
-    particle2: 148
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 148
-    particle2: 149
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 149
-    particle2: 150
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 150
-    particle2: 151
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 151
-    particle2: 152
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 152
-    particle2: 153
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 153
-    particle2: 154
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 154
-    particle2: 155
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 155
-    particle2: 156
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 156
-    particle2: 157
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 157
-    particle2: 158
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 158
-    particle2: 159
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 159
-    particle2: 160
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 160
-    particle2: 161
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 161
-    particle2: 162
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 162
-    particle2: 163
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &6175492517478774430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125825929726822305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 0
---- !u!114 &7243093440536742702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125825929726822305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &419438783801696312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125825929726822305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 692028862596738440}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &4636534331380386486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125825929726822305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 692028862596738440}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &2754181260154773980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125825929726822305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 2382824123654855158}
-  tensionThreshold: 100
 --- !u!1 &1152482625529346458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +11,7 @@ GameObject:
   - component: {fileID: 7698403442701387555}
   - component: {fileID: 6294029274702410143}
   - component: {fileID: 8020894665515685542}
+  - component: {fileID: 2862544381322330527}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Untagged
@@ -1046,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1152482625529346458}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2660007, y: 2.1853247, z: -2.3284397}
+  m_LocalPosition: {x: 1.5220432, y: 2.1853247, z: -2.329996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1086,6 +68,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RopeRemover
   ropeAttacher: {fileID: 3742220545965495388}
+--- !u!114 &2862544381322330527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152482625529346458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 6294029274702410143}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &1202695892920895793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,45 +115,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4723629636660618153}
   - {fileID: 1472128066996216532}
   - {fileID: 4793264460947820773}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2441275344329981379
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2595397887313291490}
-  m_Layer: 9
-  m_Name: RightDoor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2595397887313291490
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2441275344329981379}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7347273860805503554}
-  - {fileID: 2505624830578395365}
-  - {fileID: 3486950502856509418}
-  - {fileID: 5598860697729692996}
-  m_Father: {fileID: 4723629636660618153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3500309724207329196
 GameObject:
@@ -1166,6 +130,13 @@ GameObject:
   - component: {fileID: 8635161912408668590}
   - component: {fileID: 3742220545965495388}
   - component: {fileID: 3238806263445247387}
+  - component: {fileID: 4445041402716359001}
+  - component: {fileID: 2155859989414647128}
+  - component: {fileID: 3767451537489457191}
+  - component: {fileID: 3213574301663988563}
+  - component: {fileID: 7444931462916308669}
+  - component: {fileID: 1437826923399308742}
+  - component: {fileID: 7179843079630017378}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Untagged
@@ -1182,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 3500309724207329196}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5439568, y: 2.1853247, z: -2.3284397}
+  m_LocalPosition: {x: 1.8, y: 2.1853247, z: -2.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1200,16 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a1edff463045e2ad9b8b8b3b1e6bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RopeAttacher
-  rope:
-  - {fileID: 4446700720693496235}
-  - {fileID: 7198100598871874324}
-  - {fileID: 8789994040669139687}
-  - {fileID: 692028862596738440}
-  ropeAnchor:
-  - {fileID: 8088060660244257274}
-  - {fileID: 5670159167661904949}
-  - {fileID: 6325015735556961497}
-  - {fileID: 4636534331380386486}
+  ropeSpringJoint: []
 --- !u!65 &3238806263445247387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1231,6 +193,160 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13744164, y: 3.3641863, z: 2.5857527}
   m_Center: {x: -0.004374504, y: 1.1820931, z: 0.11409557}
+--- !u!114 &4445041402716359001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500309724207329196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 3238806263445247387}
+  m_DistanceField: {fileID: 0}
+--- !u!54 &2155859989414647128
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500309724207329196}
+  serializedVersion: 5
+  m_Mass: 0.0000001
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!145 &3767451537489457191
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500309724207329196}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1000
+--- !u!145 &3213574301663988563
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500309724207329196}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1000
+--- !u!145 &7444931462916308669
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500309724207329196}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1000
+--- !u!145 &1437826923399308742
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500309724207329196}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1000
+--- !u!114 &7179843079630017378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500309724207329196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiRigidbody
+  kinematicForParticles: 1
 --- !u!1 &3907386042865801910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +358,7 @@ GameObject:
   - component: {fileID: 5549418006874511142}
   - component: {fileID: 702312049279821565}
   - component: {fileID: 3236776056471975024}
+  - component: {fileID: 6379302147239323905}
   m_Layer: 0
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -1258,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 3907386042865801910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.124, y: 2.1853247, z: -2.3284397}
+  m_LocalPosition: {x: -1.47, y: 2.1853247, z: -2.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1298,6 +415,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RopeRemover
   ropeAttacher: {fileID: 8089478024771522193}
+--- !u!114 &6379302147239323905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907386042865801910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 702312049279821565}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &4007204069862953861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +444,13 @@ GameObject:
   - component: {fileID: 7966111204418327976}
   - component: {fileID: 8089478024771522193}
   - component: {fileID: 5774461155600723498}
+  - component: {fileID: 2476317311387332513}
+  - component: {fileID: 8958416766180754366}
+  - component: {fileID: 406029756930785179}
+  - component: {fileID: 5703569051343084028}
+  - component: {fileID: 5227332240552164439}
+  - component: {fileID: 6877415745654503301}
+  - component: {fileID: 3262851422952441775}
   m_Layer: 0
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -1325,7 +467,7 @@ Transform:
   m_GameObject: {fileID: 4007204069862953861}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5439568, y: 2.1853247, z: -2.3284397}
+  m_LocalPosition: {x: 3.1979485, y: 2.1853247, z: -2.329996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1343,16 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a1edff463045e2ad9b8b8b3b1e6bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RopeAttacher
-  rope:
-  - {fileID: 2325661664260036205}
-  - {fileID: 1057079662366937969}
-  - {fileID: 845961586347583342}
-  - {fileID: 2382824123654855158}
-  ropeAnchor:
-  - {fileID: 7048853668005521288}
-  - {fileID: 4180486752284406581}
-  - {fileID: 8906793770380687518}
-  - {fileID: 6300603071790464541}
+  ropeSpringJoint: []
 --- !u!65 &5774461155600723498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1374,846 +507,160 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2724018, y: 3.3862915, z: 2.4767492}
   m_Center: {x: -5.19, y: 1.1931458, z: 0.13787615}
---- !u!1 &5064276594452857372
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 497534884792801339}
-  - component: {fileID: 1057079662366937969}
-  - component: {fileID: 1458280976575510830}
-  - component: {fileID: 3820685034453840193}
-  - component: {fileID: 4025384023445266925}
-  - component: {fileID: 4180486752284406581}
-  - component: {fileID: 1002735370793588056}
-  m_Layer: 9
-  m_Name: Obi Rope_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &497534884792801339
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064276594452857372}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: 0.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8950576834574255790}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1057079662366937969
+--- !u!114 &2476317311387332513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064276594452857372}
+  m_GameObject: {fileID: 4007204069862953861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 7
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
+  m_EditorClassIdentifier: Obi::Obi.ObiCollider
+  thickness: 0
+  inverted: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 5774461155600723498}
+  m_DistanceField: {fileID: 0}
+--- !u!54 &8958416766180754366
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007204069862953861}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!145 &406029756930785179
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007204069862953861}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
   m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 792
-    particle2: 793
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 793
-    particle2: 794
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 794
-    particle2: 795
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 795
-    particle2: 796
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 796
-    particle2: 797
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 797
-    particle2: 798
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 798
-    particle2: 799
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 799
-    particle2: 800
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 800
-    particle2: 801
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 801
-    particle2: 802
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 802
-    particle2: 803
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 803
-    particle2: 804
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 804
-    particle2: 805
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 805
-    particle2: 806
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 806
-    particle2: 807
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 807
-    particle2: 808
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 808
-    particle2: 809
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 809
-    particle2: 810
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 810
-    particle2: 811
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 811
-    particle2: 812
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 812
-    particle2: 813
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 813
-    particle2: 814
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 814
-    particle2: 815
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 815
-    particle2: 816
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 816
-    particle2: 817
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 817
-    particle2: 818
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 818
-    particle2: 819
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 819
-    particle2: 820
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 820
-    particle2: 821
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 821
-    particle2: 822
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 822
-    particle2: 823
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &1458280976575510830
-MonoBehaviour:
+  m_ConnectedMassScale: 1000
+--- !u!145 &5703569051343084028
+SpringJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064276594452857372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 2
---- !u!114 &3820685034453840193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064276594452857372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &4025384023445266925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064276594452857372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 1057079662366937969}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &4180486752284406581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064276594452857372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 1057079662366937969}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &1002735370793588056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064276594452857372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 2382824123654855158}
-  tensionThreshold: 100
---- !u!1 &5896873085724167424
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5108901546601537202}
-  - component: {fileID: 845961586347583342}
-  - component: {fileID: 5979526967687220667}
-  - component: {fileID: 4732260394571298381}
-  - component: {fileID: 1551404841635038501}
-  - component: {fileID: 8906793770380687518}
-  - component: {fileID: 6597642516950330832}
-  m_Layer: 9
-  m_Name: Obi Rope_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &5108901546601537202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896873085724167424}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: 0.68}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8950576834574255790}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &845961586347583342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896873085724167424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 6
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
+  m_GameObject: {fileID: 4007204069862953861}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
   m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 660
-    particle2: 661
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 661
-    particle2: 662
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 662
-    particle2: 663
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 663
-    particle2: 664
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 664
-    particle2: 665
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 665
-    particle2: 666
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 666
-    particle2: 667
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 667
-    particle2: 668
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 668
-    particle2: 669
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 669
-    particle2: 670
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 670
-    particle2: 671
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 671
-    particle2: 672
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 672
-    particle2: 673
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 673
-    particle2: 674
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 674
-    particle2: 675
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 675
-    particle2: 676
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 676
-    particle2: 677
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 677
-    particle2: 678
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 678
-    particle2: 679
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 679
-    particle2: 680
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 680
-    particle2: 681
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 681
-    particle2: 682
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 682
-    particle2: 683
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 683
-    particle2: 684
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 684
-    particle2: 685
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 685
-    particle2: 686
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 686
-    particle2: 687
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 687
-    particle2: 688
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 688
-    particle2: 689
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 689
-    particle2: 690
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 690
-    particle2: 691
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &5979526967687220667
+  m_ConnectedMassScale: 1000
+--- !u!145 &5227332240552164439
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007204069862953861}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1000
+--- !u!145 &6877415745654503301
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007204069862953861}
+  serializedVersion: 4
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 10
+  m_Tolerance: 0.000001
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1000
+--- !u!114 &3262851422952441775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896873085724167424}
+  m_GameObject: {fileID: 4007204069862953861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
+  m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 1
---- !u!114 &4732260394571298381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896873085724167424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &1551404841635038501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896873085724167424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 845961586347583342}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &8906793770380687518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896873085724167424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 845961586347583342}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &6597642516950330832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896873085724167424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 2382824123654855158}
-  tensionThreshold: 100
---- !u!1 &7469635624259674435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4723629636660618153}
-  - component: {fileID: 287321148987916245}
-  m_Layer: 9
-  m_Name: ObiSolver
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4723629636660618153
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469635624259674435}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2595397887313291490}
-  - {fileID: 8950576834574255790}
-  m_Father: {fileID: 7213782651560525101}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &287321148987916245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469635624259674435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d174fab52f0c4b8399f25d5c3ea524c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiSolver
-  simulateWhenInvisible: 1
-  m_Backend: 1
-  substeps: 4
-  maxStepsPerFrame: 1
-  synchronization: 0
-  parameters:
-    mode: 0
-    interpolation: 0
-    gravity: {x: 0, y: -9.81, z: 0}
-    ambientWind: {x: 0, y: 0, z: 0}
-    foamGravityScale: 1
-    damping: 0
-    maxAnisotropy: 3
-    sleepThreshold: 0.0005
-    maxVelocity: 50
-    maxAngularVelocity: 20
-    collisionMargin: 0.02
-    maxDepenetration: 10
-    colliderCCD: 1
-    particleCCD: 0
-    shockPropagation: 0
-    surfaceCollisionIterations: 8
-    surfaceCollisionTolerance: 0.005
-    diffusionMask: {x: 1, y: 1, z: 1, w: 1}
-  m_MaxSurfaceChunks: 32768
-  maxQueryResults: 8192
-  maxFoamParticles: 8192
-  maxParticleNeighbors: 128
-  maxParticleContacts: 6
-  useLimits: 0
-  killOffLimitsParticles: 0
-  boundaryLimits:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 5, y: 5, z: 5}
-  gravity: {x: 0, y: -9.81, z: 0}
-  gravitySpace: 1
-  ambientWind: {x: 0, y: 0, z: 0}
-  windSpace: 1
-  foamSubsteps: 1
-  foamMinNeighbors: 3
-  foamCollisions: 0
-  maxFoamVelocityStretch: 0.3
-  foamRadiusScale: 1
-  foamFade: {x: 0.05, y: 0.8}
-  foamAccelAgingRange: {x: 0.5, y: 0.8}
-  foamAccelAging: 4
-  foamVolumeDensity: 0.1
-  foamAmbientDensity: 0.02
-  foamScatterColor: {r: 0.8, g: 0.75, b: 0.7, a: 1}
-  foamAmbientColor: {r: 0.4, g: 0.5, b: 0.6, a: 1}
-  worldLinearInertiaScale: 0
-  worldAngularInertiaScale: 0
-  synchronousSpatialQueries: 0
-  distanceConstraintParameters:
-    evaluationOrder: 0
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  bendingConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  particleCollisionConstraintParameters:
-    evaluationOrder: 0
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  particleFrictionConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  collisionConstraintParameters:
-    evaluationOrder: 0
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  frictionConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  skinConstraintParameters:
-    evaluationOrder: 0
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  volumeConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  shapeMatchingConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  tetherConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  pinConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  pinholeConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  stitchConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  densityConstraintParameters:
-    evaluationOrder: 1
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  stretchShearConstraintParameters:
-    evaluationOrder: 0
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  bendTwistConstraintParameters:
-    evaluationOrder: 0
-    iterations: 1
-    SORFactor: 1
-    enabled: 1
-  chainConstraintParameters:
-    evaluationOrder: 0
-    iterations: 1
-    SORFactor: 1
-    enabled: 0
+  m_EditorClassIdentifier: Obi::Obi.ObiRigidbody
+  kinematicForParticles: 1
 --- !u!1 &8059126180990955937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,334 +694,6 @@ Transform:
   - {fileID: 7966111204418327976}
   m_Father: {fileID: 7213782651560525101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8116006518546639215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4311408093101138006}
-  - component: {fileID: 2382824123654855158}
-  - component: {fileID: 9114209262240082305}
-  - component: {fileID: 5058078712429405331}
-  - component: {fileID: 6582738167826650807}
-  - component: {fileID: 6300603071790464541}
-  - component: {fileID: 1418820306643551842}
-  m_Layer: 9
-  m_Name: Obi Rope_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4311408093101138006
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116006518546639215}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: -0.62}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8950576834574255790}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2382824123654855158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116006518546639215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 5
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
-  m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 528
-    particle2: 529
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 529
-    particle2: 530
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 530
-    particle2: 531
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 531
-    particle2: 532
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 532
-    particle2: 533
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 533
-    particle2: 534
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 534
-    particle2: 535
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 535
-    particle2: 536
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 536
-    particle2: 537
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 537
-    particle2: 538
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 538
-    particle2: 539
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 539
-    particle2: 540
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 540
-    particle2: 541
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 541
-    particle2: 542
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 542
-    particle2: 543
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 543
-    particle2: 544
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 544
-    particle2: 545
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 545
-    particle2: 546
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 546
-    particle2: 547
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 547
-    particle2: 548
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 548
-    particle2: 549
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 549
-    particle2: 550
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 550
-    particle2: 551
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 551
-    particle2: 552
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 552
-    particle2: 553
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 553
-    particle2: 554
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 554
-    particle2: 555
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 555
-    particle2: 556
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 556
-    particle2: 557
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 557
-    particle2: 558
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 558
-    particle2: 559
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &9114209262240082305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116006518546639215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 0
---- !u!114 &5058078712429405331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116006518546639215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &6582738167826650807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116006518546639215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 2382824123654855158}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &6300603071790464541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116006518546639215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 2382824123654855158}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &1418820306643551842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116006518546639215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 2382824123654855158}
-  tensionThreshold: 100
 --- !u!1 &8123179225300647351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,659 +727,3 @@ Transform:
   - {fileID: 5549418006874511142}
   m_Father: {fileID: 7213782651560525101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8500266016274333644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 438783258191970198}
-  - component: {fileID: 2325661664260036205}
-  - component: {fileID: 407788387384150348}
-  - component: {fileID: 2782387648752888211}
-  - component: {fileID: 7222032009172336571}
-  - component: {fileID: 7048853668005521288}
-  - component: {fileID: 2396185701522100167}
-  m_Layer: 9
-  m_Name: Obi Rope
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &438783258191970198
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8500266016274333644}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: -0.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8950576834574255790}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2325661664260036205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8500266016274333644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 8
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
-  m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 924
-    particle2: 925
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 925
-    particle2: 926
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 926
-    particle2: 927
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 927
-    particle2: 928
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 928
-    particle2: 929
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 929
-    particle2: 930
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 930
-    particle2: 931
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 931
-    particle2: 932
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 932
-    particle2: 933
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 933
-    particle2: 934
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 934
-    particle2: 935
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 935
-    particle2: 936
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 936
-    particle2: 937
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 937
-    particle2: 938
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 938
-    particle2: 939
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 939
-    particle2: 940
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 940
-    particle2: 941
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 941
-    particle2: 942
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 942
-    particle2: 943
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 943
-    particle2: 944
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 944
-    particle2: 945
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 945
-    particle2: 946
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 946
-    particle2: 947
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 947
-    particle2: 948
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 948
-    particle2: 949
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 949
-    particle2: 950
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 950
-    particle2: 951
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 951
-    particle2: 952
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 952
-    particle2: 953
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 953
-    particle2: 954
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 954
-    particle2: 955
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &407788387384150348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8500266016274333644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 3
---- !u!114 &2782387648752888211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8500266016274333644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &7222032009172336571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8500266016274333644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 2325661664260036205}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &7048853668005521288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8500266016274333644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 2325661664260036205}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &2396185701522100167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8500266016274333644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 2382824123654855158}
-  tensionThreshold: 100
---- !u!1 &9124949888310011892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2505624830578395365}
-  - component: {fileID: 7198100598871874324}
-  - component: {fileID: 659213206662389258}
-  - component: {fileID: 8297948869056776578}
-  - component: {fileID: 1625724428053568725}
-  - component: {fileID: 5670159167661904949}
-  - component: {fileID: 5427798813013258120}
-  m_Layer: 9
-  m_Name: Obi Rope_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2505624830578395365
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124949888310011892}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.709999, y: 4.679, z: 0.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2595397887313291490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7198100598871874324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124949888310011892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61104f33a3f344db9b7e0d0cda41a9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRope
-  solverIndices:
-    serializedContents: 
-    m_AlignBytes: 16
-  groupID: 3
-  m_CollisionMaterial: {fileID: 0}
-  m_SurfaceCollisions: 0
-  m_MassScale: 1
-  m_SelfCollisions: 0
-  restLength_: 7.089435
-  elements:
-  - particle1: 264
-    particle2: 265
-    restLength: 0.24693152
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 265
-    particle2: 266
-    restLength: 0.23765247
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 266
-    particle2: 267
-    restLength: 0.22851364
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 267
-    particle2: 268
-    restLength: 0.21951506
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 268
-    particle2: 269
-    restLength: 0.22232984
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 269
-    particle2: 270
-    restLength: 0.24471131
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 270
-    particle2: 271
-    restLength: 0.23199366
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 271
-    particle2: 272
-    restLength: 0.21953225
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 272
-    particle2: 273
-    restLength: 0.22636083
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 273
-    particle2: 274
-    restLength: 0.24205185
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 274
-    particle2: 275
-    restLength: 0.22376283
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 275
-    particle2: 276
-    restLength: 0.22258814
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 276
-    particle2: 277
-    restLength: 0.24124855
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 277
-    particle2: 278
-    restLength: 0.21304756
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 278
-    particle2: 279
-    restLength: 0.24462289
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 279
-    particle2: 280
-    restLength: 0.22106197
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 280
-    particle2: 281
-    restLength: 0.22541751
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 281
-    particle2: 282
-    restLength: 0.18858162
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 282
-    particle2: 283
-    restLength: 0.2279668
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 283
-    particle2: 284
-    restLength: 0.2311729
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 284
-    particle2: 285
-    restLength: 0.22857155
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 285
-    particle2: 286
-    restLength: 0.23033549
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 286
-    particle2: 287
-    restLength: 0.23189026
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 287
-    particle2: 288
-    restLength: 0.2306609
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 288
-    particle2: 289
-    restLength: 0.2305417
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 289
-    particle2: 290
-    restLength: 0.23124078
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 290
-    particle2: 291
-    restLength: 0.22859044
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 291
-    particle2: 292
-    restLength: 0.23163901
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 292
-    particle2: 293
-    restLength: 0.23246916
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 293
-    particle2: 294
-    restLength: 0.23062736
-    constraintForce: 0
-    tearResistance: 1
-  - particle1: 294
-    particle2: 295
-    restLength: 0.22380507
-    constraintForce: 0
-    tearResistance: 1
-  _aerodynamicsEnabled: 1
-  _drag: 0.05
-  _lift: 0.02
-  m_RopeBlueprint: {fileID: 11400000, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  tearingEnabled: 0
-  tearResistanceMultiplier: 1000
-  tearRate: 1
-  _distanceConstraintsEnabled: 1
-  _stretchingScale: 1
-  _stretchCompliance: 0
-  _maxCompression: 0
-  _bendConstraintsEnabled: 1
-  _bendCompliance: 0
-  _maxBending: 0.025
-  _plasticYield: 0
-  _plasticCreep: 0
---- !u!114 &659213206662389258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124949888310011892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958c969cfb16745f192d4d7bd28b7178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiPathSmoother
-  decimation: 0
-  smoothing: 0
-  twist: 0
-  indexInSystem: 2
---- !u!114 &8297948869056776578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124949888310011892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4747da60837c44f9ba4b4a86879bcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiRopeExtrudedRenderer
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  renderParameters:
-    layer: 10
-    lightProbeUsage: 1
-    reflectionProbeUsage: 1
-    shadowCastingMode: 1
-    receiveShadows: 1
-    motionVectors: 0
-    renderingLayerMask: 4294967295
-  uvAnchor: 0
-  uvScale: {x: 1, y: 1}
-  normalizeV: 1
-  section: {fileID: 11400000, guid: a0bc36a59515f413e90e10895929c938, type: 2}
-  thicknessScale: 0.8
---- !u!114 &1625724428053568725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124949888310011892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 7198100598871874324}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -4517029930201779066, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 0
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &5670159167661904949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124949888310011892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d03c9194b7ab4aaba4dfa5afec22c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Obi::Obi.ObiParticleAttachment
-  m_Actor: {fileID: 7198100598871874324}
-  m_Target: {fileID: 0}
-  m_ParticleGroup: {fileID: -53998285165153434, guid: 9b7a30b754796421d9e0b869d8eb345b, type: 2}
-  m_AttachmentType: 1
-  m_ConstrainOrientation: 0
-  m_Projection: 0
-  m_Compliance: 0
-  teleportToTarget: 0
-  breakThreshold: Infinity
---- !u!114 &5427798813013258120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124949888310011892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa71c9484f9f44f939ef977f09ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RopeTensionMonitor
-  rope: {fileID: 0}
-  tensionThreshold: 100
