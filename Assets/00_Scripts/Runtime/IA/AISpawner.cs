@@ -19,9 +19,10 @@ public class AISpawner : MonoBehaviour
 
     private void Update()
     {
-        
+
         if (spawnTimer < spawnCooldown)
         {
+            Debug.Log("spawner : waiting for cooldown");
             spawnTimer += Time.deltaTime;
         }
         else
@@ -32,20 +33,25 @@ public class AISpawner : MonoBehaviour
 
     void TrySpawn()
     {
-        if (playerCar.GetComponent<CarController>()._drivingInputs == null && playerCar.GetComponent<Rigidbody>().linearVelocity.magnitude > 5) ;
+        //if (playerCar.GetComponent<CarController>()._drivingInputs == null && playerCar.GetComponent<Rigidbody>().linearVelocity.magnitude > 5) ;
         
         if (gm.enemyCount < maxEnemies &&  gm.holesCount < maxHoles)
         {
+            spawnTimer = 0;
             Spawn();
+        }
+        else
+        {
+            Debug.Log("spawner : conditions not met");
         }
     }
 
     private void Spawn()
     {
-        spawnTimer = 0;
+        Debug.Log("spawner : SPAWN");
         gm.enemyCount++;
         
-        int randomIndex = Random.Range(0, enemiesPrefab.Length);
+        int randomIndex = 0;
         
         Vector2 randomDir = Random.insideUnitCircle.normalized; 
         Vector3 spawnOffset = new Vector3(randomDir.x, 0, randomDir.y) * distanceSpawn;

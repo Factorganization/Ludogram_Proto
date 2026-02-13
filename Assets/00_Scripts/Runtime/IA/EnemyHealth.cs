@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
     [SerializeField] private ParticleSystem explosionFeedback;
     
     [SerializeField] Rigidbody rigidbody;
+    [SerializeField] private GameObject ghost;
     
     private int currentHealth;
     private float destroyTimer, explosionTimer;
@@ -62,6 +63,7 @@ public class EnemyHealth : MonoBehaviour,IInteractable //Refacto : enlever monob
             {
                 GameManager.Instance.enemyCount--;
                 
+                Destroy(ghost);
                 Destroy(GetComponentInParent<EnemyBehavior>().gameObject);
             }
         }

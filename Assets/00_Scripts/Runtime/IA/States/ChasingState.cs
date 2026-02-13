@@ -72,6 +72,7 @@ public class ChasingState : EnemyState
 
     private void CheckAIObstacle()
     {
+        return;
         Collider[] aiNear = Physics.OverlapSphere(brain.transform.position, brain.ObstacleDetectionRange, LayerMask.GetMask("AI"));
         if(aiNear.Length>0)
         {

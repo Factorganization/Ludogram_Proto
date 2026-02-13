@@ -140,8 +140,8 @@ Transform:
   m_GameObject: {fileID: 1201667986440162921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0112, y: -0.23009998, z: 0.0645}
-  m_LocalScale: {x: 1.9430116, y: 0.5709107, z: 3.5722237}
+  m_LocalPosition: {x: 0.0112, y: -0.48009998, z: 0.0645}
+  m_LocalScale: {x: 1.9430116, y: 1.0709143, z: 3.5722237}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3557414674110973762}
@@ -277,23 +277,23 @@ MonoBehaviour:
   holeGenerator: {fileID: 0}
   health: {fileID: 8804980647524461628}
   currentSpeed: 0
-  type: 0
+  type: 1
   randomOffsetRange: 5
-  initialSpeed: 25
+  initialSpeed: 50
   incrementSpeedAmount: 10
   incrementSpeedTreshold: 5
   obstacleDetectionRange: 3
   playerDetectionRange: 50
   noPlayerDetectedLength: 10
-  slowSpeedAmount: 10
+  slowSpeedAmount: 0
   distanceToVan: 8
   attackReadyDelay: 0
   holePerAttack: 1
   bumpOffset: 3
   recoilPower: 1000
-  shootCooldown: 4
-  totalBulletAmount: 3
-  reloadTime: 10
+  shootCooldown: 10
+  totalBulletAmount: 1
+  reloadTime: 20
   debugLog: 0
   showGizmos: 1
 --- !u!65 &474641745068669681
@@ -398,6 +398,7 @@ MonoBehaviour:
   - {fileID: 4455098805455811937}
   explosionFeedback: {fileID: 1666131492130620534}
   rigidbody: {fileID: 2833609887653020831}
+  ghost: {fileID: 6638560579832316678}
 --- !u!65 &6391301662936899509
 BoxCollider:
   m_ObjectHideFlags: 0
