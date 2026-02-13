@@ -274,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehavior
   playerVehicule: {fileID: 0}
   holeGenerator: {fileID: 0}
+  health: {fileID: 8804980647524461628}
   currentSpeed: 0
   type: 0
   randomOffsetRange: 5
@@ -352,6 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8175834243973370694}
   - component: {fileID: 8804980647524461628}
+  - component: {fileID: 6391301662936899509}
   m_Layer: 6
   m_Name: Car Mesh
   m_TagString: Untagged
@@ -394,6 +396,28 @@ MonoBehaviour:
   meshRenderers:
   - {fileID: 4455098805455811937}
   explosionFeedback: {fileID: 1666131492130620534}
+  rigidbody: {fileID: 2833609887653020831}
+--- !u!65 &6391301662936899509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224893578408186419}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.132837, y: 1.6215808, z: 3.6264658}
+  m_Center: {x: 0.027029514, y: 0.31079042, z: 0.09046625}
 --- !u!1 &5375051577449325380
 GameObject:
   m_ObjectHideFlags: 0

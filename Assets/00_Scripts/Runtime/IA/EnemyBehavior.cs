@@ -33,6 +33,7 @@ public class EnemyBehavior : MonoBehaviour
     [Header("Global References")]
     [SerializeField] private CarController playerVehicule; // a remplacer par le nouveau script car
     [SerializeField] private HoleGenerator holeGenerator;
+    [SerializeField] private EnemyHealth health;
     
 
     public float currentSpeed;
@@ -94,6 +95,8 @@ public class EnemyBehavior : MonoBehaviour
         _currentState = newState;
         _currentState?.Enter();
         
+        name = type +" "+ _currentState.GetType().Name;
+        
         if(debugLog)
             Debug.Log("Entered state : "+ _currentState);
     }
@@ -113,7 +116,8 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (_detection.GoBackToNeutral() && !_detection.DetectPlayer())
             {
-                SetState(_neutralState);
+                health.LaunchAutoDestruction();
+                //SetState(_neutralState);
             }
         }
     }
