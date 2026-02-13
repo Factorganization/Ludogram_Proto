@@ -11,7 +11,7 @@ public class RopeRemover : MonoBehaviour
         {
             if (!player.IsAttached) return;
             
-            ropeAttacher.FreeRope(player.Rope.AttachedRope);
+            player.Rope.RopeAttacher.FreeRope(player.Rope.AttachedRope);
             player.Rope.RemoveRope();
         }
     }

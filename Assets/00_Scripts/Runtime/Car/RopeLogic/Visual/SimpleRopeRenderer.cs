@@ -45,8 +45,13 @@ public class SimpleRopeRenderer : MonoBehaviour
 
     void Update()
     {
-        if (startPoint == null || endPoint == null) return;
+        if (startPoint == null || endPoint == null)
+        {
+            lineRenderer.enabled = false;
+            return;
+        }
         
+        lineRenderer.enabled = true;
         DrawRopeCurve();
     }
 
