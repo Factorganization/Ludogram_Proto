@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     private float currentMoney=0;
     private int bankDeliveredCount;
     private float moneyDeliveredTotal; 
-    [HideInInspector] public int enemyCount, holesCount;
+    public int enemyCount, holesCount;
     
     public CarController playerCar;
 
