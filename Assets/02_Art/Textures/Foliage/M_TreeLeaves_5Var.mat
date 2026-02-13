@@ -59,7 +59,7 @@ Material:
     - _AlphaClipping: 0.88
     - _Gradient_1: 1
     - _Gradient_2: -0.1
-    - _Outline_strength: 0.75
+    - _Outline_strength: 0.771
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.165
