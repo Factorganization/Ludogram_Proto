@@ -6,7 +6,6 @@ using UnityEngine;
 public class RopeAttacher : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private ObiRope[] rope;
     [SerializeField] private SpringJoint[] ropeSpringJoint;
     
     private bool rope1Used = false;
@@ -14,8 +13,8 @@ public class RopeAttacher : MonoBehaviour
     private bool rope3Used = false;
     private bool rope4Used = false;
     
+    private SimpleRopeRenderer[] _ropeRenderer = new SimpleRopeRenderer[3];
     
-    [SerializeField] private ObiParticleAttachment[] ropeAnchor;
 
     private void Start()
     {
@@ -32,16 +31,12 @@ public class RopeAttacher : MonoBehaviour
             int ropeIndex = ChoseRopeToAttach();
             if (ropeIndex == -9999) return; // No available ropes
             
-            player.Rope.AttachRope(rope[ropeIndex]);
-            
-            ropeAnchor[ropeIndex].target =player.transform;
-            
-            rope[ropeIndex].gameObject.SetActive(true);
-            
             // Connect the rope's spring joint to the player's Rigidbody
             ropeSpringJoint[ropeIndex].connectedBody = player.GetCachedComponent<Rigidbody>();
             ropeSpringJoint[ropeIndex].maxDistance = player.Playerstats.MaxRopeDistance;
             player.RopeRenderer.endPoint = transform;
+            _ropeRenderer[ropeIndex] = player.RopeRenderer;
+            player.Rope.AttachRope(); // We can pass null here since we're not using
         }
     }
 
@@ -72,32 +67,27 @@ public class RopeAttacher : MonoBehaviour
         return -9999; // No available ropes
     }
     
-    public void FreeRope(ObiRope ropeToFree)
+    public void FreeRope(SpringJoint ropeToFree )
     {
-        if (ropeToFree == rope[0])
+        for (int i = 0; i < ropeSpringJoint.Length; i++)
         {
-            rope1Used = false;
-            rope[0].gameObject.SetActive(false);
-            ropeSpringJoint[0].connectedBody = null;
+            if (ropeSpringJoint[i] == ropeToFree)
+            {
+                ropeSpringJoint[i].connectedBody = null;
+                _ropeRenderer[i].endPoint = null;
+                
+                switch (i)
+                {
+                    case 0: rope1Used = false; break;
+                    case 1: rope2Used = false; break;
+                    case 2: rope3Used = false; break;
+                    case 3: rope4Used = false; break;
+                }
+                return;
+            }
         }
-        else if (ropeToFree == rope[1]) 
-        { 
-            rope2Used = false; 
-            rope[1].gameObject.SetActive(false);
-            ropeSpringJoint[1].connectedBody = null;
-        } 
-        else if (ropeToFree == rope[2])
-        {
-            rope3Used = false;
-            rope[2].gameObject.SetActive(false);
-            ropeSpringJoint[2].connectedBody = null;
-        } 
-        else if (ropeToFree == rope[3])
-        {
-            rope4Used = false;
-            rope[3].gameObject.SetActive(false);
-            ropeSpringJoint[3].connectedBody = null;
-        }
+        
+        Logs.LogError("Attempted to free a rope that is not managed by this RopeAttacher!");
     }
     
 }
