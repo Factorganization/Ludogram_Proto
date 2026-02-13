@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
         if (endScreen)
         {
             endScreen.gameObject.SetActive(true);
-            scoreEndScreen.text = moneyDeliveredTotal+"$";
+            scoreEndScreen.text = Mathf.RoundToInt(moneyDeliveredTotal)+"$";
         }
     }
 
@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
         if (endScreen)
         {
             endScreen.gameObject.SetActive(false);
-            scoreEndScreen.text = Mathf.RoundToInt(moneyDeliveredTotal).ToString();
+            
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

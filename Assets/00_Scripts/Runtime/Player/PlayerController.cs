@@ -247,8 +247,8 @@ public class PlayerController : MonoBehaviour
 
     private void HandleRotation()
     {
-        float mouseX = rotVector.x * sensitivity;
-        float mouseY = rotVector.y * sensitivity;
+        float mouseX = (rotVector.x * sensitivity) * Time.deltaTime;
+        float mouseY = (rotVector.y * sensitivity) * Time.deltaTime;
 
         transform.Rotate(0, mouseX, 0);
 
