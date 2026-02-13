@@ -83,7 +83,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4797150973422761571}
+    - targetCorrespondingSourceObject: {fileID: 3224893578408186419, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2633702584777580670}
   m_SourcePrefab: {fileID: 100100000, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+--- !u!1 &1597869475439861568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3224893578408186419, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
+  m_PrefabInstance: {fileID: 4246290051727428979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2633702584777580670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597869475439861568}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.089611, y: 1.4091907, z: 4.3143272}
+  m_Center: {x: 0.009305954, y: 0.20459533, z: 0.22502708}
 --- !u!1 &2072181885737878447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2750578144721948380, guid: 44070ea55389b6a44b8dd38c80a7dbaf, type: 3}
@@ -101,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453501805fae3fc469d18c3389072445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoleGenerator
-  holePrefab: {fileID: 2872654400384901377, guid: c6b3fcbc9be911d4bbd43c9231005637, type: 3}
+  holePrefab: {fileID: 701957616425378649, guid: 44ad16238ac3314498bfcdb712ee1807, type: 3}
   aimPrecision: 1
   distanceMax: 100
   yBoost: 4

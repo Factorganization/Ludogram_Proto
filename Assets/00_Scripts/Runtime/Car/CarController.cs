@@ -6,7 +6,7 @@ namespace CarScripts {
     [RequireComponent(typeof(Rigidbody))]
     public class CarController : MonoBehaviour {
         private Rigidbody carRb;
-        private DrivingInputs _drivingInputs;
+        internal DrivingInputs _drivingInputs;
         
         
         private enum WheelDriveMode {

@@ -64,6 +64,11 @@ public class InteractComponent : PlayerComponent
             case Hole :
                 character._uiSwapper.SwapCrosshair(UISwapper.InteractionUI.REPAIR);
                 break;
+            case Bank :
+
+                break;
+            case EnemyHealth :
+                break; 
             //TODO : DESTROY ENEMIES CAR
             
             //TODO : Rope crank
